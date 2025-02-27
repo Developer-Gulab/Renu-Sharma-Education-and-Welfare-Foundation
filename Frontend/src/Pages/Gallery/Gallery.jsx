@@ -1,8 +1,10 @@
 import React from "react";
+import GalleryHeader from "./GalleryHeader";
 export default function Gallery(){
     return(
         <>
-        <h1 className="text-3xl font-bold underline">Gallery Page(Team Aman)</h1>
+         <GalleryHeader/>
+         
         </>
     )
 }
