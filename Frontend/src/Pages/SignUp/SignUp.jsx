@@ -1,23 +1,25 @@
 import { useState } from 'react'; // Manages form input, errors, and loading state
-import { Link, useNavigate } from 'react-router-dom'; // Redirects users after logging in
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link, useNavigate } from 'react-router-dom'; // Redirects users after signing up
 import axios from 'axios'; // Used to send HTTP requests to the backend
 
-
 const SignUp = () => {
-  const [formData, setFormData] = useState({  // Stores email & password entered by the user
+  const [formData, setFormData] = useState({  // Stores name, email, password, and confirm password entered by the user
     name: '',
     email: '',
     password: '',
     confirmPassword: ''
   });
   const [error, setError] = useState('');   // Stores any error messages
-  const [loading, setLoading] = useState(false);  // Shows signing in... when login is in progres
+  const [loading, setLoading] = useState(false);  // Shows creating account... when signing up is in progress
+  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false); // State for confirm password visibility
   const navigate = useNavigate();
 
   const { name, email, password, confirmPassword } = formData;
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });  // updates fromdata when user type email and password
+    setFormData({ ...formData, [e.target.name]: e.target.value });  // updates formData when user types
   };
 
   const handleSubmit = async (e) => {
@@ -91,30 +93,48 @@ const SignUp = () => {
   
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-300">Password</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              required
-              className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Password"
-              value={password}
-              onChange={handleChange}
-            />
+            <div className="relative">
+              <input
+                id="password"
+                name="password"
+                type={showPassword ? 'text' : 'password'}
+                required
+                className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Password"
+                value={password}
+                onChange={handleChange}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400"
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+            </div>
           </div>
-  
+
           <div>
             <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-300">Confirm Password</label>
-            <input
-              id="confirmPassword"
-              name="confirmPassword"
-              type="password"
-              required
-              className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Confirm Password"
-              value={confirmPassword}
-              onChange={handleChange}
-            />
+            <div className="relative">
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type={showConfirmPassword ? 'text' : 'password'}
+                required
+                className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={handleChange}
+              />
+              <button
+                type="button"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400"
+              >
+                {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+            </div>
           </div>
   
           <button
@@ -126,6 +146,14 @@ const SignUp = () => {
           </button>
         </form>
   
+        <div className="mt-4">
+          <p className="text-center text-gray-400">Or sign up with</p>
+          <div className="flex justify-center space-x-4 mt-2">
+            <button className="bg-red-600 text-white py-2 px-4 rounded-md">Google</button>
+            <button className="bg-blue-600 text-white py-2 px-4 rounded-md">Facebook</button>
+          </div>
+        </div>
+  
         <p className="text-center text-gray-400 mt-4">
           Already have an account?{' '}
           <Link to="/login" className="text-blue-400 hover:text-blue-300">
@@ -136,5 +164,4 @@ const SignUp = () => {
     </div>
   );
 }  
-
 export default SignUp;
