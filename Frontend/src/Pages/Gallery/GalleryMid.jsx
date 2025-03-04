@@ -77,11 +77,11 @@ function GalleryMid() {
     return (
         <div className=' bg-red-200 justify-evenly p-12 '>
             <div className="tabs tabs-border bg-red-500 font-medium ">
-                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 " aria-label="📚 Education" defaultChecked  />
+                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 " aria-label="📚 Education" defaultChecked />
                 <div className="tab-content border-base-300 bg-base-100 p-10">
                     <div className='grid grid-cols-3 gap-3'>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s" alt="" />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrT7MI9fsrc6mWRBJBwhrf4vwTL7S5B8CzQ&s" alt=""  />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrT7MI9fsrc6mWRBJBwhrf4vwTL7S5B8CzQ&s" alt="" />
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s" alt="" />
                     </div>
                     <div className='grid grid-cols-3 gap-4'>
@@ -104,7 +104,7 @@ function GalleryMid() {
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s" alt="" />
                     </div>
                 </div>
-               
+
 
                 <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400" aria-label="❤️ Internship" />
                 <div className="tab-content border-base-300 bg-base-100 p-10">
@@ -148,21 +148,70 @@ function GalleryMid() {
                     </div>
                 </div>
 
+
+
+
+                { /*hover demo*/}
                 <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400" aria-label="📚 Education" />
                 <div className="tab-content border-base-300 bg-base-100 p-10">
                     <div className='grid grid-cols-3 gap-4'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s" alt="" />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrT7MI9fsrc6mWRBJBwhrf4vwTL7S5B8CzQ&s" alt="" />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s" alt="" />
+                        <div className="relative group w-64 h-40 ">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s"
+                                alt="Gallery"
+                                className="w-full h-full object-cover rounded-xl"
+                            />
+                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white opacity-0 group-hover:opacity-100 transition duration-300 rounded-xl">
+                                <p className='text-sm font-bold '> Date : 25 Feb 2024</p>
+                                <p className='text-lg font-semibold '> Project : Education Drive</p>
+                                <p className='text-sm'>Event : Book Donation</p>
+                                <p className='text-sm'> Impact : 500+ students benefited</p>
+                            </div>
+                        </div>
+                        <div className="relative group w-64 h-40">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s"
+                                alt="Gallery"
+                                className="w-full h-full object-cover rounded-xl"
+                            />
+                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white opacity-0 group-hover:opacity-100 transition duration-300 rounded-xl">
+                                <p className='text-sm font-bold '> Date : 25 Feb 2024</p>
+                                <p className='text-lg font-semibold '> Project : Education Drive</p>
+                                <p className='text-sm'>Event : Book Donation</p>
+                                <p className='text-sm'> Impact : 500+ students benefited</p>
+                            </div>
+                        </div><div className="relative group w-64 h-40">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s"
+                                alt="Gallery"
+                                className="w-full h-full object-cover rounded-xl"
+                            />
+                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white opacity-0 group-hover:opacity-100 transition duration-300 rounded-xl">
+                                <p className='text-sm font-bold '> Date : 25 Feb 2024</p>
+                                <p className='text-lg font-semibold '> Project : Education Drive</p>
+                                <p className='text-sm'>Event : Book Donation</p>
+                                <p className='text-sm'> Impact : 500+ students benefited</p>
+                            </div>
+                        </div>
                     </div>
+
                     <div className='grid grid-cols-3 gap-4'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s" alt="" />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrT7MI9fsrc6mWRBJBwhrf4vwTL7S5B8CzQ&s" alt="" />
-                        <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" 
-                        className='h-52 w-72'/>
+                        <div className="relative group w-64 h-40">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s"
+                                alt="Gallery"
+                                className="w-full h-full object-cover rounded-xl"
+                            />
+                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white opacity-0 group-hover:opacity-100 transition duration-300 rounded-xl">
+                                <p className='text-sm font-bold '> Date : 25 Feb 2024</p>
+                                <p className='text-lg font-semibold '> Project : Education Drive</p>
+                                <p className='text-sm'>Event : Book Donation</p>
+                                <p className='text-sm'> Impact : 500+ students benefited</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
+
             </div>
 
         </div>
