@@ -3,6 +3,7 @@ import bcrypt from 'bcryptjs';  // Import bcryptjs to securely hash passwords be
 
 // schema defined in the database
 const UserSchema = new mongoose.Schema({
+  
   name: {
     type: String,
     required: true
@@ -16,6 +17,11 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  phone: {
+    type: String,
+    required: true // Added phone number field
+  },
+
   date: {
     type: Date,
     default: Date.now
