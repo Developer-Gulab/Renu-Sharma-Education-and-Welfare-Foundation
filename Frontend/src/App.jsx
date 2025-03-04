@@ -8,23 +8,22 @@ import AboutUs from './Pages/AboutUs/AboutUs'
 import SignUp from './Pages/SignUp/SignUp'
 import Login from './Pages/Login/Login'
 import Internship from './Pages/Internship/Internship'
-import ForgotPassword from './Pages/Login/ForgotPassword'; // Import the ForgotPassword component
+import ForgotPassword from './Pages/Login/ForgotPassword';
+
 function App() {
   return (
     <>
-
       <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/gallery' element={<Gallery/>}/>
-      <Route path='/services' element={<Services/>}/>
-      <Route path='/contactus' element={<ContactUs/>}/>
-      <Route path='/aboutus' element={<AboutUs/>}/>
-      <Route path='/signup' element={<SignUp/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/internship' element={<Internship/>}/>
-      <Route path="/forgot-password" element={<ForgotPassword />} />
-    </Routes>
-      
+        <Route path='/' element={<Home />} />
+        <Route path='/gallery' element={<Gallery />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/contactus' element={<ContactUs />} />
+        <Route path='/aboutus' element={<AboutUs />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/internship' element={<Internship />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+      </Routes>
     </>
   )
 }
