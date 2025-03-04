@@ -1,4 +1,5 @@
 import { useState } from 'react'; // Manages form input, errors, and loading state
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom'; // Redirects users after logging in
 import axios from 'axios'; // Used to send HTTP requests to the backend
 
@@ -8,13 +9,14 @@ const Login = () => {
     password: ''
   });
   const [error, setError] = useState('');   // Stores any error messages
-  const [loading, setLoading] = useState(false); // Shows signing in... when login is in progres
+  const [loading, setLoading] = useState(false); // Shows signing in... when login is in progress
+  const [showPassword, setShowPassword] = useState(false); // State for password visibility
   const navigate = useNavigate();
 
   const { email, password } = formData;
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value }); // updates fromdata when user type email and password
+    setFormData({ ...formData, [e.target.name]: e.target.value }); // updates formData when user types email and password
   };
 
   const handleSubmit = async (e) => {
@@ -64,16 +66,28 @@ const Login = () => {
   
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-300">Password</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              required
-              className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Password"
-              value={password}
-              onChange={handleChange}
-            />
+            <div className="relative">
+              <input
+                id="password"
+                name="password"
+                type={showPassword ? 'text' : 'password'}
+                required
+                className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Password"
+                value={password}
+                onChange={handleChange}
+              />
+              <button
+  type="button"
+  onClick={() => setShowPassword(!showPassword)}
+  className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400"
+>
+  {showPassword ? <FaEyeSlash /> : <FaEye />}
+</button>
+
+            </div>
+            <Link to="/forgot-password" className="text-blue-400 hover:text-blue-300 mt-2 block text-sm">Forgot Password?</Link>
+
           </div>
   
           <button
@@ -84,6 +98,14 @@ const Login = () => {
             {loading ? 'Signing in...' : 'Sign in'}
           </button>
         </form>
+
+        <div className="mt-4">
+          <p className="text-center text-gray-400">Or sign in with</p>
+          <div className="flex justify-center space-x-4 mt-2">
+            <button className="bg-red-600 text-white py-2 px-4 rounded-md">Google</button>
+            <button className="bg-blue-600 text-white py-2 px-4 rounded-md">Facebook</button>
+          </div>
+        </div>
   
         <p className="text-center text-gray-400 mt-4">
           Don&apos;t have an account?{' '}
