@@ -7,10 +7,47 @@ import process from 'process'; // Import process to access environment variables
 dotenv.config(); // Load environment variables from the .env file
 const router = express.Router(); // Create an Express Router to define routes separately
 
+router.post('/forgot-password', async (req, res) => {
+  try {
+    const { email } = req.body; // Only destructuring email for forgot password
+
+    // Check if email exists
+    let user = await User.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ message: 'Email does not exist' });
+    }
+
+    // Send OTP logic here (not implemented in this example)
+
+    res.status(200).json({ success: true, message: 'OTP has been sent to your email!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+router.get('/check-email', async (req, res) => {
+  try {
+    const { email } = req.query; // Get email from query parameters
+
+    // Check if user exists
+    const user = await User.findOne({ email });
+    if (user) {
+      return res.status(200).json({ exists: true });
+    }
+
+    res.status(200).json({ exists: false });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 // Register a new user
+
 router.post('/register', async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, phone } = req.body; // Added phone to destructured body
 
     // Check if user already exists
     let user = await User.findOne({ email });
@@ -22,7 +59,8 @@ router.post('/register', async (req, res) => {
     user = new User({
       name,
       email,
-      password
+      password,
+      phone // Added phone to user object
     });
 
     await user.save();
@@ -48,9 +86,6 @@ router.post('/register', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-
-
-
 
 // Login user
 router.post('/login', async (req, res) => {
@@ -90,4 +125,5 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
+
 export default router;
