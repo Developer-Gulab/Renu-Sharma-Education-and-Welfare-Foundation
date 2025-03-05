@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "date": "25 Feb 2024",
+        "project": "Helping Drive",
+        "event": "Book Donation",
+        "impact": "500+ students benefited",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+    },
+    {
+        "id": 2,
+        "date": "10 Mar 2024",
+        "project": "Tech Workshop",
+        "event": "Coding Bootcamp",
+        "impact": "300+ students trained",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+    },
+    {
+        "id": 3,
+        "date": "15 Apr 2024",
+        "project": "Career Guidance",
+        "event": "Seminar on Career Opportunities",
+        "impact": "200+ students guided",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+    },
+    {
+        "id": 4,
+        "date": "20 May 2024",
+        "project": "Clean School Drive",
+        "event": "Campus Cleaning Initiative",
+        "impact": "10+ schools cleaned",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+    },
+    {
+        "id": 5,
+        "date": "05 Jun 2024",
+        "project": "Tree Plantation",
+        "event": "Environmental Awareness",
+        "impact": "500+ trees planted",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+    },
+    {
+        "id": 6,
+        "date": "15 Jul 2024",
+        "project": "STEM Learning",
+        "event": "Science Fair for Students",
+        "impact": "100+ projects exhibited",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+    }
+]
+
+    

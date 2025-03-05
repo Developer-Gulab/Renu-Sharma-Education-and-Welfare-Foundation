@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "date": "05 Jan 2024",
+        "cause": "Food Donation",
+        "event": "Meals for the Needy",
+        "impact": "1,000+ meals distributed",
+        "image": "https://annamrita.org/wp-content/uploads/2023/02/Why-should-you-donate-to-the-education-of-impoverished-children_.jpg"
+    },
+    {
+        "id": 2,
+        "date": "15 Feb 2024",
+        "cause": "Clothes Donation",
+        "event": "Winter Clothes Drive",
+        "impact": "500+ families helped",
+        "image": "https://annamrita.org/wp-content/uploads/2023/02/Why-should-you-donate-to-the-education-of-impoverished-children_.jpg"
+    },
+    {
+        "id": 3,
+        "date": "10 Mar 2024",
+        "cause": "Blood Donation",
+        "event": "Life-Saving Blood Drive",
+        "impact": "300+ units collected",
+        "image": "https://annamrita.org/wp-content/uploads/2023/02/Why-should-you-donate-to-the-education-of-impoverished-children_.jpg"
+    },
+    {
+        "id": 4,
+        "date": "20 Apr 2024",
+        "cause": "Stationery Donation",
+        "event": "School Supplies for Kids",
+        "impact": "700+ students supported",
+        "image": "https://annamrita.org/wp-content/uploads/2023/02/Why-should-you-donate-to-the-education-of-impoverished-children_.jpg"
+    },
+    {
+        "id": 5,
+        "date": "08 May 2024",
+        "cause": "Medical Aid",
+        "event": "Free Medicine & Health Checkups",
+        "impact": "200+ patients treated",
+        "image": "https://annamrita.org/wp-content/uploads/2023/02/Why-should-you-donate-to-the-education-of-impoverished-children_.jpg"
+    },
+    {
+        "id": 6,
+        "date": "25 Jun 2024",
+        "cause": "Shelter Support",
+        "event": "Housing Assistance for Homeless",
+        "impact": "50+ families provided shelter",
+        "image": "https://annamrita.org/wp-content/uploads/2023/02/Why-should-you-donate-to-the-education-of-impoverished-children_.jpg"
+    }
+]

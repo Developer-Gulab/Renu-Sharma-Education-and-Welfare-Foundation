@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "date": "10 Jan 2024",
+        "company": "Tech Innovators",
+        "role": "Web Development Intern",
+        "impact": "Built an e-commerce website",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgd67P7ywjGvMGajlU8VmK8r1G74hsrRkmcg&s"
+    },
+    {
+        "id": 2,
+        "date": "20 Feb 2024",
+        "company": "AI Solutions",
+        "role": "Machine Learning Intern",
+        "impact": "Developed an AI chatbot",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgd67P7ywjGvMGajlU8VmK8r1G74hsrRkmcg&s"
+    },
+    {
+        "id": 3,
+        "date": "15 Mar 2024",
+        "company": "CyberTech",
+        "role": "Cybersecurity Intern",
+        "impact": "Enhanced network security",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgd67P7ywjGvMGajlU8VmK8r1G74hsrRkmcg&s"
+    },
+    {
+        "id": 4,
+        "date": "05 Apr 2024",
+        "company": "FinTech Corp",
+        "role": "Data Analyst Intern",
+        "impact": "Analyzed financial trends",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgd67P7ywjGvMGajlU8VmK8r1G74hsrRkmcg&s"
+    },
+    {
+        "id": 5,
+        "date": "18 May 2024",
+        "company": "HealthTech",
+        "role": "App Developer Intern",
+        "impact": "Built a health monitoring app",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgd67P7ywjGvMGajlU8VmK8r1G74hsrRkmcg&s"
+    },
+    {
+        "id": 6,
+        "date": "30 Jun 2024",
+        "company": "Green Energy Co.",
+        "role": "Sustainability Intern",
+        "impact": "Worked on renewable energy solutions",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgd67P7ywjGvMGajlU8VmK8r1G74hsrRkmcg&s"
+    }
+]

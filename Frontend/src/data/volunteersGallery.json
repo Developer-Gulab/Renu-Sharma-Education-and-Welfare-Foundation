@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "date": "12 Jan 2024",
+        "organization": "Helping Hands",
+        "event": "Food Distribution",
+        "impact": "Served 1,500 meals",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+    },
+    {
+        "id": 2,
+        "date": "25 Feb 2024",
+        "organization": "Clean Earth",
+        "event": "Beach Cleaning Drive",
+        "impact": "Collected 2 tons of waste",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+    },
+    {
+        "id": 3,
+        "date": "15 Mar 2024",
+        "organization": "Youth Education",
+        "event": "Teaching Underprivileged Kids",
+        "impact": "Helped 200+ students",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+    },
+    {
+        "id": 4,
+        "date": "05 Apr 2024",
+        "organization": "Green Warriors",
+        "event": "Tree Plantation",
+        "impact": "Planted 1,000+ trees",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+    },
+    {
+        "id": 5,
+        "date": "22 May 2024",
+        "organization": "Animal Rescue",
+        "event": "Rescue and Shelter Support",
+        "impact": "Saved 50+ animals",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+    },
+    {
+        "id": 6,
+        "date": "10 Jun 2024",
+        "organization": "Mental Wellness Hub",
+        "event": "Counseling & Awareness",
+        "impact": "Reached 500+ people",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+    }
+]

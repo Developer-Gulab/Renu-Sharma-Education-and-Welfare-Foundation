@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "date": "05 Feb 2024",
+        "initiative": "Free Health Camp",
+        "event": "Medical Checkups",
+        "impact": "Treated 800+ patients",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrrEq-13p9U4na8eONPcocvjI73YjebCvyA&s"
+    },
+    {
+        "id": 2,
+        "date": "20 Mar 2024",
+        "initiative": "Blood Donation Drive",
+        "event": "Blood Donation Campaign",
+        "impact": "Collected 500+ units",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrrEq-13p9U4na8eONPcocvjI73YjebCvyA&s"
+    },
+    {
+        "id": 3,
+        "date": "10 Apr 2024",
+        "initiative": "Cancer Awareness",
+        "event": "Early Detection & Prevention",
+        "impact": "Reached 5,000+ people",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrrEq-13p9U4na8eONPcocvjI73YjebCvyA&s"
+    },
+    {
+        "id": 4,
+        "date": "28 Apr 2024",
+        "initiative": "Mental Health Support",
+        "event": "Workshops & Counseling",
+        "impact": "Helped 1,200+ individuals",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrrEq-13p9U4na8eONPcocvjI73YjebCvyA&s"
+    },
+    {
+        "id": 5,
+        "date": "15 May 2024",
+        "initiative": "Children’s Vaccination Drive",
+        "event": "Immunization Program",
+        "impact": "Vaccinated 1,500+ kids",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrrEq-13p9U4na8eONPcocvjI73YjebCvyA&s"
+    },
+    {
+        "id": 6,
+        "date": "10 Jun 2024",
+        "initiative": "Free Eye Checkup",
+        "event": "Vision Screening Camp",
+        "impact": "Provided glasses to 500+ people",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrrEq-13p9U4na8eONPcocvjI73YjebCvyA&s"
+    }
+]
