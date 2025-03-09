@@ -37,52 +37,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Our Impact Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-black">Our Impact</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-4 transition-transform hover:scale-105">
-              <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
-              <p className="text-gray-600">Students Supported</p>
-            </div>
-            <div className="p-4 transition-transform hover:scale-105">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <p className="text-gray-600">Schools Partnered</p>
-            </div>
-            <div className="p-4 transition-transform hover:scale-105">
-              <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
-              <p className="text-gray-600">Community Programs</p>
-            </div>
-            <div className="p-4 transition-transform hover:scale-105">
-              <div className="text-4xl font-bold text-blue-600 mb-2">20+</div>
-              <p className="text-gray-600">Districts Reached</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial Section */}
-      <section className="py-16 bg-[#b4fbe3]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-black ">Testimonials</h2>
-          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md hover:shadow-lg hover:bg-red-400 hover:text-black transition-shadow">
-            <div className="text-gray-600 italic mb-4">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fugit facilis officia, fugiat culpa nobis, veritatis corporis praesentium commodi quibusdam voluptatem voluptate nesciunt temporibus est facere autem aliquid quisquam totam. </div>
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-gray-700 rounded-full mr-4 text-centre"></div>
-              <div>
-                <div className="font-semibold">Utkarsh Malasi</div>
-                <div className="text-gray-500 text-sm">Program Beneficiary</div>
-                <div className="font-semibold">Aman Jaggernal</div>
-                <div className="text-gray-500 text-sm">Program Beneficiary</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Founder Section */}
+  {/* About Founder Section */}
       <section className="py-16 bg-green-300">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -120,6 +75,31 @@ export default function AboutUs() {
         </div>
       </section>
 
+      {/* Our Impact Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">Our Impact</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="p-4 transition-transform hover:scale-105">
+              <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
+              <p className="text-gray-600">Students Supported</p>
+            </div>
+            <div className="p-4 transition-transform hover:scale-105">
+              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+              <p className="text-gray-600">Schools Partnered</p>
+            </div>
+            <div className="p-4 transition-transform hover:scale-105">
+              <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+              <p className="text-gray-600">Community Programs</p>
+            </div>
+            <div className="p-4 transition-transform hover:scale-105">
+              <div className="text-4xl font-bold text-blue-600 mb-2">20+</div>
+              <p className="text-gray-600">Districts Reached</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
       {/* Team Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -143,6 +123,28 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+      
+      {/* Testimonial Section */}
+      <section className="py-16 bg-[#b4fbe3]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black ">Testimonials</h2>
+          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md hover:shadow-lg hover:bg-red-400 hover:text-black transition-shadow">
+            <div className="text-gray-600 italic mb-4">
+             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fugit facilis officia, fugiat culpa nobis, veritatis corporis praesentium commodi quibusdam voluptatem voluptate nesciunt temporibus est facere autem aliquid quisquam totam. </div>
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-gray-700 rounded-full mr-4 text-centre"></div>
+              <div>
+                <div className="font-semibold">Utkarsh Malasi</div>
+                <div className="text-gray-500 text-sm">Program Beneficiary</div>
+                <div className="font-semibold">Aman Jaggernal</div>
+                <div className="text-gray-500 text-sm">Program Beneficiary</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
 
       {/* Photo Gallery Section */}
       <section className="py-16 bg-gray-50">
