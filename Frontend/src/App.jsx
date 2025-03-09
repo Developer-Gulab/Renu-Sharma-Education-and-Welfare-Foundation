@@ -11,7 +11,6 @@ import Internship from './Pages/Internship/Internship'
 function App() {
   return (
     <>
-    <AboutUs/>
       <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/gallery' element={<Gallery/>}/>

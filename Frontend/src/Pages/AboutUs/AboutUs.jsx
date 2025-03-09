@@ -1,4 +1,5 @@
 import React from "react";
+import ImageSlider from "../../components/about/ImageSlider";
 
 
 export default function AboutUs() {
@@ -143,22 +144,8 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
-  
-
-      {/* Photo Gallery Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-black">Photo Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className=" w-full h-64 aspect-w-16 aspect-h-9 bg-gray-300 rounded-full transition-transform hover:scale-105" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80")' }} >
-            <img src="https://unsplash.com/photos/grayscale-photo-of-3-children-smiling-1IQJ1sB1T00"/>
-            </div>
-            <div className="w-full h-64 aspect-w-16 aspect-h-9 bg-gray-300 rounded-lg transition-transform hover:scale-105"></div>
-            <div className="w-full h-64 aspect-w-16 aspect-h-9 bg-gray-300 rounded-full transition-transform hover:scale-105"></div>
-          </div>
-        </div>
-      </section>
+      
+      <ImageSlider/>
     </div>
   );
 }
