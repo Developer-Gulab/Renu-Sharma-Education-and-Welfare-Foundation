@@ -21,7 +21,8 @@ const ImageSlider = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#001F3F] to-[#003366]">
+      <h2 className="text-3xl font-bold text-center mb-12 text-white">Our Picture </h2>
       <div className="relative w-full max-w-4xl h-64 overflow-hidden mx-auto my-8 rounded-lg shadow-lg p-4 bg-gray-100"> {/* Subtle background color */}
         <motion.div
           className="absolute inset-0 flex"
@@ -40,9 +41,7 @@ const ImageSlider = () => {
         </motion.div>
       </div>
 
-      <footer className="w-full bg-gray-800 text-white text-center p-4">
-        <p>Footer Content Here</p>
-      </footer>
+     
     </div>
   );
 };
