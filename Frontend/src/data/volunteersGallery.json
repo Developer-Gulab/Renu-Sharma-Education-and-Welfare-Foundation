@@ -5,7 +5,7 @@
         "organization": "Helping Hands",
         "event": "Food Distribution",
         "impact": "Served 1,500 meals",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+        "image": "https://images.pexels.com/photos/668296/pexels-photo-668296.jpeg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "organization": "Clean Earth",
         "event": "Beach Cleaning Drive",
         "impact": "Collected 2 tons of waste",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+        "image": "https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "organization": "Youth Education",
         "event": "Teaching Underprivileged Kids",
         "impact": "Helped 200+ students",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+        "image": "https://images.pexels.com/photos/3184303/pexels-photo-3184303.jpeg"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "organization": "Green Warriors",
         "event": "Tree Plantation",
         "impact": "Planted 1,000+ trees",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+        "image": "https://images.pexels.com/photos/1642883/pexels-photo-1642883.jpeg"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "organization": "Animal Rescue",
         "event": "Rescue and Shelter Support",
         "impact": "Saved 50+ animals",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+        "image": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg"
     },
     {
         "id": 6,
@@ -45,6 +45,38 @@
         "organization": "Mental Wellness Hub",
         "event": "Counseling & Awareness",
         "impact": "Reached 500+ people",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZeH1t5cynPXzy-TEScAnDhiQRHqCJDm64g&s"
+        "image": "https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg"
+    },
+    {
+        "id": 7,
+        "date": "18 Jul 2024",
+        "organization": "Disaster Relief Team",
+        "event": "Flood Relief Camp",
+        "impact": "Assisted 2,000 victims",
+        "image": "https://images.pexels.com/photos/3184303/pexels-photo-3184303.jpeg"
+    },
+    {
+        "id": 8,
+        "date": "05 Aug 2024",
+        "organization": "Blood Donors United",
+        "event": "Blood Donation Drive",
+        "impact": "Collected 500+ blood units",
+        "image": "https://images.pexels.com/photos/682356/pexels-photo-682356.jpeg"
+    },
+    {
+        "id": 9,
+        "date": "21 Sep 2024",
+        "organization": "Senior Care Foundation",
+        "event": "Old Age Home Volunteering",
+        "impact": "Engaged with 100+ seniors",
+        "image": "https://images.pexels.com/photos/1642883/pexels-photo-1642883.jpeg"
+    },
+    {
+        "id": 10,
+        "date": "10 Oct 2024",
+        "organization": "Sports for All",
+        "event": "Youth Sports Camp",
+        "impact": "Trained 300+ kids",
+        "image": "https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg"
     }
 ]

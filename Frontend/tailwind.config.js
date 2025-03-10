@@ -10,7 +10,11 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         lora: ["Lora", "serif"],
         dancing: ["Dancing Script", "cursive"],
+        playfair: ["Playfair Display", "serif"],
+        ubuntu: ["Ubuntu"],
       },
+     
+      
     },
   },
   plugins: [

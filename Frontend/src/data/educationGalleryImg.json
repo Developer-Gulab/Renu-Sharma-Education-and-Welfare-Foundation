@@ -5,7 +5,7 @@
         "project": "Helping Drive",
         "event": "Book Donation",
         "impact": "500+ students benefited",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+        "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "project": "Tech Workshop",
         "event": "Coding Bootcamp",
         "impact": "300+ students trained",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+        "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "project": "Career Guidance",
         "event": "Seminar on Career Opportunities",
         "impact": "200+ students guided",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+        "image": "https://images.unsplash.com/photo-1588072432836-e10032774350"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "project": "Clean School Drive",
         "event": "Campus Cleaning Initiative",
         "impact": "10+ schools cleaned",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+        "image": "https://media.istockphoto.com/id/2199025858/photo/sri-lankan-young-girls-using-a-digital-tablet.jpg?s=1024x1024&w=is&k=20&c=1z7d_2E1UH256G7SvtrYlLGFgp_b98AnxGsX3qxfKrU="
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "project": "Tree Plantation",
         "event": "Environmental Awareness",
         "impact": "500+ trees planted",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
+        "image": "https://media.istockphoto.com/id/1395727646/photo/handheld-shot-of-village-school-girl-kids-seriously-busy-working-on-laptop-concept-of.jpg?s=1024x1024&w=is&k=20&c=MWUSNvfmNLKvObMEcO6B3JHZkr3mtSP99cy72A5fSfs="
     },
     {
         "id": 6,
@@ -45,8 +45,49 @@
         "project": "STEM Learning",
         "event": "Science Fair for Students",
         "impact": "100+ projects exhibited",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGETAk3KkyouUZO-lYZFW4O2vl5RMBQIdw&s"
-    }
-]
+        "image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353"
+    },
 
+        {
+            "id": 7,
+            "date": "20 Aug 2024",
+            "project": "Food Drive",
+            "event": "Feeding the Needy",
+            "impact": "1000+ meals distributed",
+            "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe"
+        },
+        {
+            "id": 8,
+            "date": "05 Sep 2024",
+            "project": "Digital Literacy",
+            "event": "Teaching Computer Basics",
+            "impact": "150+ students trained",
+            "image": "https://media.istockphoto.com/id/1395727837/photo/group-of-happy-smiling-village-school-kids-in-uniform-standing-at-middle-paddy-field-by.jpg?s=1024x1024&w=is&k=20&c=iSr_ivPz-b789KFuSJcHkkSrVvu56ETIkM9Izti6JJI="
+        },
+        {
+            "id": 9,
+            "date": "18 Oct 2024",
+            "project": "Health Awareness",
+            "event": "Free Medical Checkups",
+            "impact": "300+ people benefited",
+            "image": "https://img.freepik.com/premium-photo/cute-indian-child-reading-his-book_75648-596.jpg?w=1060"
+        },
+        {
+            "id": 10,
+            "date": "12 Nov 2024",
+            "project": "Art & Creativity",
+            "event": "Painting Competition",
+            "impact": "200+ students participated",
+            "image": "https://images.unsplash.com/photo-1528460033278-a6ba57020470"
+        },
+        {
+            "id": 11,
+            "date": "25 Dec 2024",
+            "project": "Winter Clothing Drive",
+            "event": "Providing Warm Clothes",
+            "impact": "500+ people helped",
+            "image": "https://img.freepik.com/premium-vector/technology-education-supplies_24908-28315.jpg?w=740"
+        }
     
+    
+]
