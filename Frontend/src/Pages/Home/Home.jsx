@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <>
       {/* Header with conditional login/signup buttons */}
-      <header className="bg-purple-600 p-4 flex justify-between items-center">
+      <header className="bg-white-600 p-4 flex justify-between items-center">
         <h1 className="text-white text-xl font-bold">Team Satwik</h1>
         
         <div>
