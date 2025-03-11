@@ -8,17 +8,18 @@ import internshipGallery from "../../data/internshipGallery.json"
 
 function GalleryMid() {
     return (
-        <div className=' bg-blue-950 justify-evenly p-20  '>
-            <div className="tabs tabs-border bg-purple-600 font-medium rounded-md">
-                <input type="radio" name="my_tabs_2" className="tab  text-white hover:text-black hover:bg-yellow-400  hover:rounded-l-md flex " aria-label="📚 Education " defaultChecked />
+        <div className=' bg-blue-950 justify-evenly p-10 lg:p-20 md:p-20  w-full'>
+            <div className="tabs tabs-border bg-purple-600 font-medium rounded-md  overflow-x-auto ">
+                <input type="radio" name="my_tabs_2" className="tab  text-white hover:text-black hover:bg-yellow-400  hover:rounded-l-md  " aria-label="Education " defaultChecked />
+               
                 <div className="tab-content border-base-300  p-10 bg-blue-50 rounded-b-md">
                     <h1 className=" text-3xl  text-center font-semibold font-ubuntu ">🎓 Empowering Education for a <span className='text-red-700'>Brighter Future!</span></h1>
-                    <div className=' gap-6 bg-blue-50 p-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+                    <div className=' gap-6 bg-blue-50 p-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 '>
 
                         {
                             educationGalleryImg.map((item) => (
 
-                                <div key={item.id} className="relative group w-80 h-60 my-1">
+                                <div key={item.id} className="relative group w-full h-60  ">
                                     <img
                                         src={item.image}
                                         alt="Gallery"
@@ -37,7 +38,7 @@ function GalleryMid() {
                     </div>
                 </div>
 
-                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black " aria-label="🏥 Healthcare" />
+                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black " aria-label=" Healthcare" />
                 <div className="tab-content border-base-300  p-10 bg-blue-50 rounded-b-md">
                     <h1 className=" text-3xl  text-center font-semibold font-ubuntu ">❤️ Health & Wellness Initiatives:<span className='text-green-700'>  Care for All!</span></h1>
                     <div className=' gap-6 bg-blue-50 p-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
@@ -45,7 +46,7 @@ function GalleryMid() {
                         {
                             healthCareGallery.map((item) => (
 
-                                <div key={item.id} className="relative group w-80 h-60 my-1">
+                                <div key={item.id} className="relative group w-full h-60 ">
                                     <img
                                         src={item.image}
                                         alt="Gallery"
@@ -66,15 +67,15 @@ function GalleryMid() {
 
                 </div>
 
-                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black " aria-label="🚀 Internship" />
+                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black " aria-label=" Internship" />
                 <div className="tab-content border-base-300  p-10 bg-blue-50 rounded-b-md">
                     <h1 className=" text-3xl  text-center font-semibold font-ubuntu ">💼 Unlock Your Potential with  <span className='text-yellow-700'> Internship!</span></h1>
-                    <div className=' gap-6 bg-blue-50 p-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+                    <div className=' gap-6 bg-blue-50 p-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 '>
 
                         {
                             internshipGallery.map((item) => (
 
-                                <div key={item.id} className="relative group w-80 h-60 my-1">
+                                <div key={item.id} className="relative group w-full h-60 ">
                                     <img
                                         src={item.image}
                                         alt="Gallery"
@@ -95,7 +96,7 @@ function GalleryMid() {
                     </div>
 
                 </div>
-                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black " aria-label="🤝 Volunteer" />
+                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black " aria-label=" Volunteer" />
                 <div className="tab-content border-base-300  p-10 bg-blue-50 rounded-b-md">
                     <h1 className=" text-3xl  text-center font-semibold font-ubuntu ">🌍 Explore the World of <span className='text-pink-700'>Volunteering!</span></h1>
                     <div className='gap-6 bg-blue-50 p-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
@@ -103,7 +104,7 @@ function GalleryMid() {
                         {
                             volunteersGallery.map((item) => (
 
-                                <div key={item.id} className="relative group w-80 h-60 my-1">
+                                <div key={item.id} className="relative group w-full h-60 ">
                                     <img
                                         src={item.image}
                                         alt="Gallery"
@@ -125,7 +126,7 @@ function GalleryMid() {
 
                 </div>
 
-                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black "  aria-label="❤️ Donation" />
+                <input type="radio" name="my_tabs_2" className="tab hover:bg-yellow-400 text-white hover:text-black "  aria-label=" Donation" />
                 <div className="tab-content border-base-300  p-10 bg-blue-50 rounded-b-md">
                     <h1 className=" text-3xl  text-center font-semibold font-ubuntu ">🍽️ Spreading Smiles Through<span className='text-cyan-700'> Donation!</span></h1>
                     <div className='gap-6 bg-blue-50 p-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
@@ -134,7 +135,7 @@ function GalleryMid() {
                             donationGallery.map((item) => (
 
 
-                                <div key={item.id} className="relative group  w-80 h-60 my-1 ">
+                                <div key={item.id} className="relative group  w-full h-60 ">
 
                                     <img
                                         src={item.image}
