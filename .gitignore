@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-node_modules
-.vscode/
-=======
+
 # Logs
 logs
 *.log
@@ -30,4 +27,3 @@ dist-ssr
 .env
 .env.local
 
->>>>>>> 0afe656 (added login/signup page with backend)
