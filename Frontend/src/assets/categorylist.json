@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Online Learning Platforms",
+    "category": "Education",
+    "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "title": "Health & Wellness Program",
+    "category": "Healthcare",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 3,
+    "title": "Software Development Internship",
+    "category": "Internship",
+    "image": "https://plus.unsplash.com/premium_photo-1727209458324-5d04d5e00cf4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aW50ZXJuc2hpcHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 4,
+    "title": "Community Clean-Up Drive",
+    "category": "Volunteer",
+    "image": "https://images.unsplash.com/photo-1617953141905-b27fb1f17d88?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dm9sdW50ZXJ8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    "id": 5,
+    "title": "Support Underprivileged Children",
+    "category": "Donation",
+    "image": "https://plus.unsplash.com/premium_photo-1683140538884-07fb31428ca6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RG9uYXRpb258ZW58MHx8MHx8fDA%3D"
+  }
+]
