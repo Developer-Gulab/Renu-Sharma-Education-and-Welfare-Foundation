@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "date": "05 Feb 2024",
+        "initiative": "Free Health Camp",
+        "event": "Medical Checkups",
+        "impact": "Treated 800+ patients",
+        "image": "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg"
+    },
+    {
+        "id": 2,
+        "date": "20 Mar 2024",
+        "initiative": "Blood Donation Drive",
+        "event": "Blood Donation Campaign",
+        "impact": "Collected 500+ units",
+        "image": "https://images.pexels.com/photos/3873196/pexels-photo-3873196.jpeg"
+    },
+    {
+        "id": 3,
+        "date": "10 Apr 2024",
+        "initiative": "Cancer Awareness",
+        "event": "Early Detection & Prevention",
+        "impact": "Reached 5,000+ people",
+        "image": "https://images.pexels.com/photos/7088487/pexels-photo-7088487.jpeg"
+    },
+    {
+        "id": 4,
+        "date": "28 Apr 2024",
+        "initiative": "Mental Health Support",
+        "event": "Workshops & Counseling",
+        "impact": "Helped 1,200+ individuals",
+        "image": "https://images.pexels.com/photos/4100427/pexels-photo-4100427.jpeg"
+    },
+    {
+        "id": 5,
+        "date": "15 May 2024",
+        "initiative": "Children’s Vaccination Drive",
+        "event": "Immunization Program",
+        "impact": "Vaccinated 1,500+ kids",
+        "image": "https://images.pexels.com/photos/8376274/pexels-photo-8376274.jpeg"
+    },
+    {
+        "id": 6,
+        "date": "10 Jun 2024",
+        "initiative": "Free Eye Checkup",
+        "event": "Vision Screening Camp",
+        "impact": "Provided glasses to 500+ people",
+        "image": "https://images.pexels.com/photos/6476266/pexels-photo-6476266.jpeg"
+    },
+    {
+        "id": 7,
+        "date": "18 Jul 2024",
+        "initiative": "Dental Care Initiative",
+        "event": "Free Dental Checkups",
+        "impact": "Served 700+ patients",
+        "image": "https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg"
+    },
+    {
+        "id": 8,
+        "date": "22 Aug 2024",
+        "initiative": "HIV/AIDS Awareness",
+        "event": "Educational Workshops",
+        "impact": "Reached 2,500+ individuals",
+        "image": "https://images.pexels.com/photos/8450474/pexels-photo-8450474.jpeg"
+    },
+    {
+        "id": 9,
+        "date": "10 Sep 2024",
+        "initiative": "Yoga & Wellness Camp",
+        "event": "Stress Management Sessions",
+        "impact": "Benefited 1,000+ people",
+        "image": "https://images.pexels.com/photos/3822356/pexels-photo-3822356.jpeg"
+    },
+    {
+        "id": 10,
+        "date": "05 Oct 2024",
+        "initiative": "Diabetes Prevention Drive",
+        "event": "Health Awareness & Free Tests",
+        "impact": "Tested 2,000+ individuals",
+        "image": "https://images.pexels.com/photos/3873196/pexels-photo-3873196.jpeg"
+    }
+]

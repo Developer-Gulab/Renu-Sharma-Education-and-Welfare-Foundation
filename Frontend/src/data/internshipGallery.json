@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "date": "10 Jan 2024",
+        "company": "Tech Innovators",
+        "role": "Web Development Intern",
+        "impact": "Built an e-commerce website",
+        "image": "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg"
+    },
+    {
+        "id": 2,
+        "date": "20 Feb 2024",
+        "company": "AI Solutions",
+        "role": "Machine Learning Intern",
+        "impact": "Developed an AI chatbot",
+        "image": "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg"
+    },
+    {
+        "id": 3,
+        "date": "15 Mar 2024",
+        "company": "CyberTech",
+        "role": "Cybersecurity Intern",
+        "impact": "Enhanced network security",
+        "image": "https://images.pexels.com/photos/5380663/pexels-photo-5380663.jpeg"
+    },
+    {
+        "id": 4,
+        "date": "05 Apr 2024",
+        "company": "FinTech Corp",
+        "role": "Data Analyst Intern",
+        "impact": "Analyzed financial trends",
+        "image": "https://images.pexels.com/photos/6693651/pexels-photo-6693651.jpeg"
+    },
+    {
+        "id": 5,
+        "date": "18 May 2024",
+        "company": "HealthTech",
+        "role": "App Developer Intern",
+        "impact": "Built a health monitoring app",
+        "image": "https://images.pexels.com/photos/4031867/pexels-photo-4031867.jpeg"
+    },
+    {
+        "id": 6,
+        "date": "30 Jun 2024",
+        "company": "Green Energy Co.",
+        "role": "Sustainability Intern",
+        "impact": "Worked on renewable energy solutions",
+        "image": "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg"
+    },
+    {
+        "id": 7,
+        "date": "10 Jul 2024",
+        "company": "EduTech Solutions",
+        "role": "Content Developer Intern",
+        "impact": "Created interactive learning modules",
+        "image": "https://images.pexels.com/photos/414535/pexels-photo-414535.jpeg"
+    },
+    {
+        "id": 8,
+        "date": "22 Aug 2024",
+        "company": "AutoTech",
+        "role": "Software Engineer Intern",
+        "impact": "Developed automation software",
+        "image": "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg"
+    },
+    {
+        "id": 9,
+        "date": "05 Sep 2024",
+        "company": "Cloud Systems",
+        "role": "Cloud Computing Intern",
+        "impact": "Optimized cloud infrastructure",
+        "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg"
+    },
+    {
+        "id": 10,
+        "date": "18 Oct 2024",
+        "company": "Blockchain Innovators",
+        "role": "Blockchain Developer Intern",
+        "impact": "Developed decentralized applications",
+        "image": "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg"
+    }
+]
+

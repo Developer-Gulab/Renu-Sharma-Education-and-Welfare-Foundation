@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "date": "05 Jan 2024",
+        "cause": "Food Donation",
+        "event": "Meals for the Needy",
+        "impact": "1,000+ meals distributed",
+        "image": "https://images.pexels.com/photos/6646930/pexels-photo-6646930.jpeg"
+    },
+    {
+        "id": 2,
+        "date": "15 Feb 2024",
+        "cause": "Clothes Donation",
+        "event": "Winter Clothes Drive",
+        "impact": "500+ families helped",
+        "image": "https://images.pexels.com/photos/4100427/pexels-photo-4100427.jpeg"
+    },
+    {
+        "id": 3,
+        "date": "10 Mar 2024",
+        "cause": "Blood Donation",
+        "event": "Life-Saving Blood Drive",
+        "impact": "300+ units collected",
+        "image": "https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg"
+    },
+    {
+        "id": 4,
+        "date": "20 Apr 2024",
+        "cause": "Stationery Donation",
+        "event": "School Supplies for Kids",
+        "impact": "700+ students supported",
+        "image": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+    },
+    {
+        "id": 5,
+        "date": "08 May 2024",
+        "cause": "Medical Aid",
+        "event": "Free Medicine & Health Checkups",
+        "impact": "200+ patients treated",
+        "image": "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg"
+    },
+    {
+        "id": 6,
+        "date": "25 Jun 2024",
+        "cause": "Shelter Support",
+        "event": "Housing Assistance for Homeless",
+        "impact": "50+ families provided shelter",
+        "image": "https://images.pexels.com/photos/5064606/pexels-photo-5064606.jpeg"
+    },
+    {
+        "id": 7,
+        "date": "10 Jul 2024",
+        "cause": "Tree Plantation",
+        "event": "Green Earth Campaign",
+        "impact": "Planted 5,000+ trees",
+        "image": "https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg"
+    },
+    {
+        "id": 8,
+        "date": "15 Aug 2024",
+        "cause": "Disaster Relief",
+        "event": "Flood Relief Efforts",
+        "impact": "Helped 3,000+ affected families",
+        "image": "https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg"
+    },
+    {
+        "id": 9,
+        "date": "05 Sep 2024",
+        "cause": "Child Education",
+        "event": "School Enrollment Drive",
+        "impact": "Admitted 400+ kids to school",
+        "image": "https://images.pexels.com/photos/7107370/pexels-photo-7107370.jpeg"
+    },
+    {
+        "id": 10,
+        "date": "12 Oct 2024",
+        "cause": "Mental Health",
+        "event": "Awareness & Counseling Camp",
+        "impact": "500+ individuals benefited",
+        "image": "https://images.pexels.com/photos/4100427/pexels-photo-4100427.jpeg"
+    }
+]

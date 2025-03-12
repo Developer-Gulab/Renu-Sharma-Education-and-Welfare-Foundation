@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        lora: ["Lora", "serif"],
+        dancing: ["Dancing Script", "cursive"],
+        playfair: ["Playfair Display", "serif"],
+        ubuntu: ["Ubuntu"],
+      },
+     
+      
+    },
   },
   plugins: [
     require('daisyui'),
