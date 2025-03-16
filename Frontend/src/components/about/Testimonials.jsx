@@ -58,13 +58,13 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000); // Change testimonial every 5 seconds
+    }, 7000); // Change testimonial every 7 seconds for a slower effect
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#001F3F] to-[#003366]">
+    <section className="py-16  bg-[#001F3F]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Testimonials</h2>
         <div className="flex justify-center space-x-4">
@@ -75,13 +75,13 @@ const Testimonials = () => {
             initial={{ opacity: 0, x: -100 }} // Start from the left
             animate={{ opacity: 1, x: 0 }} // Move to center
             exit={{ opacity: 0, x: 100 }} // Exit to the right
-            transition={{ duration: 0.5 }} // Animation duration
+            transition={{ duration: 1 }} // Animation duration
           >
             <div className="flex flex-col items-center mb-4">
               <img src={testimonials[currentIndex].image} alt={testimonials[currentIndex].name} className="w-24 h-24 rounded-full mb-4" />
               <div className="text-gray-600 italic mb-4">{testimonials[currentIndex].text}</div>
               <div className="font-semibold text-black">{testimonials[currentIndex].name}</div>
-              <div className="text-gray-500 text-sm">{testimonials[currentIndex].role}</div>
+              {/* <div className="text-gray-500 text-sm">{test testimonials[currentIndex].role}</div> */}
             </div>
           </motion.div>
 
@@ -92,7 +92,7 @@ const Testimonials = () => {
             initial={{ opacity: 0, x: 100 }} // Start from the right
             animate={{ opacity: 1, x: 0 }} // Move to center
             exit={{ opacity: 0, x: -100 }} // Exit to the left
-            transition={{ duration: 0.5 }} // Animation duration
+            transition={{ duration: 1 }} // Animation duration
           >
             <div className="flex flex-col items-center mb-4">
               <img src={testimonials[(currentIndex + 1) % testimonials.length].image} alt={testimonials[(currentIndex + 1) % testimonials.length].name} className="w-24 h-24 rounded-full mb-4" />
