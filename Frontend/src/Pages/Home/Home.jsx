@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Heart, Users, Globe, Trees } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+// import { motion } from "framer-react";
 
 const Home = () => {
   const navigate = useNavigate();
   const [donationAmount, setDonationAmount] = useState(10);
   const [customAmount, setCustomAmount] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [direction, setDirection] = useState("left-to-right");
 
   const impactStats = [
     {
@@ -172,13 +174,19 @@ const Home = () => {
       ),
     },
   ];
-
-  const donationAmounts = [25, 50, 100, 250];
   const images = [
     "url('https://img.freepik.com/premium-photo/big-crowd-indian-women-vector-avatars-indian-woman-representing-different-statesreligions-i_1057738-35662.jpg')",
     "url('https://cdn.downtoearth.org.in/library/large/2022-02-25/0.25794500_1645773147_istock-870402320.jpg')",
     "url('https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/Education-in-india-1024x606-1.jpg')",
   ];
+
+  const image = [
+    "url('https://news.blr.com/app/uploads/sites/3/2017/10/woman-leader.jpg')",
+    "url('https://news.blr.com/app/uploads/sites/3/2017/10/woman-leader.jpg')",
+    "url('https://news.blr.com/app/uploads/sites/3/2017/10/woman-leader.jpg')",
+  ];
+
+  const donationAmounts = [25, 50, 100, 250];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -199,6 +207,7 @@ const Home = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent opacity-80"></div>
+
         <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center h-full">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white animate-fade-in">
             Empowering Lives, <br /> Creating Change
@@ -210,7 +219,7 @@ const Home = () => {
           <div className="space-x-4 animate-fade-in">
             <button
               onClick={() => navigate("/donate")}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform"
             >
               Donate for good
               <ArrowRight className="inline-block ml-2" />
@@ -277,16 +286,16 @@ const Home = () => {
       </section>
 
       {/* Programs  */}
-      <section className=" py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
+      <section className=" flex justify-center  py-16">
+        <div className="container mx-auto px-4 w-[60%]">
+          <h2 className="text-4xl  text-gray-50 font-bold text-center mb-32">
             Our Program
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-28">
             {programInitiatives.map((program, index) => (
               <div
                 key={index}
-                className="text-center  p-6  transition duration-300"
+                className="text-center bg-white bg-opacity-10 rounded-lg  p-6  transition duration-300"
               >
                 <div className="flex justify-center mb-4">{program.icon}</div>
                 <h3 className="text-xl text-gray-200 font-semibold mb-4">
@@ -331,7 +340,7 @@ const Home = () => {
           <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
             Support Our Mission
           </h2>
-          <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <div className="max-w-xl mx-auto bg-opacity-10 bg-white p-8 rounded-lg shadow-lg">
             <div className="flex justify-center mb-6 space-x-4">
               {donationAmounts.map((amount) => (
                 <button
@@ -393,6 +402,32 @@ const Home = () => {
                   <button className="mt-4 text-blue-600 hover:text-blue-800 flex items-center transition duration-300">
                     Learn More <ArrowRight className="ml-2 w-5 h-5" />
                   </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Our Leaders */}
+
+      <section>
+        <div className="container mx-auto flex items-center justify-center flex-col py-16 px-4">
+          <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
+            Our Leaders
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {temp.map((program, index) => (
+              <div
+                key={index}
+                className="relative text-center bg-blue-100 p-6 rounded-lg hover:shadow-lg transition duration-300"
+              >
+                <img
+                  src={image[index].replace("url('", "").replace("')", "")}
+                  alt={program.title}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  {/* <p className="text-white text-center">{program.hoverText}</p> */}
                 </div>
               </div>
             ))}
