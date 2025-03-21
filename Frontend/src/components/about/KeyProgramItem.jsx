@@ -6,18 +6,18 @@ import 'aos/dist/aos.css';
 const KeyProgramItem = ({ title, description, stats, icon, aosAnimation, aosDelay }) => {
   return (
     <div 
-      className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex flex-col items-center w-full" 
+      className="bg-[#6A9AB0] p-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex flex-col items-center w-full" 
       data-aos={aosAnimation} 
       data-aos-delay={aosDelay}
     >
-      <div className="text-4xl text-white mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-4 text-[#2c5169] text-center">{title}</h3>
-      <p className="text-lg mb-4 text-center">{description}</p>
+      <div className="text-3xl text-white mb-2">{icon}</div>
+      <h3 className="text-lg font-semibold mb-2 text-[#2c5169] text-center">{title}</h3>
+      <p className="text-sm mb-2 text-center">{description}</p>
       <div className="flex justify-around w-full">
         {stats.map((stat, index) => (
           <div key={index} className="text-center">
-            <span className="text-4xl font-bold text-blue-600">{stat.number}</span>
-            <span className="text-gray-600 block">{stat.label}</span>
+            <span className="text-2xl font-bold text-blue-600">{stat.number}</span>
+            <span className="text-gray-600 block text-sm">{stat.label}</span>
           </div>
         ))}
       </div>
@@ -30,10 +30,10 @@ const KeyProgramsSection = () => {
     <section className="py-16 bg-[#001F3F]" data-aos="fade-up">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">Our Key Programs</h2>
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col md:flex-row gap-6">
           <KeyProgramItem 
             title="Community Health Initiatives"
-            description="Providing preventative care, maternal health services, and chronic disease management through our network of mobile and permanent health centers. Our approach emphasizes health education alongside treatment."
+            description="Providing preventative care, maternal health services, and chronic disease management through our network of mobile and permanent health centers."
             stats={[
               { number: 18, label: "Health Camps" },
               { number: "35,000+", label: "Medical Consultations" },
@@ -45,7 +45,7 @@ const KeyProgramsSection = () => {
           />
           <KeyProgramItem 
             title="Education Transformation"
-            description="Implementing innovative teaching methodologies, providing learning resources, and developing curriculum that addresses both academic and life skills. Our programs focus on critical thinking and practical application."
+            description="Implementing innovative teaching methodologies and providing learning resources."
             stats={[
               { number: 42, label: "School Programs" },
               { number: "15,000+", label: "Students Reached" },
@@ -57,7 +57,7 @@ const KeyProgramsSection = () => {
           />
           <KeyProgramItem 
             title="Knowledge Integration"
-            description="Creating pathways between healthcare knowledge and educational outcomes through specialized programs that teach health literacy, nutrition, and preventative care within school environments."
+            description="Creating pathways between healthcare knowledge and educational outcomes."
             stats={[
               { number: 28, label: "Integrated Programs" },
               { number: "10,000+", label: "Participants" },

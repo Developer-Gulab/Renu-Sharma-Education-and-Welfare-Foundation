@@ -24,34 +24,20 @@ const PartnersSection = () => {
         <p className="text-center text-gray-300 mb-8">
           We collaborate with organizations that share our vision for integrated community development.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           <PartnerItem 
-            name="Global Health Initiative"
-            description="A global organization focused on improving health outcomes in underserved communities."
-            logo="https://via.placeholder.com/150" // Replace with actual logo URL
+            name="ILEARN Institute"
+            description="A leading educational institution focused on innovative learning solutions. ILEARN Institute is dedicated to transforming education through technology and personalized learning experiences. Our programs are designed to empower students with critical thinking skills, creativity, and the ability to adapt to a rapidly changing world. We offer a range of courses that cater to diverse learning needs, ensuring that every student has the opportunity to succeed."
+            logo="https://content3.jdmagicbox.com/comp/malappuram/g6/9999px483.x483.240216115756.q8g6/catalogue/ilearn-institute-of-it-education-valanchery-malappuram-institutes-for-distance-education-zdm03geyol.jpg" // Replace with actual logo URL
             aosAnimation="zoom-in"
             aosDelay={100}
           />
           <PartnerItem 
-            name="Education First"
-            description="Dedicated to ensuring quality education for all children, regardless of their background."
-            logo="https://via.placeholder.com/150" // Replace with actual logo URL
+            name="Pregrade Learning Institute"
+            description="Dedicated to providing quality education and resources for early learners. Pregrade Learning Institute focuses on developing foundational skills in children through innovative teaching methods and engaging learning materials. Our programs are designed to foster a love for learning and prepare students for future academic success."
+            logo="https://framerusercontent.com/images/cCTBuhN2veXZbg4devKwcUW9394.png?scale-down-to=512" // Replace with actual logo URL
             aosAnimation="zoom-in"
             aosDelay={200}
-          />
-          <PartnerItem 
-            name="Community Alliance"
-            description="Working to empower local communities through sustainable development initiatives."
-            logo="https://via.placeholder.com/150" // Replace with actual logo URL
-            aosAnimation="zoom-in"
-            aosDelay={300}
-          />
-          <PartnerItem 
-            name="Future Builders"
-            description="Investing in the future by supporting youth development and education programs."
-            logo="https://via.placeholder.com/150" // Replace with actual logo URL
-            aosAnimation="zoom-in"
-            aosDelay={400}
           />
         </div>
       </div>
