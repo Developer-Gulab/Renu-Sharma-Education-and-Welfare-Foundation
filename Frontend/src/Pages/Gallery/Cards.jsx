@@ -1,10 +1,11 @@
 import React from "react";
-export default function Cards({item}){
+export default function Cards({item,onClick}){
     console.log(item);
     return(
         <>
-    <div className="mt-4 my-3 p-3">
-  <div className="relative group w-full overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:scale-[1.05] hover:shadow-3xl">
+    <div className="mt-4 my-3 p-3 cursor-pointer" onClick={onClick}>
+  <div className="relative group w-full overflow-hidden rounded-2xl shadow-xl transition-all duration-500 
+  hover:scale-[1.05] hover:shadow-3xl ">
     
     {/* Background Image with Smooth Hover Zoom */}
     <figure className="relative overflow-hidden rounded-2xl">

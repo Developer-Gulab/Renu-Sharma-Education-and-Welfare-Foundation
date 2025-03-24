@@ -5,15 +5,25 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import list from "../../assets/categorylist.json";
 import Cards from "./Cards";
+import { useState } from "react";
 import {motion} from "framer-motion";
+import GalleryMid from "./GalleryMid";
 export default function GalleryHeader() {
+  const [selectedCategory, setSelectedCategory] = useState("Education");
+
+  const handleCardClick = (category) => {
+    setSelectedCategory(category);
+  };
  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    initialSlide: 0,
+  dots: true,  
+  infinite: true,  // Enables looping back to the first slide
+  speed: 2000,  // Slow and smooth transition (2 seconds)
+  slidesToShow: 2,
+  slidesToScroll: 1,  // Moves one slide at a time for smooth effect
+  autoplay: true,  // Auto-play enabled
+  autoplaySpeed: 4000, // 3 seconds before the next slide appears
+  cssEase: "ease-in-out",  // Smooth transition effect
+  pauseOnHover: false,  // Prevent pausing when hovering
     responsive: [
       {
         breakpoint: 1024,
@@ -106,13 +116,28 @@ export default function GalleryHeader() {
     <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
     {/*carousel*/}
     <div className="md:px-4 md:mt-8 mt-4">
-       <div className="slider-container">
-      <Slider {...settings}>
-         {list.map((el)=>(<Cards item={el} key={el.id}/>))}
-      </Slider>
-    </div>
+    <div className="slider-container">
+  <Slider {...settings}>
+    {list.map((el, index) => (
+      <motion.div
+        key={el.id}
+        initial={{ opacity: 0, y: 20, rotateY: 20 }}
+        whileInView={{ opacity: 1, y: 0, rotateY:0 }}
+        transition={{ duration: 0.5, ease: "easeInOut", delay: index * 0.1 }}
+        style={{ perspective: 1000 }}
+      >
+        <Cards item={el} onClick={() => handleCardClick(el.category)} />
+      </motion.div>
+    ))}
+  </Slider>
+</div>
+
       </div>
+     
     </div>
+    <hr className="w-1/2 mx-auto mt-12 bg-black-700 h-1 "></hr>
+    {/* Conditionally Render GalleryMid */}
+    {selectedCategory && <GalleryMid selectedCategory={selectedCategory} />}
     </>
   );
 }
