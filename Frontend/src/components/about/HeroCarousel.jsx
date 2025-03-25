@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const images = [
   {
@@ -48,11 +50,10 @@ const HeroCarousel = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black flex items-center justify-center">
           <div className="text-white text-center p-8 rounded-lg shadow-lg">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-shadow">About Us</h1>
-            {/* <p className="text-lg mb-4">We are dedicated to uplifting individuals and communities through innovative solutions and collaborative efforts.</p> */}
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-shadow " data-aos="fade-down" data-aos-duration="1000">About Us</h1>
             <div className="max-w-2xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">{images[currentIndex].title}</h2>
-              <p className="text-xl">{images[currentIndex].description}</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1000">{images[currentIndex].title}</h2>
+              <p className="text-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">{images[currentIndex].description}</p>
             </div>
           </div>
         </div>
@@ -62,4 +63,3 @@ const HeroCarousel = () => {
 };
 
 export default HeroCarousel;
-

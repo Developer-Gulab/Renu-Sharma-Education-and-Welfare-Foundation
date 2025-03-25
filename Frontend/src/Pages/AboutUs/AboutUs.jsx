@@ -28,18 +28,19 @@ export default function AboutUs() {
      
       <br />
       <br />
-      {/* About Renu Sharma Foundation Section */}
-      <section className="py-16 bg-gradient-to-r from-[#001F3F] to-[#3A6D8C]" data-aos="fade-up">
-        <div className="container mx-auto px-4 md:px-20">
-          <h2 className="text-3xl font-bold text-center mb-6 text-white shadow-md">About Renu Sharma Foundation</h2>
-          <p className="text-lg text-center mb-4 text-gray-200">
-            The Renu Sharma Foundation is dedicated to uplifting individuals and communities through various initiatives. Our mission is to provide support, resources, and opportunities to those in need, ensuring a brighter future for all.
-          </p>
-          <p className="text-lg text-center text-gray-200">
-            We believe in the power of community and strive to make a positive impact through education, healthcare, and social welfare programs.
-          </p>
-        </div>
-      </section>
+    
+{/* About Renu Sharma Foundation Section */}
+<section className="py-16 bg-[#001F3F]" data-aos="fade-up">
+  <div className="container mx-auto px-20">
+    <h2 className="text-3xl font-bold text-center mb-6 text-[#3A6D8C]" data-aos="fade-down" data-aos-duration="1000">About Renu Sharma Foundation</h2>
+    <p className="text-lg text-center mb-4 text-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      The Renu Sharma Foundation is dedicated to uplifting individuals and communities through various initiatives. Our mission is to provide support, resources, and opportunities to those in need, ensuring a brighter future for all.
+    </p>
+    <p className="text-lg text-center text-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+      We believe in the power of community and strive to make a positive impact through education, healthcare, and social welfare programs.
+    </p>
+  </div>
+</section>
 
       {/* What We Do Section */}
       <section className="py-16 bg-[#001F3F]" data-aos="zoom-in">
@@ -101,7 +102,7 @@ export default function AboutUs() {
       {/* About Founder Section */}
       <section className="py-16 bg-[#001F3F]" data-aos="fade-up">
         <div className="container mx-auto px-4 md:px-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">About Our Founder</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">About Our Founder And Co-founder</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="aspect-w-4 aspect-h-5 relative" data-aos="fade-right">
               <div className="w-full h-[500px] rounded-2xl shadow-2xl overflow-hidden group">
@@ -135,8 +136,10 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
+          
           {/* Co-Founders Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+            
             <div data-aos="fade-left" className="flex flex-col items-center justify-center h-full text-center">
               <h3 className="text-xl font-semibold mb-4">Dr. Renu Sharma</h3>
               <p className="text-gray-400 mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo officia maxime laudantium iste, voluptatibus ab omnis sequi quisquam dolore similique explicabo architecto magni. Dicta aperiam voluptates ut rerum illum quasi!</p>
