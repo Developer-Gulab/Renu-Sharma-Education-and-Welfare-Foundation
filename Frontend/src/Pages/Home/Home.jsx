@@ -1,34 +1,37 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Heart, Users, Globe, Trees } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-// import { motion } from "framer-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
   const navigate = useNavigate();
   const [donationAmount, setDonationAmount] = useState(10);
   const [customAmount, setCustomAmount] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [direction, setDirection] = useState("left-to-right");
 
   const impactStats = [
     {
       icon: <Users className="text-blue-600 w-12 h-12" />,
-      number: "5000+",
+      number: 5000,
+      suffix: "+",
       label: "educate childrens",
     },
     {
       icon: <Globe className="text-green-600 w-12 h-12" />,
-      number: "20+",
+      number: 20,
+      suffix: "+",
       label: "States Served",
     },
     {
       icon: <Heart className="text-red-600 w-12 h-12" />,
-      number: "100+",
+      number: 100,
+      suffix: "+",
       label: "Active Programs",
     },
     {
       icon: <Trees className="text-green-600 w-12 h-12" />,
-      number: "10000+",
+      number: 10000,
+      suffix: "+",
       label: "trees planted",
     },
   ];
@@ -179,11 +182,16 @@ const Home = () => {
     "url('https://cdn.downtoearth.org.in/library/large/2022-02-25/0.25794500_1645773147_istock-870402320.jpg')",
     "url('https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/Education-in-india-1024x606-1.jpg')",
   ];
-
   const image = [
-    "url('https://news.blr.com/app/uploads/sites/3/2017/10/woman-leader.jpg')",
-    "url('https://news.blr.com/app/uploads/sites/3/2017/10/woman-leader.jpg')",
-    "url('https://news.blr.com/app/uploads/sites/3/2017/10/woman-leader.jpg')",
+    "url('https://img.freepik.com/premium-photo/modern-business-man-formal-suit-standing-with-crossed-arms-isolated-grey-background-businesspeople-concept_533057-1641.jpg')",
+    "url('https://img.freepik.com/premium-photo/young-man-formal-attire-his-workplace-generative-ai_94628-10978.jpg')",
+    "url('https://th.bing.com/th/id/OIP.RLcJBl8mSFJnFtcg13TGDwHaE8?rs=1&pid=ImgDetMain')",
+  ];
+
+  const videoSources = [
+    { src: "/videos/video1.mp4", title: "Community Outreach" },
+    { src: "/videos/video2.mp4", title: "Education Programs" },
+    { src: "/videos/video3.mp4", title: "Environmental Efforts" },
   ];
 
   const donationAmounts = [25, 50, 100, 250];
@@ -199,69 +207,162 @@ const Home = () => {
   return (
     <div className="bg-[#001F3F] min-h-screen">
       {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center h-[98vh] text-white"
-        style={{
-          backgroundImage: images[currentImageIndex],
-          transition: "background-image 1s ease-in-out",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent opacity-80"></div>
+      <section className="relative bg-cover bg-center h-screen text-white overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: images[currentImageIndex] }}
+          />
+        </AnimatePresence>
 
-        <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center h-full">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white animate-fade-in">
-            Empowering Lives, <br /> Creating Change
-          </h1>
-          <p className="text-xl mb-8 max-w-2xl text-gray-300 animate-fade-in">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-transparent mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-transparent to-blue-900/60"></div>
+
+        <motion.div
+          className="relative z-10 container mx-auto px-4 flex flex-col justify-center h-full"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.h1
+            className="text-4xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            <motion.span
+              className="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity }}
+            >
+              Empowering Lives,
+            </motion.span>
+            <br />
+            <motion.span
+              className="inline-block mt-4"
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              Creating Change
+            </motion.span>
+          </motion.h1>
+
+          <motion.p
+            className="text-xl mb-8 max-w-2xl text-gray-100 font-medium"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
             Together, we can make a difference and
             <br /> transform communities through sustainable solutions.
-          </p>
-          <div className="space-x-4 animate-fade-in">
-            <button
+          </motion.p>
+
+          <motion.div
+            className="space-x-4"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <motion.button
               onClick={() => navigate("/donate")}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform group relative overflow-hidden"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Donate for good
-              <ArrowRight className="inline-block ml-2" />
-            </button>
+              <span className="relative z-10 flex items-center">
+                Donate for good
+                <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </motion.button>
+          </motion.div>
+
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
+            {images.map((_, index) => (
+              <motion.div
+                key={index}
+                className={`w-3 h-3 rounded-full ${
+                  currentImageIndex === index ? "bg-white" : "bg-white/30"
+                }`}
+                whileHover={{ scale: 1.2 }}
+                onClick={() => setCurrentImageIndex(index)}
+              />
+            ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* About us */}
       <section className="mt-20 py-16">
-        <div className="container mx-auto flex items-center justify-center flex-col md:flex-row px-4">
-          <div className="md:w-1/2">
-            <img
-              src="https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/Education-in-india-1024x606-1.jpg'"
-              alt="About Us"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-            <h2 className="text-4xl text-gray-50 font-bold text-center md:text-left mb-6">
-              Who are we?
-            </h2>
-            <p className="text-gray-200 text-lg leading-relaxed mb-8">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestiae labore, iusto quasi quisquam quo numquam illum id nemo
-              laboriosam dicta dolorum. Est veniam magnam deserunt qui! Hic
-              voluptatibus eum facilis! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eos repellat omnis, asperiores magnam ad,
-              reprehenderit nostrum porro architecto reiciendis ullam iure
-              minima voluptatem exercitationem illo suscipit earum nobis
-              perferendis aliquam. Consequuntur dolor expedita distinctio
-              exercitationem, provident odit, officia ut vero molestias deleniti
-              voluptatibus iste quae quod incidunt modi ipsum?
-            </p>
-            <button
-              onClick={() => navigate("/about")}
-              className="bg-blue-600  hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300"
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="container mx-auto flex items-center justify-center flex-col md:flex-row px-4"
+          >
+            <motion.div
+              className="md:w-1/2"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Know more
-            </button>
-          </div>
-        </div>
+              <img
+                src="https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/Education-in-india-1024x606-1.jpg'"
+                alt="About Us"
+                className="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+              />
+            </motion.div>
+
+            <motion.div
+              className="md:w-1/2 md:pl-12 mt-8 md:mt-0"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, staggerChildren: 0.1 }}
+            >
+              <motion.h2
+                className="text-4xl text-gray-50 font-bold text-center md:text-left mb-6"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.6 }}
+              >
+                Who are we?
+              </motion.h2>
+
+              <motion.p
+                className="text-gray-200 text-lg leading-relaxed mb-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Molestiae labore, iusto quasi quisquam quo numquam illum id nemo
+                laboriosam dicta dolorum. Est veniam magnam deserunt qui! Hic
+                voluptatibus eum facilis! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit.
+              </motion.p>
+
+              <motion.button
+                onClick={() => navigate("/about")}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)",
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Know more
+              </motion.button>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
       </section>
 
       {/* Impact  */}
@@ -269,20 +370,49 @@ const Home = () => {
         <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
           Our Impact
         </h2>
-        <div className="grid md:grid-cols-4 mt-24 gap-8 ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-4 mt-24 gap-8 "
+        >
           {impactStats.map((stat, index) => (
-            <div
+            <motion.div
               key={index}
-              className="text-center flex justify-center items-center  flex-col p-6 "
+              className="text-center flex justify-center items-center flex-col p-6 hover:bg-white/5 rounded-xl transition-all duration-300 cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
             >
-              {stat.icon}
-              <h3 className="text-4xl font-bold text-gray-100 mt-4 ">
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                {stat.icon}
+              </motion.div>
+              <motion.h3
+                className="text-4xl font-bold text-gray-100 mt-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
                 {stat.number}
-              </h3>
-              <p className="text-gray-600">{stat.label}</p>
-            </div>
+                <span className="text-xl">{stat.suffix}</span>
+              </motion.h3>
+              <motion.p
+                className="text-gray-400 font-medium mt-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                {stat.label}
+              </motion.p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* Programs  */}
@@ -413,7 +543,7 @@ const Home = () => {
       <section>
         <div className="container mx-auto flex items-center justify-center flex-col py-16 px-4">
           <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
-            Our Leaders
+            Our Team
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {temp.map((program, index) => (
@@ -434,6 +564,36 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* feedback */}
+      <div>
+        <div className="container mx-auto flex items-center justify-center flex-col py-16 px-4">
+          <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
+            What other says
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {temp.map((program, index) => (
+              <div
+                key={index}
+                className="relative text-center bg-blue-100 p-6 rounded-lg hover:shadow-lg transition duration-300"
+              >
+                <div className="relative">
+                  <video
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                    autoPlay
+                    loop
+                    muted
+                    // playsInline
+                    src={videoSources[index].src}
+                    controls
+                  />
+                </div>
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0  transition-opacity duration-300"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
