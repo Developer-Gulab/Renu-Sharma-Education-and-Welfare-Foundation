@@ -1,50 +1,58 @@
-[
-    {
-      "name": "Web Development",
-      "rating": 4.7,
-      "description": "Explore the world of development and build amazing web applications.",
-      "image": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901789.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
-    },
-    {
-      "name": "UI/UX Design",
-      "rating": 4.5,
-      "description": "Craft beautiful and user-friendly experiences with design and research.",
-      "image": "https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
-    },
-    {
-      "name": "App Development",
-      "rating": 4.6,
-      "description": "Build cutting-edge mobile applications for Android and iOS platforms.",
-      "image": "https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
-    },
-    {
-      "name": "HR Internship",
-      "rating": 4.2,
-      "description": "Gain experience in recruitment, employee engagement, and HR management.",
-      "image": "https://img.freepik.com/free-photo/woman-selecting-pictures-people_1134-466.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
-    },
-    {
-      "name": "Digital Marketing",
-      "rating": 4.4,
-      "description": "Master SEO, social media, and online marketing strategies.",
-      "image": "https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
-    },
-    {
-      "name": "Data Analyst",
-      "rating": 4.8,
-      "description": "Analyze and interpret data to drive meaningful business decisions.",
-      "image": "https://example.com/images/data-analyst.jpg"
-    },
-    {
-      "name": "Social Media Marketing",
-      "rating": 4.3,
-      "description": "Create engaging content and grow online communities effectively.",
-      "image": "https://example.com/images/social-media-marketing.jpg"
-    },
-    {
-      "name": "CSR (Corporate Social Responsibility)",
-      "rating": 4.1,
-      "description": "Make a social impact through ethical and sustainable business practices.",
-      "image": "https://example.com/images/csr.jpg"
-    }
-  ]
+ [
+  {
+    "id": 1,
+    "name": "Web Development",
+    "rating": 4.7,
+    "description": "Explore the world of development and build amazing web applications.",
+    "image": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901789.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+  },
+  {
+    "id": 2,
+    "name": "UI/UX Design",
+    "rating": 4.5,
+    "description": "Craft beautiful and user-friendly experiences with design and research.",
+    "image": "https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+  },
+  {
+    "id": 3,
+    "name": "App Development",
+    "rating": 4.6,
+    "description": "Build cutting-edge mobile applications for Android and iOS platforms.",
+    "image": "https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+  },
+  {
+    "id": 4,
+    "name": "HR Internship",
+    "rating": 4.2,
+    "description": "Gain experience in recruitment, employee engagement, and HR management.",
+    "image": "https://img.freepik.com/free-photo/woman-selecting-pictures-people_1134-466.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+  },
+  {
+    "id": 5,
+    "name": "Digital Marketing",
+    "rating": 4.4,
+    "description": "Master SEO, social media, and online marketing strategies.",
+    "image": "https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+  },
+  {
+    "id": 6,
+    "name": "Data Analyst",
+    "rating": 4.8,
+    "description": "Analyze and interpret data to drive meaningful business decisions.",
+    "image": "https://img.freepik.com/free-photo/paper-analysis_1098-15678.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_keywords_boost"
+  },
+  {
+    "id": 7,
+    "name": "Social Media Marketing",
+    "rating": 4.3,
+    "description": "Create engaging content and grow online communities effectively.",
+    "image": "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_keywords_boost"
+  },
+  {
+    "id": 8,
+    "name": "CSR (Corporate Social Responsibility)",
+    "rating": 4.1,
+    "description": "Make a social impact through ethical and sustainable business practices.",
+    "image": "https://img.freepik.com/free-photo/people-working-tech-brand-together_23-2150966123.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_keywords_boost"
+  }
+] 
