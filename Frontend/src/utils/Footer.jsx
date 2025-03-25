@@ -1,7 +1,17 @@
-import React from "react";
-import { FaInstagram, FaTwitter, FaLinkedin, FaHeart } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const [subscribed, setSubscribed] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = () => {
+    if (email.trim() !== "") {
+      setSubscribed(true);
+      setTimeout(() => setSubscribed(false), 3000);
+    }
+  };
+
   const socialLinks = [
     { 
       name: "Instagram", 
@@ -32,37 +42,42 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#001F3F] to-[#003366] text-white py-12 px-6 shadow-2xl">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 items-center">
-        {/* Logo Section */}
+        {/* Subscribe to Newsletter */}
         <div className="flex flex-col items-center justify-center space-y-4">
-          <div className="relative">
-            <img
-              src="/image.png"
-              alt="Renu Sharma Health Care And Education Foundation Logo"
-              className="h-32 w-32 object-cover border-4 border-white/20 rounded-xl transition-transform duration-300  cursor-pointer"
+          <h3 className="text-lg font-semibold">Subscribe to our Newsletter</h3>
+          <div className="flex space-x-2">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="px-4 py-2 rounded-lg text-gray-900 focus:outline-none border border-gray-300 bg-white shadow-md focus:ring-2 focus:ring-yellow-400"
             />
+            <button 
+              onClick={handleSubscribe} 
+              className="px-4 py-2 bg-yellow-400 text-black font-semibold rounded-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
+            >
+              Subscribe
+            </button>
           </div>
-          
+          {subscribed && (
+            <p className="text-green-400 mt-2 animate-pulse">Thank you for subscribing! 🎉</p>
+          )}
         </div>
 
         {/* Navigation Links */}
         <div className="flex flex-col items-center space-y-4">
           <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { name: "About Us", link: "/about-us" },
-              { name: "Contact Us", link: "/contact-us" },
-              { name: "Gallery", link: "/gallery" },
-              { name: "Internship", link: "/internship" },
-              { name: "Services", link: "/services" },
-            ].map((item, index) => (
+            {["About Us", "Contact Us", "Gallery", "Internship", "Services"].map((name, index) => (
               <a
                 key={index}
-                href={item.link}
+                href={`/${name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="text-base transition-all duration-300 hover:text-yellow-400 hover:translate-x-2 font-medium group relative"
               >
                 <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 text-yellow-400">
                   →
                 </span>
-                {item.name}
+                {name}
               </a>
             ))}
           </div>
@@ -104,9 +119,8 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="text-center mt-6 pt-4 border-t border-white/20">
-        <p className="text-sm opacity-80 flex items-center justify-center space-x-2">
-          <span>© 2025 Renu Sharma HealthCare & Education Foundation | </span>
-          <span>All Rights Reserved</span>
+        <p className="text-sm opacity-80">
+          © 2025 Renu Sharma HealthCare & Education Foundation | All Rights Reserved
         </p>
       </div>
     </footer>
