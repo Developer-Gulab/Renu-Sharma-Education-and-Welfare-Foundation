@@ -29,3 +29,9 @@ dist-ssr
 
 node_modules
 .vscode/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore VSCode settings
+.vscode/
