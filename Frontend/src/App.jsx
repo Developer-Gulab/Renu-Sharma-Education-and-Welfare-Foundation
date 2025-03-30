@@ -11,7 +11,7 @@ import Internship from "./Pages/Internship/Internship";
 import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
-    <div className="bg-[#001F3F] min-h-screen">
+    <div className="bg-[#E8F4F8] min-h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

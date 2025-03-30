@@ -5,10 +5,10 @@ const AboutRenu = () => {
   return (
     <div className="flex flex-col md:flex-row px-4 pt-60 justify-center md:space-x-32 items-center">
       <div className="md:w-1/2">
-        <h1 className="text-3xl md:text-5xl font-bold text-white text-center md:text-left">
+        <h1 className="text-3xl md:text-5xl font-bold text-[#001F3F] text-center md:text-left">
           About Renu Sharma Foundation
         </h1>
-        <p className="mt-8 text-base text-center md:text-left md:text-lg">
+        <p className="mt-8 text-base text-center md:text-left md:text-lg text-gray-700">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat et
           iusto possimus provident, quidem ut maiores porro odio soluta,
           similique exercitationem repellat, sit at. Voluptatum perferendis
@@ -20,13 +20,13 @@ const AboutRenu = () => {
           rerum tenetur quasi, quam laborum optio magnam sequi, iste vel animi.
           <br />
         </p>
-        <button className="bg-white mt-8 py-2 px-6 rounded-full font-bold  md:block cursor-pointer text-white bg-opacity-20 p-1">
+        <button className="bg-[#001F3F] mt-8 py-2 px-6 rounded-full font-bold md:block cursor-pointer text-white p-1">
           About Us
         </button>
       </div>
       <div className="relative h-1/2 mt-32 md:mt-0">
         <motion.div
-          className="absolute inset-0 rounded-full bg-white bg-opacity-40 m-2 md:m-4"
+          className="absolute inset-0 rounded-full bg-[#001F3F] bg-opacity-60 m-2 md:m-4"
           animate={{
             scale: [2, 2.1, 2],
             opacity: [0.1, 0.15, 0.1],
@@ -39,7 +39,7 @@ const AboutRenu = () => {
           }}
         />
         <motion.div
-          className="absolute inset-0 rounded-full bg-white bg-opacity-30 m-2 md:m-4"
+          className="absolute inset-0 rounded-full bg-[#001F3F] bg-opacity-65 m-2 md:m-4"
           animate={{
             scale: [1.8, 1.9, 1.8],
             opacity: [0.15, 0.2, 0.15],
@@ -52,7 +52,7 @@ const AboutRenu = () => {
           }}
         />
         <motion.div
-          className="absolute inset-0 rounded-full bg-white bg-opacity-50 m-2 md:m-4"
+          className="absolute inset-0 rounded-full bg-[#001F3F] bg-opacity-40 m-2 md:m-4"
           animate={{
             scale: [1.6, 1.7, 1.6],
             opacity: [0.15, 0.2, 0.15],
@@ -65,7 +65,7 @@ const AboutRenu = () => {
           }}
         />
         <motion.div
-          className="absolute inset-0 rounded-full bg-white bg-opacity-40 m-2 md:m-4"
+          className="absolute inset-0 rounded-full bg-[#001F3F] bg-opacity-85 m-2 md:m-4"
           animate={{
             scale: [1.4, 1.5, 1.4],
             opacity: [0.15, 0.2, 0.15],

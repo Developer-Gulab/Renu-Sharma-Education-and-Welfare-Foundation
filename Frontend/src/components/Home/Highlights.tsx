@@ -61,7 +61,7 @@ const Highlights = () => {
 
   return (
     <div className="min-h-screen mt-32 flex flex-col items-center justify-center relative">
-      <h2 className="absolute text-7xl font-bold text-white z-10 top-[14%]">
+      <h2 className="absolute text-7xl font-bold text-[#001F3F] z-10 top-[14%]">
         Highlights
       </h2>
       <div className="absolute hidden w-full justify-center xl:mx-auto 2xl:flex z-20">
@@ -78,6 +78,7 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inViews[0] ? { opacity: 0.15, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
+          className="text-[#001F3F]"
         >
           <span>Highlights</span> &nbsp;
           <span>Highlights</span> &nbsp;
@@ -88,6 +89,7 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inViews[1] ? { opacity: 0.15, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
+          className="text-[#001F3F]"
         >
           <span>Highlights</span> &nbsp;
           <span>Highlights</span> &nbsp;
@@ -98,6 +100,7 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inViews[2] ? { opacity: 0.15, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
+          className="text-[#001F3F]"
         >
           <span>Highlights</span> &nbsp;
           <span>Highlights</span> &nbsp;
@@ -108,6 +111,7 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inViews[3] ? { opacity: 0.15, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
+          className="text-[#001F3F]"
         >
           <span>Highlights</span> &nbsp;
           <span>Highlights</span> &nbsp;
@@ -118,6 +122,7 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inViews[4] ? { opacity: 0.15, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
+          className="text-[#001F3F]"
         >
           <span>Highlights</span> &nbsp;
           <span>Highlights</span> &nbsp;
@@ -128,6 +133,7 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inViews[5] ? { opacity: 0.15, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
+          className="text-[#001F3F]"
         >
           <span>Highlights</span> &nbsp;
           <span>Highlights</span> &nbsp;
@@ -138,13 +144,14 @@ const Highlights = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inViews[6] ? { opacity: 0.15, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
+          className="text-[#001F3F]"
         >
           <span>Highlights</span> &nbsp;
           <span>Highlights</span> &nbsp;
           <span>Highlights</span>
         </motion.h1>
       </div>
-      <button className="absolute bottom-20 bg-white py-2 px-6 rounded-full font-bold  md:block cursor-pointer text-white bg-opacity-20 p-1">
+      <button className="absolute bottom-20 bg-[#001F3F] py-2 px-6 rounded-full font-bold md:block cursor-pointer text-white p-1">
         Go to Gallery
       </button>
     </div>

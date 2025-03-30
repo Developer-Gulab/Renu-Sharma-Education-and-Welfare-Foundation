@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const images = [
   "https://give.do/blog/wp-content/uploads/2023/08/The-role-of-the-education-NGO-in-India-enthusiastic-children-beneficiaries-education-classroom-preview.jpg",
@@ -21,13 +21,15 @@ const ImageSlider = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen  bg-[#001F3F]">
-      <h2 className="text-3xl font-bold text-center mb-12 text-white">Our Picture </h2>
-      <div className="relative w-full max-w-4xl h-64 overflow-hidden mx-auto my-8 rounded-lg shadow-lg p-4 bg-gray-100"> {/* Subtle background color */}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#E8F4F8]">
+      <h2 className="text-3xl font-bold text-center mb-12 text-[#001F3F]">
+        Our Picture{" "}
+      </h2>
+      <div className="relative w-full max-w-4xl h-64 overflow-hidden mx-auto my-8 rounded-lg shadow-lg p-4 bg-white">
         <motion.div
           className="absolute inset-0 flex"
-          initial={{ x: '0%' }}
-          animate={{ x: `-${currentIndex * (100 / 3)}%` }} // Move based on current index
+          initial={{ x: "0%" }}
+          animate={{ x: `-${currentIndex * (100 / 3)}%` }}
           transition={{ duration: 0.5 }}
         >
           {images.map((image, index) => (
@@ -35,13 +37,11 @@ const ImageSlider = () => {
               key={index}
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover mx-1" // Added small margin for spacing between images
+              className="w-full h-full object-cover mx-1"
             />
           ))}
         </motion.div>
       </div>
-
-     
     </div>
   );
 };

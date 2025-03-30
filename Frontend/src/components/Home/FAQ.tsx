@@ -54,7 +54,7 @@ const FAQ = () => {
       ref={ref}
     >
       <div className="">
-        <h1 className="text-3xl md:text-6xl font-bold text-white text-center">
+        <h1 className="text-3xl md:text-6xl font-bold text-[#001F3F] text-center">
           Frequently Asked Questions
         </h1>
       </div>
@@ -62,7 +62,7 @@ const FAQ = () => {
         {faqData.map((data, index) => {
           return (
             <motion.div
-              className="bg-white bg-opacity-10 p-8 rounded-2xl cursor-pointer transition-all duration-300"
+              className="bg-white p-8 rounded-2xl cursor-pointer transition-all duration-300 shadow-lg"
               key={data.id}
               onClick={() => handleActiveIndex(data.id)}
               initial={{ opacity: 0, y: 50 }}
@@ -70,10 +70,10 @@ const FAQ = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
             >
               <div className="flex justify-between items-center">
-                <h1 className="text-white text-xl font-semibold">
+                <h1 className="text-[#001F3F] text-xl font-semibold">
                   {data.question}
                 </h1>
-                <span className="text-white text-2xl font-bold cursor-pointer transition-all duration-500">
+                <span className="text-[#001F3F] text-2xl font-bold cursor-pointer transition-all duration-500">
                   {activeIndex.includes(data.id) ? (
                     <IoCloseOutline />
                   ) : (
@@ -82,7 +82,7 @@ const FAQ = () => {
                 </span>
               </div>
               {activeIndex.includes(data.id) && (
-                <p className="text-white text-base font-medium mt-4 opacity-60">
+                <p className="text-gray-700 text-base font-medium mt-4">
                   {data.answer}
                 </p>
               )}
