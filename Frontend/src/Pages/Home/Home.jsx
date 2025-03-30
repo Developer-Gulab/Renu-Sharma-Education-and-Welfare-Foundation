@@ -53,6 +53,8 @@ const reelImags = [
 ];
 
 export default function Home() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -82,6 +84,31 @@ export default function Home() {
           <button className="bg-[#001F3F] py-2 px-6 rounded-full font-bold hidden md:block cursor-pointer text-white p-1">
             Donate Now
           </button>
+        </div>
+        <div>
+          {isLoggedIn ? (
+            <button
+              onClick={handleLogout}
+              className="bg-white text-purple-600 px-4 py-2 rounded hover:bg-gray-100"
+            >
+              Logout
+            </button>
+          ) : (
+            <div className="space-x-2">
+              <Link
+                to="/login"
+                className="bg-white text-purple-600 px-4 py-2 rounded hover:bg-gray-100"
+              >
+                Login
+              </Link>
+              <Link
+                to="/signup"
+                className="bg-transparent border border-white text-white px-4 py-2 rounded hover:bg-purple-700"
+              >
+                Sign Up
+              </Link>
+            </div>
+          )}
         </div>
       </div>
       {/* <div className="min-w-full md:mt-[-100px] max-w-7xl xl:mx-auto min-h-[50vh] sm:min-h-[70vh] lg:min-h-screen items-center flex overflow-hidden">
@@ -117,6 +144,7 @@ export default function Home() {
       <FAQ />
       <KnowMore />
       <FooterTitle />
+      <HomeComponent />
     </div>
   );
 }

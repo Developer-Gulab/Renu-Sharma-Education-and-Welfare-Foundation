@@ -9,6 +9,13 @@ import {
   FaHospital,
   FaUsers,
 } from "react-icons/fa"; // Other icons
+import {
+  FaUtensils,
+  FaTshirt,
+  FaPaw,
+  FaHospital,
+  FaUsers,
+} from "react-icons/fa"; // Other icons
 import ImageSlider from "../../components/about/ImageSlider";
 import ImpactSection from "../../components/about/ImpactSection";
 import Testimonials from "../../components/about/Testimonials";
@@ -27,7 +34,7 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#E8F4F8] text-[#001F3F]">
+    <div className="min-h-screen bg-[#001F3F] text-white">
       {/* Hero Section */}
       <HeroCarousel />
 
@@ -35,17 +42,17 @@ export default function AboutUs() {
       <br />
 
       {/* About Renu Sharma Foundation Section */}
-      <section className="py-16 bg-[#E8F4F8]" data-aos="fade-up">
+      <section className="py-16 bg-[#001F3F]" data-aos="fade-up">
         <div className="container mx-auto px-20">
           <h2
-            className="text-3xl font-bold text-center mb-6 text-[#001F3F]"
+            className="text-3xl font-bold text-center mb-6 text-[#3A6D8C]"
             data-aos="fade-down"
             data-aos-duration="1000"
           >
             About Renu Sharma Foundation
           </h2>
           <p
-            className="text-lg text-center mb-4 text-gray-700"
+            className="text-lg text-center mb-4 text-gray-200"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="200"
@@ -56,7 +63,7 @@ export default function AboutUs() {
             brighter future for all.
           </p>
           <p
-            className="text-lg text-center text-gray-700"
+            className="text-lg text-center text-gray-200"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="400"
@@ -70,84 +77,84 @@ export default function AboutUs() {
       {/* What We Do Section */}
       <section className="py-16 bg-[#E8F4F8]" data-aos="zoom-in">
         <div className="container mx-auto px-4 md:px-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#001F3F]">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">
             What We Do
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
-              className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-right"
             >
-              <MdNightShelter className="text-3xl mb-4 text-[#001F3F]" />
-              <h3 className="text-xl font-semibold mb-4 text-[#001F3F]">
+              <MdNightShelter className="text-3xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
                 Shelter Provision
               </h3>
-              <p className="text-gray-700">
+              <p>
                 We provide safe and secure shelter for homeless individuals and
                 families, ensuring they have a place to call home.
               </p>
             </div>
             <div
-              className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-up"
             >
-              <FaUtensils className="text-3xl mb-4 text-[#001F3F]" />
-              <h3 className="text-xl font-semibold mb-4 text-[#001F3F]">
+              <FaUtensils className="text-3xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
                 Food Assistance
               </h3>
-              <p className="text-gray-700">
+              <p>
                 Our organization distributes nutritious meals and food supplies
                 to those in need, combating hunger in our communities.
               </p>
             </div>
             <div
-              className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-left"
             >
-              <FaTshirt className="text-3xl mb-4 text-[#001F3F]" />
-              <h3 className="text-xl font-semibold mb-4 text-[#001F3F]">
+              <FaTshirt className="text-3xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
                 Clothing Donations
               </h3>
-              <p className="text-gray-700">
+              <p>
                 We collect and distribute clothing to underprivileged
                 individuals, ensuring they have access to essential garments.
               </p>
             </div>
             <div
-              className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-right"
             >
-              <FaPaw className="text-3xl mb-4 text-[#001F3F]" />
-              <h3 className="text-xl font-semibold mb-4 text-[#001F3F]">
+              <FaPaw className="text-3xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
                 Animal Care
               </h3>
-              <p className="text-gray-700">
+              <p>
                 We provide care and shelter for abandoned and injured animals,
                 promoting animal welfare in our community.
               </p>
             </div>
             <div
-              className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-up"
             >
-              <FaHospital className="text-3xl mb-4 text-[#001F3F]" />
-              <h3 className="text-xl font-semibold mb-4 text-[#001F3F]">
+              <FaHospital className="text-3xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
                 Healthcare Services
               </h3>
-              <p className="text-gray-700">
+              <p>
                 Our foundation offers healthcare services, including medical
                 check-ups and treatments for those who cannot afford them.
               </p>
             </div>
             <div
-              className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-left"
             >
-              <FaUsers className="text-3xl mb-4 text-[#001F3F]" />
-              <h3 className="text-xl font-semibold mb-4 text-[#001F3F]">
+              <FaUsers className="text-3xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
                 Community Development
               </h3>
-              <p className="text-gray-700">
+              <p>
                 We engage in community development projects that empower
                 individuals and improve living conditions in underserved areas.
               </p>
