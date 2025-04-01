@@ -2,13 +2,17 @@ import React, { useRef } from "react";
 import Reel from "../../components/Home/HomeReel";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useEffect, useState } from "react";
-import Impact from "../../components/Home/Impact";
 import KnowMore from "../../components/Home/KnowMore";
 import AboutRenu from "../../components/Home/AboutRenu";
 import Highlights from "../../components/Home/Highlights";
+import Impact from "../../components/Home/Impact";
 import FAQ from "../../components/Home/FAQ";
 import FooterTitle from "../../components/Home/FooterTitle";
 import Offer from "../../components/Home/Offer";
+import { Link } from "react-router-dom";
+import Programs from "../../components/Home/Programs";
+import Donate from "../../components/Home/Donate";
+import Leader from "../../components/Home/Leader";
 
 const reelImags = [
   {
@@ -139,12 +143,14 @@ export default function Home() {
       </div> */}
       <Impact />
       <AboutRenu />
+      <Programs />
       {/* <Offer /> */}
       <Highlights />
+      <Donate />
       <FAQ />
+      <Leader />
       <KnowMore />
       <FooterTitle />
-      <HomeComponent />
     </div>
   );
 }

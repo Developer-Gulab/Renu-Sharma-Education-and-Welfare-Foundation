@@ -9,13 +9,7 @@ import {
   FaHospital,
   FaUsers,
 } from "react-icons/fa"; // Other icons
-import {
-  FaUtensils,
-  FaTshirt,
-  FaPaw,
-  FaHospital,
-  FaUsers,
-} from "react-icons/fa"; // Other icons
+
 import ImageSlider from "../../components/about/ImageSlider";
 import ImpactSection from "../../components/about/ImpactSection";
 import Testimonials from "../../components/about/Testimonials";

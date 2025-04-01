@@ -1,5 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import {
+  ArrowRight,
+  Heart,
+  Users,
+  Globe,
+  Trees,
+  Target,
+  MapPin,
+} from "lucide-react";
 
 const AnimatedNumber = ({ value, className }) => {
   const [count, setCount] = useState(0);
@@ -43,6 +52,7 @@ const AnimatedNumber = ({ value, className }) => {
 
 const imapctStats = [
   {
+    icon: <Users className="text-blue-600 w-8 h-8" />,
     stat: 15,
     title: "LAC",
     description: "children and their families are impacted every year",
@@ -51,6 +61,7 @@ const imapctStats = [
     rotate: 10,
   },
   {
+    icon: <Globe className="text-green-600 w-8 h-8" />,
     stat: 2000,
     title: "VILLAGES",
     description: "and slums are reached out to across the country",
@@ -59,6 +70,7 @@ const imapctStats = [
     rotate: 10,
   },
   {
+    icon: <Target className="text-red-600 w-8 h-8" />,
     stat: 400,
     title: "PROJECTS",
     description: "focused on education, healthcare, and women empowerment ",
@@ -67,6 +79,7 @@ const imapctStats = [
     rotate: 0,
   },
   {
+    icon: <MapPin className="text-green-600 w-8 h-8" />,
     stat: 25,
     title: "STATES",
     description: "are reached including the remotest areas ",
@@ -96,8 +109,11 @@ const Impact = () => {
                 : { x: stat.x, y: stat.y, rotate: stat.rotate }
             }
             transition={{ duration: 1.5 }}
-            className="flex flex-col items-center gap-2 px-8 md:px-12 py-8 bg-white text-center rounded-3xl font-bold md:block cursor-pointer shadow-lg"
+            className="flex flex-col  items-center gap-2 px-8 md:px-12 py-8 bg-white text-center rounded-3xl font-bold md:block cursor-pointer shadow-lg"
           >
+            <div className="flex justify-center items-center text-sm my-1">
+              <span>{stat.icon}</span>
+            </div>
             <AnimatedNumber
               value={stat.stat}
               className="text-6xl font-bold text-[#001F3F]"
