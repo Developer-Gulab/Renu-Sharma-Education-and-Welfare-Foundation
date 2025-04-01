@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { MdNightShelter } from "react-icons/md";
@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa"; // Other icons
 import ImageSlider from "../../components/about/ImageSlider";
 import ImpactSection from "../../components/about/ImpactSection";
-import Testimonials from "../../components/about/Testimonials";
 import KeyProgramsSection from "../../components/about/KeyProgramItem";
 import LeadershipTeamSection from "../../components/about/LeadershipTeamSection";
 import PartnersSection from "../../components/about/PartnersSection";
