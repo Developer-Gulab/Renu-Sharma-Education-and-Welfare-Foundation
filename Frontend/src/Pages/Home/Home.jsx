@@ -1,70 +1,26 @@
-import React, { useRef } from "react";
-import Reel from "../../components/Home/HomeReel";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+
+import {  useState } from "react";
 import KnowMore from "../../components/Home/KnowMore";
 import AboutRenu from "../../components/Home/AboutRenu";
-import Highlights from "../../components/Home/Highlights";
+import Highlights from "../../components/Home/Highlights.tsx";
 import Impact from "../../components/Home/Impact";
 import FAQ from "../../components/Home/FAQ";
 import FooterTitle from "../../components/Home/FooterTitle";
-import Offer from "../../components/Home/Offer";
+
 import { Link } from "react-router-dom";
 import Programs from "../../components/Home/Programs";
 import Donate from "../../components/Home/Donate";
 import Leader from "../../components/Home/Leader";
 
-const reelImags = [
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392246/ngo/wleduksg5avcqj8mikj9.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392246/ngo/m8b4h9jkixqxs3tdp89l.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392246/ngo/aedeouyejbmym81jx7ei.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392246/ngo/dnazefrh2p9fdlm66ldx.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392247/ngo/j9se1rtllljhapxjskdz.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392247/ngo/rbzrxi0tl5xzz1qoalby.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392247/ngo/jbkmgfwwtdzg8fmazoms.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392247/ngo/jwbwaum4qfpfsiyrf2yi.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392247/ngo/kwgeeb6i0x2iimyt1x01.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392247/ngo/wsfuwepihmjhhelm4lbz.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392247/ngo/md3alvn9rkg1zlcymxca.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392248/ngo/xe9qyrozzwiy7qlb7vsz.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dfhg1joox/image/upload/v1742392248/ngo/g6ycubhvld3mfwodxbra.jpg",
-  },
-];
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const yPos = useTransform(scrollYProgress, [0, 1], ["-90%", "-15%"]);
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   const mainRef = useRef(null);
 
   return (
@@ -82,38 +38,34 @@ export default function Home() {
           </h2>
         </div>
         <div className="flex justify-center gap-8 pt-10">
-          <button className="bg-[#001F3F] py-2 px-6 rounded-full font-bold md:block cursor-pointer text-white p-1">
-            Register
-          </button>
-          <button className="bg-[#001F3F] py-2 px-6 rounded-full font-bold hidden md:block cursor-pointer text-white p-1">
-            Donate Now
-          </button>
+          {/* Removed Register button */}
+          {/* Removed Donate Now button */}
         </div>
-        <div>
-          {isLoggedIn ? (
-            <button
-              onClick={handleLogout}
-              className="bg-white text-purple-600 px-4 py-2 rounded hover:bg-gray-100"
-            >
-              Logout
-            </button>
-          ) : (
-            <div className="space-x-2">
-              <Link
-                to="/login"
+          <div className="flex justify-center gap-8 pt-10">
+            {isLoggedIn ? (
+              <button
+                onClick={handleLogout}
                 className="bg-white text-purple-600 px-4 py-2 rounded hover:bg-gray-100"
               >
-                Login
-              </Link>
-              <Link
-                to="/signup"
-                className="bg-transparent border border-white text-white px-4 py-2 rounded hover:bg-purple-700"
-              >
-                Sign Up
-              </Link>
-            </div>
-          )}
-        </div>
+                Logout
+              </button>
+            ) : (
+              <div className="space-x-2">
+                <Link
+                  to="/login"
+                  className="bg-[#001F3F] text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className="bg-[#001F3F] text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
+          </div>
       </div>
       {/* <div className="min-w-full md:mt-[-100px] max-w-7xl xl:mx-auto min-h-[50vh] sm:min-h-[70vh] lg:min-h-screen items-center flex overflow-hidden">
         <div className="flex min-h-[50vh] min-w-full max-w-7xl items-center overflow-hidden sm:min-h-[70vh] lg:min-h-screen xl:mx-auto">

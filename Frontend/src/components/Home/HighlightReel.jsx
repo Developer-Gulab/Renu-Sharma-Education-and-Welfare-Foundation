@@ -13,7 +13,7 @@ const HighlightReel = ({ reelImg, angle, baseVelocity, classes }) => {
               >
                 <img
                   src={img.src}
-                  fill
+                  // fill
                   className="object-cover object-center rounded-md"
                   alt={`reel-image-${idx}`}
                 />
