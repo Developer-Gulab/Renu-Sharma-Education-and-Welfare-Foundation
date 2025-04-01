@@ -10,7 +10,7 @@ function Leader() {
     {
       title: "Connecting with people",
       description: "Visiting various places to connect with the peoples",
-      hoverText: "connect with people",
+      hoverText: "onnect with people",
     },
     {
       title: "Education",
@@ -26,15 +26,15 @@ function Leader() {
   return (
     <div>
       <section>
-        <div className="container mx-auto flex items-center justify-center flex-col py-16 px-4">
-          <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
+        <div className="container mx-auto flex items-center justify-center flex-col pt-32 px-4">
+          <h2 className="text-7xl text-[#001F3F] font-bold text-center mb-12">
             Our Team
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {temp.map((program, index) => (
               <div
                 key={index}
-                className="relative text-center bg-blue-100 p-6 rounded-lg hover:shadow-lg transition duration-300"
+                className="relative text-center bg-white p-12 rounded-3xl hover:shadow-lg transition duration-300"
               >
                 <img
                   src={image[index].replace("url('", "").replace("')", "")}

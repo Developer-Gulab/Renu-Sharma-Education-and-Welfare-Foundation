@@ -1,33 +1,34 @@
-import { Routes, Route } from 'react-router-dom';
-import './App.css'
-import Gallery from './Pages/Gallery/Gallery'
-import Home from './Pages/Home/Home'
-import Services from './Pages/Services/Services'
-import ContactUs from './Pages/ContactUs/ContactUs'
-import AboutUs from './Pages/AboutUs/AboutUs'
-import SignUp from './Pages/SignUp/SignUp'
-import Login from './Pages/Login/Login'
-import Internship from './Pages/Internship/Internship'
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Gallery from "./Pages/Gallery/Gallery";
+import Home from "./Pages/Home/Home";
+import Services from "./Pages/Services/Services";
+import ContactUs from "./Pages/ContactUs/ContactUs";
+import AboutUs from "./Pages/AboutUs/AboutUs";
+import SignUp from "./Pages/SignUp/SignUp";
+import Login from "./Pages/Login/Login";
+import Internship from "./Pages/Internship/Internship";
+import Navbar from "./components/Navbar/Navbar";
 
-
-import ForgotPassword from './Pages/Login/ForgotPassword'; // Import the ForgotPassword component
+import ForgotPassword from "./Pages/Login/ForgotPassword"; // Import the ForgotPassword component
 
 function App() {
   return (
-    <>
+    <div className="bg-[#E8F4F8] min-h-screen">
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/gallery' element={<Gallery />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/contactus' element={<ContactUs />} />
-        <Route path='/aboutus' element={<AboutUs />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/internship' element={<Internship />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/internship" element={<Internship />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
