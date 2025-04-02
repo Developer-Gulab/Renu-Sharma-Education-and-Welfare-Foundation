@@ -57,7 +57,7 @@ function About() {
               </motion.p>
 
               <motion.button
-                onClick={() => navigate("/about")}
+                onClick={() => navigate("/aboutus")}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300"
                 whileHover={{
                   scale: 1.05,

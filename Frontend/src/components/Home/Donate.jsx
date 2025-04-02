@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Donate() {
   const [donationAmount, setDonationAmount] = useState(10);
@@ -40,7 +40,7 @@ function Donate() {
                 className="w-[600px] px-4 py-2 border rounded-l-full"
               />
 
-              <button className="w-[300px] bg-green-600  hover:bg-green-700 text-white font-bold py-3 rounded-r-full transition duration-300">
+              <button className="w-[300px] bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-r-full transition duration-300">
                 Donate ${donationAmount}
               </button>
             </div>

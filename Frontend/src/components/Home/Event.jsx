@@ -1,5 +1,4 @@
-import React from "react";
-import { ArrowRight, Heart, Users, Globe, Trees } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 function Event() {
   const temp = [
@@ -35,16 +34,16 @@ function Event() {
             {temp.map((program, index) => (
               <div
                 key={index}
-                className="flex items-center  p-6 rounded-lg hover:shadow-lg transition duration-300"
+                className="flex items-center p-6 rounded-lg hover:shadow-lg transition duration-300"
               >
-                <div className="">
+                <div>
                   <img
                     src={images[index].replace("url('", "").replace("')", "")}
                     alt={program.title}
-                    className="  w-[350px] rounded-lg"
+                    className="w-[350px] rounded-lg"
                   />
                 </div>
-                <div className=" pl-8">
+                <div className="pl-8">
                   <h3 className="text-xl font-semibold mb-4">
                     {program.title}
                   </h3>
