@@ -2,8 +2,16 @@ import React from "react";
 import CardStack from "./CardStack";
 import cardsData from "./utils/internshipdomain.json";
 import { motion } from "framer-motion";
+import { FaHandsHelping, FaUserTie, FaClock, FaLayerGroup } from "react-icons/fa";
 
 export default function InternshipHeader() {
+  const featureIcons = {
+    "Hands-on Training": <FaHandsHelping className="text-blue-600 text-3xl" />,
+    "Expert Mentorship": <FaUserTie className="text-green-600 text-3xl" />,
+    "Flexible Duration": <FaClock className="text-purple-600 text-3xl" />,
+    "Diverse Departments": <FaLayerGroup className="text-red-600 text-3xl" />,
+  };
+  
   const features = [
     {
       title: "Hands-on Training",
@@ -92,28 +100,38 @@ export default function InternshipHeader() {
     </motion.div>
 
       {/* Feature Cards */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 overflow-hidden">
-      {features.map((feature, index) => {
-        const isEdge = index === 0 || index === features.length - 1; // Edge cards check
-        return (
-          <motion.div
-            key={index}
-            initial={{ 
-              opacity: 0, 
-              x: isEdge ? (index === 0 ? -50 : 50) : 0,  // Reduced x movement
-              scale: isEdge ? 0.9 : 0.95 
-            }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.15 }}
-            viewport={{ once: false, amount: 0.2 }} // Trigger when 20% is in view
-            className="bg-white text-gray-900 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl max-w-full"
-          >
-            <h3 className="text-xl font-bold">{feature.title}</h3>
-            <p className="mt-2 text-gray-600">{feature.description}</p>
-          </motion.div>
-        );
-      })}
-    </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 w-full overflow-hidden">
+  {features.map((feature, index) => {
+    const isOdd = index % 2 !== 0; // Odd from left, even from right
+
+    return (
+      <motion.div
+        key={index}
+        initial={{ 
+          opacity: 0, 
+          x: isOdd ? -200 : 200,  // Increased offset for better effect
+          scale: 0.9 
+        }}
+        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
+        className="bg-white text-gray-900 p-6 rounded-xl shadow-lg 
+          transform hover:scale-105 transition-all duration-300 hover:shadow-2xl 
+          flex items-center gap-6 mx-auto w-full md:w-5/6" // Adjust width on larger screens
+      >
+        {/* Icon (Left Side) */}
+        <div className="flex-shrink-0">{featureIcons[feature.title]}</div>
+
+        {/* Text Content (Right Side) */}
+        <div>
+          <h3 className="text-2xl font-bold">{feature.title}</h3>
+          <p className="mt-2 text-gray-600">{feature.description}</p>
+        </div>
+      </motion.div>
+    );
+  })}
+</div>
+
 
       {/* Card Stack Section */}
       <motion.hr
