@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav className="pt-6 px-2">
-      <div className="flex flex-row items-center justify-between rounded-3xl sm:mx-12 p-5 backdrop-blur-2xl bg-white bg-opacity-80 shadow-lg z-10">
+      <div className="flex flex-row items-center justify-between rounded-3xl sm:mx-12 p-2 px-6 backdrop-blur-2xl bg-white bg-opacity-80 shadow-lg z-10">
         <div className="flex flex-row gap-4 items-center">
           <img
             src="/image.png"
@@ -24,7 +24,7 @@ const Navbar = () => {
           <li>About Us</li>
           <li>Contact Us</li>
         </ul>
-        <button className="bg-[#001F3F] py-2 px-4 rounded-xl font-semibold text-white hidden md:block cursor-pointer">
+        <button className="bg-[#001F3F] py-2 px-4 font-semibold text-white hidden md:block cursor-pointer rounded-full">
           Register
         </button>
         {isMenuOpen ? (
