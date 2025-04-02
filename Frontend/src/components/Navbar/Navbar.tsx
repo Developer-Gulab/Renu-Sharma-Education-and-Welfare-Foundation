@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { CgMenuRightAlt, CgClose } from "react-icons/cg";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
           <li>Gallery</li>
           <li>Services</li>
           <li>Internship</li>
-          <li>About Us</li>
+          <Link to="/AboutUs">About Us</Link>
           <li>Contact Us</li>
         </ul>
         <button className="bg-[#001F3F] py-2 px-4 rounded-xl font-semibold text-white hidden md:block cursor-pointer">
