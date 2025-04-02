@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { CgMenuRightAlt, CgClose } from "react-icons/cg";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
