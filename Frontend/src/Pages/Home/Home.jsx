@@ -11,6 +11,8 @@ import Programs from "../../components/Home/Programs";
 import Donate from "../../components/Home/Donate";
 import Leader from "../../components/Home/Leader";
 import Feedback from "@/components/Home/Feedback";
+import Footer from "@/components/Home/Footer";
+import CardGrid from "@/components/Home/CardGrid";
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,19 +32,19 @@ export default function Home() {
 
         {/* Content with higher z-index */}
         <div className="relative z-10">
-          <h1 className="text-5xl sm:text-5xl md:text-7xl font-bold text-center md:mt-40 mt-32 text-[#001F3F]">
+          <h1 className="text-5xl sm:text-5xl md:text-7xl font-bold text-center md:mt-32 mt-32 text-[#001F3F]">
             Renu Sharma Foundation
           </h1>
-          <h2 className="text-sm sm:text-xl md:text-lg font-semibold text-center mt-8 text-[#001F3F] border-[0px] rounded-badge bg-[#001F3F] bg-opacity-10 p-1 px-4 w-fit mx-auto">
+          <h2 className="text-sm sm:text-xl md:text-sm font-semibold text-center mt-6 text-[#001F3F] border-[0px] rounded-badge bg-[#001F3F] bg-opacity-10 p-1 px-4 w-fit mx-auto">
             Join us in our mission to create a better future for underprivileged
             communities
           </h2>
 
-          <div className="flex justify-center gap-8 pt-10">
+          <div className="flex justify-center gap-8 pt-8">
             {isLoggedIn ? (
               <button
                 onClick={handleLogout}
-                className="bg-white text-purple-600 px-4 py-2 rounded hover:bg-gray-100"
+                className="bg-white text-purple-600 px-6 py-2 rounded-full hover:bg-gray-100"
               >
                 Logout
               </button>
@@ -50,22 +52,22 @@ export default function Home() {
               <div className="space-x-2">
                 <Link
                   to="/login"
-                  className="bg-[#001F3F] text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
+                  className="bg-[#001F3F] text-white px-6 py-2 rounded-full hover:bg-blue-700 cursor-pointer"
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
-                  className="bg-[#001F3F] text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
+                  className="bg-[#001F3F] text-white px-6 py-2 rounded-full hover:bg-blue-700 cursor-pointer"
                 >
                   Sign Up
                 </Link>
               </div>
             )}
           </div>
+          <CardGrid />
         </div>
       </div>
-
       <Impact />
       <AboutRenu />
       <Programs />
@@ -76,6 +78,7 @@ export default function Home() {
       <Feedback />
       <KnowMore />
       <FooterTitle />
+      <Footer />
     </div>
   );
 }

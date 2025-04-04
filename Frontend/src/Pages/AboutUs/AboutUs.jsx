@@ -75,11 +75,11 @@ export default function AboutUs() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
-              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#001F3F] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-right"
             >
               <MdNightShelter className="text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Shelter Provision
               </h3>
               <p>
@@ -88,11 +88,11 @@ export default function AboutUs() {
               </p>
             </div>
             <div
-              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#001F3F] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-up"
             >
               <FaUtensils className="text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Food Assistance
               </h3>
               <p>
@@ -101,11 +101,11 @@ export default function AboutUs() {
               </p>
             </div>
             <div
-              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#001F3F] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-left"
             >
               <FaTshirt className="text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Clothing Donations
               </h3>
               <p>
@@ -114,11 +114,11 @@ export default function AboutUs() {
               </p>
             </div>
             <div
-              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#001F3F] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-right"
             >
               <FaPaw className="text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Animal Care
               </h3>
               <p>
@@ -127,11 +127,11 @@ export default function AboutUs() {
               </p>
             </div>
             <div
-              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#001F3F] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-up"
             >
               <FaHospital className="text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Healthcare Services
               </h3>
               <p>
@@ -140,11 +140,11 @@ export default function AboutUs() {
               </p>
             </div>
             <div
-              className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#001F3F] p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               data-aos="fade-left"
             >
               <FaUsers className="text-3xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4 text-[#2c5169]">
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Community Development
               </h3>
               <p>
@@ -164,8 +164,8 @@ export default function AboutUs() {
         data-aos-delay="200"
       >
         <div className="container mx-auto px-4 md:px-20">
-          <div className="bg-[#6A9AB0] p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:border-2 hover:border-[#3A6D8C] ">
-            <h2 className="text-3xl font-bold text-center mb-6 text-[#2c5169]">
+          <div className="bg-[#001F3F] p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:border-2 hover:border-[#3A6D8C] ">
+            <h2 className="text-3xl font-bold text-center mb-6 text-white">
               Our Mission
             </h2>
             <p className="text-lg text-center mb-4">

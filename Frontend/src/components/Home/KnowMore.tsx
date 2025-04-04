@@ -2,7 +2,7 @@ import React from "react";
 
 const KnowMore = () => {
   return (
-    <div className="min-h-screen pt-32">
+    <div className="pt-32">
       <div className="sm:px-20 lg:py-2 bg-white py-2 mx-4 md:mx-24 rounded-3xl font-bold border-2 border-[#001F3F] md:block cursor-pointer text-[#001F3F] p-1">
         <div className="flex flex-col md:flex-row rounded-3xl px-4 w-full mx-auto bg-cover h-64 items-center md:justify-around justify-evenly">
           <div className="text-3xl md:text-2xl lg:text-2xl xl:text-4xl text-center md:text-left text-[#001F3F] font-bold">
