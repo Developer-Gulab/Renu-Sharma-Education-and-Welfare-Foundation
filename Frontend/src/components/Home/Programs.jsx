@@ -7,7 +7,7 @@ function Programs() {
       description: "Providing quality education to underprivileged children",
       icon: (
         <svg
-          className="w-12 h-12 text-purple-600"
+          className="w-12 h-12 text-[#001F3F]"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -126,53 +126,27 @@ function Programs() {
   ];
   return (
     <div>
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ margin: "0px 0px -100px 0px" }}
-        transition={{ duration: 0.5 }}
-        className="flex justify-center py-16"
-      >
-        <div className="container mx-auto px-4 w-[60%]">
-          <h2 className="text-4xl  text-gray-50 font-bold text-center mb-32">
+      <motion.section className=" flex justify-center pt-32">
+        <div className="container mx-auto px-4 w-[70%]">
+          <h2 className="text-7xl  text-[#001F3F] font-bold text-center mb-20">
             Our Program
           </h2>
-          <motion.div
-            className="grid md:grid-cols-2 gap-28"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.2,
-                },
-              },
-            }}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ margin: "0px 0px -100px 0px" }}
-          >
+          <div className="grid md:grid-cols-3 gap-16">
             {programInitiatives.map((program, index) => (
               <motion.div
                 key={index}
-                className="text-center bg-white bg-opacity-10 rounded-lg p-6 transition duration-300 hover:bg-opacity-20 cursor-pointer"
-                variants={{
-                  hidden: { y: 20, opacity: 0 },
-                  visible: { y: 0, opacity: 1 },
-                }}
-                whileHover={{
-                  scale: 1.05,
-                  transition: { duration: 0.3 },
-                }}
+                className="p-6 transition duration-300 gap-2 px-8 md:px-12 py-16 bg-white text-center rounded-3xl font-bold md:block cursor-pointer shadow-lg"
               >
                 <div className="flex justify-center mb-4">{program.icon}</div>
-                <h3 className="text-xl text-gray-200 font-semibold mb-4">
+                <h3 className="text-xl text-[#001F3F] font-semibold mb-4">
                   {program.title}
                 </h3>
-                <p className="text-gray-400">{program.description}</p>
+                <p className="text-[#001F3F] font-normal text-base">
+                  {program.description}
+                </p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </motion.section>
     </div>

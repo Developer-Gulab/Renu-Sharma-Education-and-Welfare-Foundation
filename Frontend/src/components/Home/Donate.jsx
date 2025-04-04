@@ -9,10 +9,10 @@ function Donate() {
     <div>
       <section className=" py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl text-gray-50 font-bold text-center mb-12">
+          <h2 className="text-7xl text-[#001F3F] font-bold text-center mb-12">
             Support Our Mission
           </h2>
-          <div className="max-w-xl mx-auto bg-opacity-10 bg-white p-8 rounded-lg shadow-lg">
+          <div className="max-w-6xl mx-auto  bg-white p-16 rounded-2xl shadow-lg">
             <div className="flex justify-center mb-6 space-x-4">
               {donationAmounts.map((amount) => (
                 <button
@@ -20,9 +20,9 @@ function Donate() {
                   onClick={() => setDonationAmount(amount)}
                   className={`px-4 py-2 rounded-full ${
                     donationAmount === amount
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-700"
-                  } hover:bg-blue-700 hover:text-white transition duration-300`}
+                      ? "bg-[#001F3F] text-[#001F3F]"
+                      : "bg-[#001F3F] text-white"
+                  } hover:bg-blue-700 hover:text-[#001F3F] transition duration-300`}
                 >
                   ${amount}
                 </button>
@@ -37,10 +37,10 @@ function Donate() {
                   setCustomAmount(e.target.value);
                   setDonationAmount(Number(e.target.value));
                 }}
-                className="w-[600px] px-4 py-2 border rounded-l-full"
+                className="w-[600px] px-4 py-2 border-2 border-[#001F3F] rounded-l-full bg-gray-100   placeholder:text-[#001F3F] placeholder:font-bold "
               />
 
-              <button className="w-[300px] bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-r-full transition duration-300">
+              <button className="w-[300px] bg-[#001F3F]  text-white font-bold py-3 rounded-r-full transition duration-300">
                 Donate ${donationAmount}
               </button>
             </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { MdNightShelter } from "react-icons/md";
@@ -9,9 +9,9 @@ import {
   FaHospital,
   FaUsers,
 } from "react-icons/fa"; // Other icons
+
 import ImageSlider from "../../components/about/ImageSlider";
 import ImpactSection from "../../components/about/ImpactSection";
-import Testimonials from "../../components/about/Testimonials";
 import KeyProgramsSection from "../../components/about/KeyProgramItem";
 import LeadershipTeamSection from "../../components/about/LeadershipTeamSection";
 import PartnersSection from "../../components/about/PartnersSection";
@@ -68,7 +68,7 @@ export default function AboutUs() {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-16 bg-[#001F3F]" data-aos="zoom-in">
+      <section className="py-16 bg-[#E8F4F8]" data-aos="zoom-in">
         <div className="container mx-auto px-4 md:px-20">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">
             What We Do
