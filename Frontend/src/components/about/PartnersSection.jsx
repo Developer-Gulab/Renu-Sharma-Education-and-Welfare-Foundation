@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 const PartnerItem = ({ name, description, logo, aosAnimation, aosDelay }) => {
   return (
     <div 
-      className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 flex flex-col items-center" 
+      className=" p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 flex flex-col items-center hover-effect  shadow-slate-400" 
       data-aos={aosAnimation} 
       data-aos-delay={aosDelay}
     >
