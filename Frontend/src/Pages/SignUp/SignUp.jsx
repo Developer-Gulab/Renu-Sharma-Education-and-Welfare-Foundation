@@ -354,8 +354,20 @@ const SignUp = () => {
               </div>
             </div>
             
-  
-           
+            <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg">
+              <p className="text-white text-center drop-shadow-md">
+                To keep things secure and private, please sign up before donating. 
+                It&apos;s quick and easy — and it helps us a lot!
+              </p>
+              <div className="mt-4 text-center">
+                <a 
+                  href="/" 
+                  className="text-white hover:text-indigo-200 transition-colors font-medium underline"
+                >
+                  Have A Nice Day
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         
