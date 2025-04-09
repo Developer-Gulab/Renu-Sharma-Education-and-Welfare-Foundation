@@ -3,8 +3,9 @@ import CardStack from "./CardStack";
 import cardsData from "./utils/internshipdomain.json";
 import { motion } from "framer-motion";
 import { FaHandsHelping, FaUserTie, FaClock, FaLayerGroup } from "react-icons/fa";
-
+import { useState } from "react";
 export default function InternshipHeader() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const featureIcons = {
     "Hands-on Training": <FaHandsHelping className="text-blue-600 text-3xl" />,
     "Expert Mentorship": <FaUserTie className="text-green-600 text-3xl" />,
@@ -99,38 +100,41 @@ export default function InternshipHeader() {
       </motion.div>
     </motion.div>
 
-      {/* Feature Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 w-full overflow-hidden">
-  {features.map((feature, index) => {
-    const isOdd = index % 2 !== 0; // Odd from left, even from right
-
-    return (
+    {/*feature cards*/}
+    <div className="flex flex-wrap justify-center items-start gap-8 mt-10 w-full overflow-visible">
+  {features.map((feature, index) => (
+    <motion.div
+      key={index}
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
+      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 300, damping: 20 }}
+      viewport={{ once: true }}
+      className={`
+        relative flex flex-col items-center w-64 transition-transform duration-300 cursor-pointer
+        ${hoveredIndex === index ? "scale-[1.2] z-40 -translate-y-3 shadow-2xl" : ""}
+        ${hoveredIndex !== null && hoveredIndex !== index ? "blur-[1.5px] opacity-40" : ""}
+      `}
+    >
+      {/* Floating Icon */}
       <motion.div
-        key={index}
-        initial={{ 
-          opacity: 0, 
-          x: isOdd ? -200 : 200,  // Increased offset for better effect
-          scale: 0.9 
-        }}
-        whileInView={{ opacity: 1, x: 0, scale: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
-        viewport={{ once: true, amount: 0.1 }}
-        className="bg-white text-gray-900 p-6 rounded-xl shadow-lg 
-          transform hover:scale-105 transition-all duration-300 hover:shadow-2xl 
-          flex items-center gap-6 mx-auto w-full md:w-5/6" // Adjust width on larger screens
+        animate={{ y: [0, -8, 0, 8, 0] }}
+        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+        className="bg-white p-4 rounded-full shadow-md text-4xl text-gray-800 z-10"
       >
-        {/* Icon (Left Side) */}
-        <div className="flex-shrink-0">{featureIcons[feature.title]}</div>
-
-        {/* Text Content (Right Side) */}
-        <div>
-          <h3 className="text-2xl font-bold">{feature.title}</h3>
-          <p className="mt-2 text-gray-600">{feature.description}</p>
-        </div>
+        {featureIcons[feature.title]}
       </motion.div>
-    );
-  })}
+
+      {/* Content */}
+      <div className="mt-3 bg-white border border-gray-200 rounded-xl shadow-md w-full px-4 py-3 text-center z-0">
+        <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+        <p className="text-sm text-gray-600 mt-1">{feature.description}</p>
+      </div>
+    </motion.div>
+  ))}
 </div>
+
 
 
       {/* Card Stack Section */}
@@ -150,5 +154,5 @@ export default function InternshipHeader() {
       </div>
       
     </div>
-  );
+  );;
 }

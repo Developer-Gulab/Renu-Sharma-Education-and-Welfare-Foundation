@@ -24,7 +24,7 @@ const CardStack = ({ items, scaleFactor = 0.05 }) => {
           <motion.div
             key={card.id}
             className={cn(
-              "absolute dark:bg-black bg-white h-[65vh] w-[90%] rounded-3xl p-4",
+              "absolute dark:bg-black bg-white h-[75vh] w-[95%] rounded-3xl p-4",
               "shadow-xl border border-neutral-200 dark:border-white/[0.1]",
               "shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between",
               "bg-cover bg-center group overflow-hidden"
