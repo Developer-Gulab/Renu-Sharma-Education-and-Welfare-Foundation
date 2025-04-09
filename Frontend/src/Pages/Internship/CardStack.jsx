@@ -18,7 +18,7 @@ const CardStack = ({ items, scaleFactor = 0.05 }) => {
   const offset = 35 / items.length;
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center h-screen">
+    <div className="relative w-full flex flex-col items-center justify-center h-screen mb-0">
       <div className="relative w-full flex justify-center items-center overflow-visible" style={{ height: `${60 + (items.length - 1) * offset}vh` }}>
         {cards.map((card, index) => (
           <motion.div
@@ -56,17 +56,16 @@ const CardStack = ({ items, scaleFactor = 0.05 }) => {
             </div>
 
             <div className="absolute bottom-4 right-4 flex space-x-4">
-              <button className="relative px-5 py-2 text-sm font-semibold text-white bg-white/10 backdrop-blur-md rounded-lg shadow-md border border-white/30 transition-all duration-300 group-hover:border-transparent 
-                group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-purple-500">
-                Know More
-              </button>
-
+              
               <button className="relative px-5 py-2 text-sm font-semibold text-white bg-white/10 backdrop-blur-md rounded-lg shadow-md border border-white/30 transition-all duration-300 group-hover:border-transparent 
                 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-green-500" onClick={()=>document.getElementById("my_modal_3").showModal()}>
-                Enroll
+              <div className="flex flex-col md:flex-row items-center">
+                <span className="font-bold text-2xl"> Enroll Now  </span> 
+              <span className="ml-3"> <ArrowRightCircle size={30} className="text-white" /> </span></div>
               </button>
+               </div>
               <InternshipForm card={card} />
-            </div>
+             
           </motion.div>
         ))}
       </div>

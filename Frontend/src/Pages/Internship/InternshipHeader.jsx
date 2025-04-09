@@ -2,8 +2,9 @@ import React from "react";
 import CardStack from "./CardStack";
 import cardsData from "./utils/internshipdomain.json";
 import { motion } from "framer-motion";
-import { FaHandsHelping, FaUserTie, FaClock, FaLayerGroup } from "react-icons/fa";
+import { FaHandsHelping, FaUserTie, FaClock, FaLayerGroup,FaBriefcase } from "react-icons/fa";
 import { useState } from "react";
+import IntershipInfo from "./InternhipInfo";
 export default function InternshipHeader() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const featureIcons = {
@@ -148,10 +149,57 @@ export default function InternshipHeader() {
     boxShadow: "0px 0px 15px rgba(0, 255, 200, 0.7)",
   }}
 />
+   <IntershipInfo/>
 
-      <div className="h-screen flex items-center justify-center mt-10">
-        <CardStack items={cardsData} />
-      </div>
+   <div className="text-center py-24 px-4 space-y-10" >
+  {/* Icon */}
+  <motion.div
+    initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+    whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+    transition={{ duration: 1.2, ease: "backOut" }}
+    viewport={{ once: true }}
+    className="flex justify-center"
+  >
+    <div className="bg-gradient-to-br from-emerald-400 to-cyan-500 p-5 rounded-full shadow-xl shadow-cyan-400/40 animate-pulse">
+      <FaBriefcase className="text-white text-4xl" />
+    </div>
+  </motion.div>
+
+  {/* Heading */}
+  <motion.h2
+    initial={{ opacity: 0, scale: 0.85 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+    viewport={{ once: true }}
+    className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-300 to-cyan-400 text-transparent bg-clip-text"
+  >
+    Discover Your Dream Domain
+  </motion.h2>
+
+  {/* Paragraph */}
+  <motion.p
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.1, delay: 0.4, ease: "easeInOut" }}
+    viewport={{ once: true }}
+    className="text-lg max-w-2xl mx-auto text-white/85 leading-relaxed"
+  >
+    Dive into tailored internships built for your strengths. From creative arts to cutting-edge tech, uncover
+    opportunities that fuel your passion and shape your future.
+  </motion.p>
+
+  {/* CardStack Section */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+    className="flex justify-center items-center mt-10"
+  >
+    <CardStack items={cardsData} />
+  </motion.div>
+</div>
+
       
     </div>
   );;
