@@ -1,0 +1,22 @@
+[
+    {
+      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "title": "Tech Fest 2024",
+      "description": "A glimpse of our amazing tech innovations and student projects.",
+      "buttonText": "Explore"
+    },
+    {
+      "videoUrl": "https://www.w3schools.com/html/movie.mp4",
+      "title": "Cultural Night",
+      "description": "Enjoy the vibrant performances and fun activities from the event.",
+      "buttonText": "Watch Now"
+    },
+    {
+      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",  
+      "title": "Renu Sharma Foundation Drive",
+      "description": "A heartfelt community initiative by the Renu Sharma Foundation to support underprivileged students with educational resources and motivation. Join hands to make a difference.",
+      "buttonText": "Learn More"
+    }
+  ]
+  
+  

@@ -113,6 +113,7 @@ function GalleryMid({ selectedCategory ,scrollToRef}) {
                             
                         ))
                     ) :
+                        
                         (<p className="text-center text-lg text-gray-500">No images available for {selectedCategory}</p>))
                 }
             </motion.div>
