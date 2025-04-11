@@ -1,0 +1,48 @@
+/* Jump-in Animation for Text */
+@keyframes jump-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .animate-jump-in {
+    animation: jump-in 1s ease-out forwards;
+  }
+  
+  /* Fade-in-left Animation for Image */
+  @keyframes fade-left {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  .animate-fade-left {
+    animation: fade-left 1s ease-in-out forwards;
+  }
+  
+  /* Fade-in-right Animation for Text */
+  @keyframes fade-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  .animate-fade-right {
+    animation: fade-right 1s ease-in-out forwards;
+  }
+  

@@ -11,16 +11,16 @@ import Internship from './Pages/Internship/Internship'
 function App() {
   return (
     <>
-      <Routes>
+      {/*<Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/gallery' element={<Gallery/>}/>
-      <Route path='/services' element={<Services/>}/>
-      <Route path='/contactus' element={<ContactUs/>}/>
+      <Route path='/gallery' element={<Gallery/>}/>*/}
+      <Services/>
+     {/* <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path='/signup' element={<SignUp/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/internship' element={<Internship/>}/>
-    </Routes>
+    </Routes>*/}
       
     </>
   )

@@ -1,3 +1,0 @@
-Note: 
-
-Make components of all pages inside this folder only, to keep the code organized.
