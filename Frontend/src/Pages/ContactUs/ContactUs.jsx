@@ -18,7 +18,6 @@ const ContactUs = () => {
           <p className="text-xl opacity-90 max-w-[600px] mx-auto">We'd love to hear from you. Let us know how we can help</p>
         </div>
       </div>
-
       <div className=" mx-auto p-6 bg-[#164672] bg-100% px-12 ">
         <section className="container ">
           <div className=" grid md:grid-cols-2 gap-8 mt-14">
