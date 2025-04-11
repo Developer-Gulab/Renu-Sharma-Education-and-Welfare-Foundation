@@ -5,13 +5,13 @@ import 'aos/dist/aos.css';
 const TeamMember = ({ name, title, description, image, aosAnimation, aosDelay }) => {
   return (
     <div 
-      className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" 
+      className=" p-6 rounded-lg shadow-lg transition-transform duration-300 hover-effect  shadow-slate-400" 
       data-aos={aosAnimation} 
       data-aos-delay={aosDelay}
     >
       <img src={image} alt={name} className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" />
-      <h3 className="text-xl font-semibold text-[#234155] text-center">{name}</h3>
-      <p className="text-[#315770]  text-center">{title}</p>
+      <h3 className="text-xl font-semibold text-[#358fcb] text-center">{name}</h3>
+      <p className="text-[#4c8ab4]  text-center">{title}</p>
       <p className="text-white mt-2 text-center">{description}</p>
     </div>
   );

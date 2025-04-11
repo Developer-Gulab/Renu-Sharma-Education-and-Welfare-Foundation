@@ -6,18 +6,18 @@ import 'aos/dist/aos.css';
 const KeyProgramItem = ({ title, description, stats, icon, aosAnimation, aosDelay }) => {
   return (
     <div 
-      className="bg-[#6A9AB0] p-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex flex-col items-center w-full" 
+      className=" p-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex flex-col items-center w-full hover-effect  shadow-slate-400" 
       data-aos={aosAnimation} 
       data-aos-delay={aosDelay}
     >
       <div className="text-3xl text-white mb-2">{icon}</div>
-      <h3 className="text-lg font-semibold mb-2 text-[#2c5169] text-center">{title}</h3>
+      <h3 className="text-lg font-semibold mb-2 text-[#3fa1e3] text-center">{title}</h3>
       <p className="text-sm mb-2 text-center">{description}</p>
       <div className="flex justify-around w-full">
         {stats.map((stat, index) => (
           <div key={index} className="text-center">
             <span className="text-2xl font-bold text-blue-600">{stat.number}</span>
-            <span className="text-gray-600 block text-sm">{stat.label}</span>
+            <span className="text-gray-100 block text-sm">{stat.label}</span>
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 const images = [
   {
-    src: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    src: 'https://miro.medium.com/v2/resize:fit:1200/1*0_TJTrY1D3i9CAvxwpZvdQ.jpeg',
     title: 'On a mission to uplift each individual',
     description: 'Making a difference in the lives of needy ones.',
   },
@@ -43,22 +43,26 @@ const HeroCarousel = () => {
   }, []);
 
   return (
-    <div className="relative h-[75vh]">
-      <div
-        className="absolute inset-0 bg-fixed bg-cover bg-center transition-all duration-500"
-        style={{ backgroundImage: `url(${images[currentIndex].src})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black flex items-center justify-center">
-          <div className="text-white text-center p-8 rounded-lg shadow-lg">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-shadow " data-aos="fade-down" data-aos-duration="1000">About Us</h1>
-            <div className="max-w-2xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1000">{images[currentIndex].title}</h2>
-              <p className="text-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">{images[currentIndex].description}</p>
+    <div className="relative h-[95vh]">
+    <div
+      className="absolute inset-0 bg-fixed bg-cover bg-center transition-all duration-500"
+      style={{ backgroundImage: `url(${images[currentIndex].src})` }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black flex items-center justify-center">
+        <div className="text-white text-center p-8 rounded-lg shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-shadow-800" data-aos="fade-down" data-aos-duration="1000" style={{ textShadow: '2px 2px 6px black' }}>About Us</h1>
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" style={{ textShadow: '2px 2px 4px black' }}>{images[currentIndex].title}</h2>
+            <p className="text-xl mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" style={{ textShadow: '1px 1px 6px black' }}>{images[currentIndex].description}</p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300" data-aos="fade-up" data-aos-duration="1000">Donate Now ❤️</button>
+              <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-700 transition duration-300" data-aos="fade-up" data-aos-duration="1000">Get Involved →</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
