@@ -21,7 +21,6 @@ const ContactUs = () => {
       <div className=" mx-auto p-6 bg-[#164672] bg-100% px-12 ">
         <section className="container ">
           <div className=" grid md:grid-cols-2 gap-8 mt-14">
-            
             {/* Feedback Form Section */}
             <div className="bg-gray-300 p-6 rounded-lg shadow-md text-black" data-aos="fade-right">
               <h3 className="text-xl font-semibold mb-4">Send us a Message</h3>
