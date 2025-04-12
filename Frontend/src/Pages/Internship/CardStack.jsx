@@ -102,3 +102,51 @@ const CardStack = ({ items, scaleFactor = 0.05 }) => {
 };
 
 export default CardStack;
+{/*
+  
+const reviews = [
+    {
+        username: "Aman Panwar",
+        internshipName: "Web Development",
+        review: "Great experience! Learned a lot about React and Node.js.",
+        rating: 5,
+        image: "https://img.freepik.com/free-photo/close-up-photo-young-successful-business-man-black-suit_171337-9509.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+    },
+    {
+        username: "John Doe",
+        internshipName: "UI/UX Design",
+        review: "Had a fantastic time working with an amazing team!",
+        rating: 4,
+        image: "https://img.freepik.com/free-photo/business-man-front-office-building_23-2148018576.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+    },
+    {
+        username: "Jane Smith",
+        internshipName: "App Development",
+        review: "Gained deep insights into API development.",
+        rating: 5,
+        image: "https://img.freepik.com/free-photo/elegant-man-with-folded-arms_1262-727.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+    },
+    {
+        username: "Alice Johnson",
+        internshipName: "Data Analyst",
+        review: "Exciting projects and great mentors!",
+        rating: 4,
+        image: "https://img.freepik.com/free-photo/portrait-confident-businessman_107420-74362.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+    },
+    {
+        username: "Michael Brown",
+        internshipName: "Cybersecurity Analyst",
+        review: "Hands-on experience with real-world security threats.",
+        rating: 5,
+        image: "https://img.freepik.com/free-photo/indian-businessman-with-his-white-car_496169-2889.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+    },
+    {
+        username: "Sophia Wilson",
+        internshipName: "Digital Marketing",
+        review: "Learned about digital marketing and branding strategies!",
+        rating: 4,
+        image: "https://img.freepik.com/free-photo/businessman-with-crossed-arms_23-2147996582.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
+    }
+];
+  
+  */ }
