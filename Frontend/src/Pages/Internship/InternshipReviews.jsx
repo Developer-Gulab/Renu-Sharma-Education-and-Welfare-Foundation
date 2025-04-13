@@ -1,8 +1,9 @@
 import React from "react";
-import { FaStar, FaQuoteLeft, FaQuoteRight, FaComments } from "react-icons/fa";
+ import { useRef,useState,useEffect } from "react";
+ import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const reviews = [
+const review1 = [
     {
         username: "Aman Panwar",
         internshipName: "Web Development",
@@ -23,7 +24,8 @@ const reviews = [
         review: "Gained deep insights into API development.",
         rating: 5,
         image: "https://img.freepik.com/free-photo/elegant-man-with-folded-arms_1262-727.jpg?ga=GA1.1.1675882604.1742791663&semt=ais_hybrid"
-    },
+    },]
+    const review2=[
     {
         username: "Alice Johnson",
         internshipName: "Data Analyst",
@@ -48,93 +50,115 @@ const reviews = [
 ];
 
 export default function InternshipReview() {
+    const scrollRef1 = useRef(null);
+  const scrollRef2 = useRef(null);
+
+  // Infinite scrolling effect
+  useEffect(() => {
+    const scroll1 = scrollRef1.current;
+    const scroll2 = scrollRef2.current;
+    const speed = 1.3;
+    let frame;
+
+    const animate = () => {
+      if (scroll1 && scroll2) {
+        scroll1.scrollTop += speed;
+        scroll2.scrollTop -= speed;
+
+        if (scroll1.scrollTop >= scroll1.scrollHeight / 2) scroll1.scrollTop = 0;
+        if (scroll2.scrollTop <= 0) scroll2.scrollTop = scroll2.scrollHeight / 2;
+      }
+      frame = requestAnimationFrame(animate);
+    };
+
+    animate();
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  // Review card component
+  const renderCard = (item, idx) => (
+    <div
+      key={idx}
+      className="bg-zinc-900 text-white p-5 rounded-lg shadow-md mb-6  w-full opacity-70"
+    >
+         <div className="flex items-center justify-between mt-3 ">
+      <div className="flex items-center gap-4">
+      <img
+        src={item.image}
+        alt={item.username}
+        className="w-16 h-16 rounded-full object-cover border-2 border-yellow-500 shadow-sm"
+      />
+      <div>
+        <p className="font-semibold text-lg text-white">{item.username}</p>
+        <p className="text-xs text-gray-400">{item.internshipName}</p>
+      </div>
+    </div>
+  
+      <div className="text-yellow-400 font-bold text-xl mb-2">
+        ⭐ {item.rating}
+      </div>
+      </div>
+      <p className="text-gray-300 text-base leading-relaxed italic text-lg mb-3">
+    "{item.review}"
+  </p>
+      
+  </div>
+ 
+  );
     return (
-        <motion.div 
-            initial={{ opacity: 0, y: 40, scale: 0.95, skewY: 5 }} 
-            whileInView={{ opacity: 1, y: 0, scale: 1, skewY: 0 }} 
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: false }}
-            className="bg-gradient-to-r from-gray-900 via-gray-800 to-[#001f3f]-400  p-10 
-            rounded-lg shadow-xl w-[100%] mx-auto flex flex-col items-center text-gray-900  "
-        >
-            
-            {/* Heading */}
-            <motion.h2
-    initial={{ opacity: 0, scale: 0.8, rotateX: -30 }}
-    whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    viewport={{ once: false }}
-    className="text-3xl font-extrabold mb-4 text-center text-white flex items-center justify-center gap-3"
+        <motion.div
+      initial={{ opacity: 0, y: 40, scale: 0.95, skewY: 5 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1, skewY: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: false }}
+      className="w-full max-w-7xl mx-auto   p-10 rounded-2xl shadow-2xl text-gray-900 flex flex-col items-center"
+    >
+     <motion.h2
+  initial={{ opacity: 0, scale: 0.8, rotateX: -30 }}
+  whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+  viewport={{ once: false }}
+  className="text-3xl md:text-4xl font-extrabold mb-6 text-center text-white flex items-center justify-center gap-3"
 >
-    🌟 What Our Past Interns Say About Their Experience 🌟
+  <motion.div
+    initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+    whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+    className="flex justify-center"
+  >
+    <div className="bg-gradient-to-br from-emerald-400 to-cyan-500 p-5 rounded-full shadow-xl shadow-cyan-400/40 animate-pulse">
+      {/* Optional icon, adjust as needed */}
+      <FaQuoteLeft className="text-white text-3xl" />
+    </div>
+  </motion.div>
+  What Our Past Interns Say About Their Experience
 </motion.h2>
 
 <motion.p
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-    viewport={{ once: false }}
-    className="text-lg text-gray-300 mb-8 text-center max-w-2xl relative z-10"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+  viewport={{ once: false }}
+  className="text-lg max-w-3xl mx-auto text-white/85 leading-relaxed mb-10"
 >
-    <motion.span
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-        className="inline-block text-blue-400 text-2xl"
-    >
-        💬
-    </motion.span>{" "}
-    Hear from our past interns about how their internships helped them grow and gain valuable skills in the industry.{" "}
-    <motion.span
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-        className="inline-block text-blue-400 text-2xl"
-    >
-        📈
-    </motion.span>
+  Hear from our past interns about how their internships helped them grow and gain valuable skills in the industry.
 </motion.p>
 
 
-            {/* Reviews Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
-                {reviews.map((review, index) => {
-                    let animationProps = { opacity: 0, scale: 0.9 };
-                    if (index % 3 === 0) animationProps.x = -50;
-                    else if (index % 3 === 2) animationProps.x = 50;
-                    else animationProps.y = 50;
-
-                    return (
-                        <motion.div 
-                            key={index} 
-                            initial={animationProps} 
-                            whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }} 
-                            transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
-                            viewport={{ once: false }}
-                            className="bg-white shadow-lg rounded-2xl i p-6 border border-gray-300 flex flex-col items-center text-gray-900 hover:shadow-2xl transition duration-300 transform hover:scale-105"
-                        >
-                           <img 
-    src={review.image} 
-    alt={review.username} 
-    className="w-32 h-32 rounded-full object-cover border-4 border-blue-400 mb-4"
-/>
-                            <h3 className="text-lg font-semibold text-center text-gray-800">{review.internshipName}</h3>
-                            <p className="text-gray-600 text-sm">by {review.username}</p>
-                            <p className="mt-2 text-gray-700 text-center flex items-center">
-                                <FaQuoteLeft className="text-gray-400 mr-2" />
-                                {review.review}
-                                <FaQuoteRight className="text-gray-400 ml-2" />
-                            </p>
-                            <p className="mt-2 text-yellow-500 font-bold flex items-center">
-                                Rating: {[...Array(review.rating)].map((_, i) => (
-                                    <FaStar key={i} className="text-yellow-500" />
-                                ))}
-                            </p>
-                            <FaComments className="text-gray-400 text-2xl mt-4" />
-                        </motion.div>
-                    );
-                })}
-            </div>
-        </motion.div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+        <div
+          className="h-[500px] overflow-y-scroll hide-scrollbar space-y-4"
+          ref={scrollRef1}
+        >
+          {[...review1, ...review2].map(renderCard)}
+        </div>
+        <div
+          className="h-[500px] overflow-y-scroll hide-scrollbar space-y-4"
+          ref={scrollRef2}
+        >
+          {[...review1, ...review2].map(renderCard)}
+        </div>
+      </div>
+    </motion.div>
     );
 }

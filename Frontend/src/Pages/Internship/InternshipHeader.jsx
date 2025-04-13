@@ -38,7 +38,7 @@ export default function InternshipHeader() {
   ];
 
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 bg-[#0a192f]">
+    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 bg-[#0a192f] ">
       {/* New Intro Section */}
       <motion.div
       initial={{ opacity: 0, scale: 0.9 }}

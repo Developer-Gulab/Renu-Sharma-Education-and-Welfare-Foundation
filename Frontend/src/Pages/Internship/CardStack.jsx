@@ -18,7 +18,7 @@ const CardStack = ({ items, scaleFactor = 0.05 }) => {
   const offset = 35 / items.length;
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center h-screen mb-0">
+    <div className="relative w-full flex flex-col items-center justify-center h-screen ">
       <div className="relative w-full flex justify-center items-center overflow-visible" style={{ height: `${60 + (items.length - 1) * offset}vh` }}>
         {cards.map((card, index) => (
           <motion.div
@@ -78,7 +78,7 @@ const CardStack = ({ items, scaleFactor = 0.05 }) => {
                bg-gradient-to-r from-purple-600 to-blue-600 text-white 
                font-extrabold text-xl md:text-2xl rounded-full shadow-xl transition-all 
                hover:shadow-[0_0_20px_rgba(255,105,180,0.8)] 
-               hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-500 mb-12"
+               hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-500 "
     whileInView={{ y: [0, -5, 0] }} // Floating effect
     transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
     whileHover={{ scale: 1.15, boxShadow: "0px 5px 20px rgba(255, 0, 150, 0.7)" }} // Glow effect
