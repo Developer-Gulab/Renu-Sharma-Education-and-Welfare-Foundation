@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import educationGalleryImg from "../../data/educationGalleryImg.json";
-import healthCareGallery from "../../data/healthCareGallery.json";
-import donationGallery from "../../data/donationGallery.json";
-import volunteersGallery from "../../data/volunteersGallery.json";
-import internshipGallery from "../../data/internshipGallery.json";
+import educationGalleryImg from "../../data/photo/educationGalleryImg.json";
+import healthCareGallery from "../../data/photo/healthCareGallery.json";
+import volunteersGallery from "../../data/photo/volunteersGallery.json"
+import internshipGallery from "../../data/photo/internshipGallery.json"
+import donationGallery from "../../data/photo/donationGallery.json";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaHeart } from "react-icons/fa"; // Import a like icon
-
 
 const categoryData = {
     Education: educationGalleryImg,
@@ -16,37 +15,11 @@ const categoryData = {
     Internship: internshipGallery,
 };
 
-
-
-function GalleryMid({ selectedCategory ,scrollToRef}) {
+function PhotoGallerySection({ selectedCategory, scrollToRef }) {
     const [loading, setLoading] = useState(false);
     const [images, setImages] = useState([]);
     const [lightboxIndex, setLightboxIndex] = useState(null);
-    const [color,setColor]=useState("");
-
-    const textColor=()=>{
-        console.log(selectedCategory);
-        
-        if(selectedCategory==="Education"){
-            setColor("text-blue-800")
-        }else if(selectedCategory==="Healthcare"){
-            setColor("text-green-800");
-        }else if(selectedCategory==="Donation"){
-            setColor("text-orange-800");
-        }else if(selectedCategory==="Volunteer"){
-            setColor("text-red-700");
-        }else if(selectedCategory==="Internship"){
-            setColor("text-purple-800");
-        }else{
-            setColor("text-blue-800");
-        }
-        console.log("Current color:", color);
-    }
-    useEffect(() => {
-        textColor(); 
-    }, [selectedCategory]);
-    
-
+   
     useEffect(() => {
         if (selectedCategory in categoryData) {
             setLoading(true); setImages([]);
@@ -54,7 +27,8 @@ function GalleryMid({ selectedCategory ,scrollToRef}) {
                 const updatedImages = categoryData[selectedCategory].map((item) => ({
                     ...item, likes: item.likes || 0, // Default to 0 if no likes field exists
                 }));
-                setImages(updatedImages); setLoading(false);
+                setImages(updatedImages);
+                setLoading(false);
             }, 500);  // Smooth transition
         }
     }, [selectedCategory]);
@@ -68,10 +42,10 @@ function GalleryMid({ selectedCategory ,scrollToRef}) {
         }
     };
     return (
-        <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 mt-4  pb-36 bg-blue-50 "  ref={scrollToRef}>
+        <div className="w-full container px-14   mt-16  pb-36 bg-blue-50 " ref={scrollToRef}>
             <motion.h1 initial={{ opacity: 0, x: -100, }} whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut", }} 
-                className={`text-4xl md:text-5xl font-extrabold text-center ${color} bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] leading-relaxed mt-4 pt-10 pb-2`}
+                transition={{ duration: 1.5, ease: "easeOut", }}
+                className="text-4xl md:text-5xl font-extrabold text-center  bg-gradient-to-r from-blue-300 to-purple-900 text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] leading-relaxed mt-4 pt-10 pb-2"
             >{selectedCategory} Gallery </motion.h1>
 
             {/* Masonry Grid */}
@@ -80,23 +54,26 @@ function GalleryMid({ selectedCategory ,scrollToRef}) {
                     hidden: { opacity: 0 },
                     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
                 }}
-                className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-12"  >
+
+                className="grid grid-cols-1  lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-1 gap-7 mt-12 "  >
+
 
                 {loading ? (
                     <div className="flex justify-center items-center h-40" >
                         <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
                     </div>) :
                     (images.length > 0 ? (
+
                         images.map((item, index) => (
                             <motion.div key={item.id} variants={{
                                 hidden: { opacity: 0, scale: 0.8 },
                                 visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
                             }}
-                                className="relative mb-4 group overflow-hidden rounded-lg cursor-pointer"
+                                className="relative mb-1 group overflow-hidden rounded-lg cursor-pointer"
                                 onClick={() => setLightboxIndex(index)} >
 
                                 <motion.img src={item.image} alt="Gallery"
-                                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" />
+                                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4 text-white">
                                     <p className="text-lg font-semibold">{item.project}</p>
                                     <div>
@@ -110,10 +87,10 @@ function GalleryMid({ selectedCategory ,scrollToRef}) {
 
                                 </div>
                             </motion.div>
-                            
+
                         ))
                     ) :
-                        
+
                         (<p className="text-center text-lg text-gray-500">No images available for {selectedCategory}</p>))
                 }
             </motion.div>
@@ -161,17 +138,11 @@ function GalleryMid({ selectedCategory ,scrollToRef}) {
                         </motion.div>
                     </motion.div>
                 </AnimatePresence>
-                
             )}
-           
+
         </div>
 
     );
 }
 
-export default GalleryMid;
-
-
-
-
-
+export default PhotoGallerySection;

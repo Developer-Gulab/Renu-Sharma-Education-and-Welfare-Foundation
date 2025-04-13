@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "location": "Pune",
+    "event": "Clothes Donation Drive",
+    "video": "https://cdn.pixabay.com/video/2019/08/13/26026-353764224_tiny.mp4",
+    "date": "2025-01-10"
+  },
+  {
+    "id": 2,
+    "location": "Mumbai",
+    "event": "Food Distribution for Homeless",
+    "video": "https://cdn.pixabay.com/video/2023/01/28/148288-793718093_tiny.mp4",
+    "date": "2025-01-25"
+  },
+  {
+    "id": 3,
+    "location": "Navi Mumbai",
+    "event": "School Supplies Charity",
+    "video": "https://cdn.pixabay.com/video/2019/02/23/21617-319452308_tiny.mp4",
+    "date": "2025-02-08"
+  },
+  {
+    "id": 4,
+    "location": "Nagpur",
+    "event": "NGO Donation Campaign",
+    "video": "https://cdn.pixabay.com/video/2016/07/28/4058-176749056_tiny.mp4",
+    "date": "2025-02-22"
+  },
+  {
+    "id": 5,
+    "location": "Kolhapur",
+    "event": "Charity Run for Funds",
+    "video": "https://cdn.pixabay.com/video/2021/07/20/82239-577893763_tiny.mp4",
+    "date": "2025-03-05"
+  }
+]

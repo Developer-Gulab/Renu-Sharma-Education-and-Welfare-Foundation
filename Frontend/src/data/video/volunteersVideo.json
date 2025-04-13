@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "location": "Nagpur",
+    "event": "Career Counseling Seminar",
+    "video": "https://cdn.pixabay.com/video/2024/05/29/214409_large.mp4",
+    "date": "2025-01-12"
+  },
+  {
+    "id": 2,
+    "location": "Thane",
+    "event": "Park Cleaning Drive",
+    "video": "https://cdn.pixabay.com/video/2025/03/28/268230_tiny.mp4",
+    "date": "2025-02-08"
+  },
+  {
+    "id": 3,
+    "location": "Nashik",
+    "event": "Street Painting by Volunteers",
+    "video": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_tiny.mp4",
+    "date": "2025-02-20"
+  },
+  {
+    "id": 4,
+    "location": "Pune",
+    "event": "Community Tree Plantation",
+    "video": "https://cdn.pixabay.com/video/2024/02/27/202134-917314709_tiny.mp4",
+    "date": "2025-03-05"
+  },
+  {
+    "id": 5,
+    "location": "Mumbai",
+    "event": "Beach Clean-up Mission",
+    "video": "https://cdn.pixabay.com/video/2021/09/05/87593-602317653_tiny.mp4",
+    "date": "2025-03-12"
+  },
+  {
+    "id": 6,
+    "location": "Kolhapur",
+    "event": "Rural Education Awareness",
+    "video": "https://cdn.pixabay.com/video/2020/06/01/40816-426939512_tiny.mp4",
+    "date": "2025-03-22"
+  },
+  {
+    "id": 7,
+    "location": "Aurangabad",
+    "event": "Plastic-Free Market Campaign",
+    "video": "https://cdn.pixabay.com/video/2021/04/07/70345-534725150_tiny.mp4",
+    "date": "2025-04-02"
+  }
+]

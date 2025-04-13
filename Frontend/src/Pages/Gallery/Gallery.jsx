@@ -1,7 +1,7 @@
 import React from "react";
-
-import GalleryHeader from "./GalleryHeader";
-import GalleryMid from "./GalleryMid";
+import RecentEvents from "../../components/Gallery_Components/RecentEvents";
+import GalleryHeader from "../../components/Gallery_Components/GalleryHeader";
+import GalleryMid from "../../components/Gallery_Components/GalleryMid";
 export default function Gallery() {
     return (
         <>
@@ -9,7 +9,9 @@ export default function Gallery() {
                 <GalleryHeader />
             </div>
             <div>
-
+                 <RecentEvents />
+            </div>
+            <div>
                 <GalleryMid />
             </div>
 

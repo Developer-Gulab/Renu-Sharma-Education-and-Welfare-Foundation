@@ -1,22 +1,45 @@
 [
-    {
-      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
-      "title": "Tech Fest 2024",
-      "description": "A glimpse of our amazing tech innovations and student projects.",
-      "buttonText": "Explore"
-    },
-    {
-      "videoUrl": "https://www.w3schools.com/html/movie.mp4",
-      "title": "Cultural Night",
-      "description": "Enjoy the vibrant performances and fun activities from the event.",
-      "buttonText": "Watch Now"
-    },
-    {
-      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",  
-      "title": "Renu Sharma Foundation Drive",
-      "description": "A heartfelt community initiative by the Renu Sharma Foundation to support underprivileged students with educational resources and motivation. Join hands to make a difference.",
-      "buttonText": "Learn More"
-    }
-  ]
-  
-  
+  {
+    "videoUrl": "https://media.istockphoto.com/id/877018552/video/analysing-data-on-dna-phenotyping.mp4?s=mp4-640x640-is&k=20&c=7EUs8Hjg7Idq_ZlYxQo8xUVnC1b7IJAve9rhp9BsAlA=",
+    "description": "A glimpse of our amazing tech innovations and student projects.",
+    "location": "Mumbai",
+    "date": "March 15, 2024",
+    "event": "🎉 Tech Fest"
+  },
+  {
+    "videoUrl": "https://media.istockphoto.com/id/1036837286/video/caucasian-business-woman-leading-a-presentation-using-the-display-in-the-glass-conference-room.mp4?s=mp4-640x640-is&k=20&c=v7vIkn-ou4hlIvTfvcIh4lcftic8F-Wx7P1zuINLqrk=",
+    "description": "Enjoy the vibrant performances and fun activities from the event.",
+    "location": "Pune",
+    "date": "March 20, 2024",
+    "event": "🎭 Cultural Night"
+  },
+  {
+    "videoUrl": "https://videos.pexels.com/video-files/857195/857195-hd_1280_720_25fps.mp4",
+    "description": "A heartfelt community initiative by the Renu Sharma Foundation to support underprivileged students.",
+    "location": "Nagpur",
+    "date": "April 5, 2025",
+    "event": "🤝 Foundation Drive"
+  },
+  {
+    "videoUrl": "https://media.istockphoto.com/id/2094120587/video/portrait-of-two-happy-rural-indian-children-sitting-together-and-using-a-smartphone.mp4?s=mp4-640x640-is&k=20&c=FN5PNTtRTFCGXp4dFLe5RuXvjTg08gE-xg00_4jvOlg=",
+    "description": "Students showcase exciting experiments and innovations.",
+    "location": "Nashik",
+    "date": "February 10, 2025",
+    "event": "🔬 Science Expo"
+  },
+  {
+    "videoUrl": "https://media.istockphoto.com/id/1210316855/video/indian-kids-hanging-around-outside-their-house.mp4?s=mp4-480x480-is&k=20&c=tJFQs3cGlU6ROptqf1cQCPTtwDVHYUDLNOoTz5IlFWw=",
+    "description": "A day full of energy, competitions, and celebration of athleticism.",
+    "location": "Thane",
+    "date": "January 26, 2025",
+    "event": "🏅 Sports Day"
+  },
+  {
+    "videoUrl": "https://media.istockphoto.com/id/1498655805/video/doctor-checking-blood-pressure-of-a-senior-adult-man-during-a-home-visit-as-part-of-a-rural.mp4?s=mp4-480x480-is&k=20&c=D9R_RBwT7sEc0bR1Jdnq_BGF1EtkOz2Euo_rbJl9PO0=",
+    "description": "Industry professionals guide students on career paths and opportunities.",
+    "location": "Kolhapur",
+    "date": "April 18, 2025",
+    "event": "🎓 Career Seminar"
+  }
+]
+
