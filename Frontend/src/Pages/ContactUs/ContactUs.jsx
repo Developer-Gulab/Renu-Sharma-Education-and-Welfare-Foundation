@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Phone, Mail, Clock } from 'lucide-react';
 
 const ContactUs = () => {
   useEffect(() => {
@@ -8,20 +9,57 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <div className=" w-full">
-      <div className="relative w-full h-[30vh] min-h-[400px] bg-cover bg-center bg-fixed flex items-center justify-center text-white text-center"
-        style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3')"
-        }}>
-        <div>
-          <h1 className="text-5xl font-extrabold mb-6 shadow-lg">Get In Touch</h1>
-          <p className="text-xl opacity-90 max-w-[600px] mx-auto">We'd love to hear from you. Let us know how we can help</p>
+    <div className=" w-full bg-[#164672]">
+      
+      <div className="w-full min-h-[80vh] flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-50 via-white to-blue-100 px-4 py-10 font-poppins">
+        <div className="mb-10">
+          <span className="text-sm  bg-blue-100 text-blue-700 px-5 py-2 rounded-full font-semibold tracking-wide shadow-sm">
+            Contact Us
+          </span>
+        </div>
+
+        <h1 className="text-4xl md:text-6xl font-bold text-blue-700 mb-6 leading-tight tracking-wide drop-shadow-md">
+          Contact the Renu Sharma Foundation
+        </h1>
+
+        <p className="text-lg md:text-base text-gray-600 max-w-2xl mb-10 leading-relaxed font-medium">
+          Have questions about our education, healthcare, or community development initiatives?
+          Our team is ready to help you make a positive impact in Haryana.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-6 mt-10">
+          {/* Phone */}
+          <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-lg text-gray-700 font-medium md:text-base text-lg">
+            <Phone className="w-5 h-5 text-blue-600" />
+            <span>+91 96714 57366</span>
+          </div>
+
+          {/* Email */}
+          <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-lg text-gray-700 font-medium text-lg">
+            <Mail className="w-5 h-5 text-blue-600" />
+            <span>official.renusharmafoundation@gmail.com</span>
+          </div>
+
+          {/* Clock */}
+          <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-lg text-gray-700 font-medium text-lg">
+            <Clock className="w-5 h-5 text-blue-600" />
+            <span>Mon-Fri, 9AM-6PM IST</span>
+          </div>
+        </div>
+
+        <div className="mt-12 animate-bounce">
+          <button className="w-12 h-12 bg-white text-blue-600 shadow-xl rounded-full flex items-center justify-center text-2xl">
+            ↓
+          </button>
         </div>
       </div>
+
+
+
       <div className=" mx-auto p-6 bg-[#164672] bg-100% px-12 ">
         <section className="container ">
           <div className=" grid md:grid-cols-2 gap-8 mt-14">
-            
+
             {/* Feedback Form Section */}
             <div className="bg-gray-300 p-6 rounded-lg shadow-md text-black" data-aos="fade-right">
               <h3 className="text-xl font-semibold mb-4">Send us a Message</h3>
@@ -58,86 +96,65 @@ const ContactUs = () => {
             </div>
           </div>
         </section>
+       </div> 
 
 
 
 
 
-        <div class="w-full bg-[#6A9AB0] text-white my-12 rounded-lg">
-          {/* <!-- Newsletter Section --> */}
-          <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 md:py-10">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-              {/* <!-- Text Content --> */}
-              <div class="text-center md:text-left">
-                <h2 class="text-2xl font-bold">Subscribe to Our Newsletter</h2>
-                <p class="text-gray-300">
+        <div className="w-full bg-[#6A9AB0] text-white mt-12 rounded-none">
+          {/* Newsletter Section */}
+          <div className="max-w-7xl mx-auto my-2 px-6 lg:px-12 py-2 md:py-6">
+            <div className="flex flex-col md:flex-row items-center justify-between ">
+              {/* Text Content */}
+              <div className="text-center md:text-left ">
+                <h2 className="text-2xl font-bold">Subscribe to Our Newsletter</h2>
+                <p className="text-gray-200">
                   Get the latest design trends, home inspiration and exclusive offers
                 </p>
               </div>
 
-              {/* <!-- Input Field --> */}
-              <div class="relative w-full max-w-md">
-                
-
-                <div class="relative w-full max-w-md">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    class="w-full p-4 rounded-full pr-14 bg-white text-black focus:outline-none"
-                  />
-                  <button
-                    class="absolute top-1/2 right-2 -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full"
-                  >
-                    <i class="fas fa-paper-plane text-white text-sm"></i>
-                  </button>
-                </div>
-
-
-
-
-
-
+              {/* Input Field */}
+              <div className="relative w-full max-w-md">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  className="w-full p-4 rounded-full pr-14 bg-white text-black focus:outline-none"
+                />
+                <button
+                  className="absolute top-1/2 right-2 -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full"
+                >
+                  <i className="fas fa-paper-plane text-white text-sm"></i>
+                </button>
               </div>
             </div>
           </div>
 
-          {/* <!-- Social Media Section --> */}
-          <div class="w-full bg-gray-900 py-4 rounded-b-lg">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-12">
-              <p class="text-gray-400">Connect with us</p>
-              <div class="flex space-x-4 mt-2  ">
-                <div class="p-2 bg-gray-800 hover:bg-gray-700 rounded-full flex justify-center w-10 h-10 cursor-pointer">
-                  <i class="fab fa-facebook-f text-white text-lg"></i>
-                </div>
-                <div class="p-2 bg-gray-800 hover:bg-gray-700 rounded-full flex justify-center w-10 h-10 cursor-pointer">
-                  <i class="fab fa-instagram text-white text-lg"></i>
-                </div>
-                <div class="p-2 bg-gray-800 hover:bg-gray-700 rounded-full flex justify-center w-10 h-10 cursor-pointer">
-                  <i class="fab fa-twitter text-white text-lg"></i>
-                </div>
-                <div class="p-2 bg-gray-800 hover:bg-gray-700 rounded-full flex justify-center w-10 h-10 cursor-pointer">
-                  <i class="fab fa-youtube text-white text-lg"></i>
-                </div>
-                <div class="p-2 bg-gray-800 hover:bg-gray-700 rounded-full flex justify-center w-10 h-10 cursor-pointer">
-                  <i class="fab fa-linkedin text-white text-lg"></i>
-                </div>
-                <div class="p-2 bg-gray-800 hover:bg-gray-700 rounded-full flex justify-center w-10 h-10 cursor-pointer">
-                  <i class="fab fa-pinterest text-white text-lg"></i>
-                </div>
+          {/* Social Media Section */}
+          <div className="w-full bg-gray-900 py-4">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-12">
+              <p className="text-gray-400">Connect with us</p>
+              <div className="flex space-x-4 mt-2 md:mt-0">
+                {["facebook-f", "instagram", "twitter", "youtube", "linkedin", "pinterest"].map((platform) => (
+                  <div key={platform} className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full flex justify-center w-10 h-10 cursor-pointer">
+                    <i className={`fab fa-${platform} text-white text-lg`}></i>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
       </div>
-    </div>
+    
 
 
 
 
 
 
-  );
+
+      );
 };
 
-export default ContactUs;
+      export default ContactUs;
