@@ -5,26 +5,26 @@ import 'aos/dist/aos.css';
 const PartnerItem = ({ name, description, logo, aosAnimation, aosDelay }) => {
   return (
     <div 
-      className=" p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 flex flex-col items-center hover-effect  shadow-slate-400" 
+      className=" p-6 rounded-lg  transition-transform duration-300 hover:scale-105 flex flex-col items-center shadow-lg hover-effect shadow-slate-800" 
       data-aos={aosAnimation} 
       data-aos-delay={aosDelay}
     >
-      <img src={logo} alt={name} className="w-24 h-24 mb-4" />
-      <h3 className="text-xl font-semibold text-white text-center">{name}</h3>
-      <p className="text-gray-200 text-center mt-2">{description}</p>
+      <img src={logo} alt={name} className="w-24 h-24 mb-4 shadow-md hover-effect shadow-slate-800" />
+      <h3 className="text-xl font-semibold text-gray-600 text-center">{name}</h3>
+      <p className="text-black text-center mt-2">{description}</p>
     </div>
   );
 };
 
 const PartnersSection = () => {
   return (
-    <section className="py-16 bg-[#001F3F] px-4 md:px-20 lg:px-32" data-aos="fade-up">
+    <section className="py-16 bg-white px-4 md:px-20 lg:px-32" data-aos="fade-up">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">Our Partners</h2>
-        <p className="text-center text-gray-300 mb-8">
+        <p className="text-center text-black mb-8">
           We collaborate with organizations that share our vision for integrated community development.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 ">
           <PartnerItem 
             name="ILEARN Institute"
             description="A leading educational institution focused on innovative learning solutions. ILEARN Institute is dedicated to transforming education through technology and personalized learning experiences. Our programs are designed to empower students with critical thinking skills, creativity, and the ability to adapt to a rapidly changing world. We offer a range of courses that cater to diverse learning needs, ensuring that every student has the opportunity to succeed."

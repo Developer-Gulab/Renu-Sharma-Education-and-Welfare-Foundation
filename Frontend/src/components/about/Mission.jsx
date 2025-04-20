@@ -4,7 +4,7 @@ const Mission = () => {
   return (
     <section className="py-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
       <div className="container mx-auto px-4 md:px-20">
-        <div className="flex flex-col md:flex-row p-6 rounded-lg shadow-lg hover-effect shadow-slate-400">
+        <div className="flex flex-col md:flex-row p-6 rounded-lg shadow-xl hover-effect shadow-slate-800">
           {/* Image Column */}
           <div className="w-full md:w-1/2 mb-6 md:mb-0" data-aos="zoom-in" data-aos-duration="1000">
             <img 

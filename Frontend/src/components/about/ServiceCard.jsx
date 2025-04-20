@@ -6,7 +6,7 @@ import { FaUtensils, FaTshirt, FaPaw, FaHospital, FaUsers } from 'react-icons/fa
 // ServiceCard Component
 const ServiceCard = ({ icon, title, description, animation }) => {
   return (
-    <div className={`p-6 rounded-lg shadow-lg hover-effect shadow-slate-400`} data-aos={animation}>
+    <div className={`p-6 rounded-lg shadow-xl hover-effect shadow-slate-800`} data-aos={animation}>
       <div className="flex flex-col items-center">
         {icon}
         <h3 className="text-xl font-semibold text-center mb-4 text-[#2c5169]">{title}</h3>
@@ -58,7 +58,7 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#001F3F]" data-aos="zoom-in">
+    <section className="py-16 bg-white" data-aos="zoom-in">
       <div className="container mx-auto px-4 md:px-20">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">What We Do</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -6,11 +6,11 @@ import 'aos/dist/aos.css';
 const KeyProgramItem = ({ title, description, stats, icon, aosAnimation, aosDelay }) => {
   return (
     <div 
-      className=" p-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex flex-col items-center w-full hover-effect  shadow-slate-400" 
+      className=" p-4 rounded-lg transition-all duration-300 hover:scale-105 flex flex-col items-center w-full hover-effect shadow-xl hover-effect shadow-slate-800" 
       data-aos={aosAnimation} 
       data-aos-delay={aosDelay}
     >
-      <div className="text-3xl text-white mb-2">{icon}</div>
+      <div className="text-3xl text-black mb-2">{icon}</div>
       <h3 className="text-lg font-semibold mb-2 text-[#3fa1e3] text-center">{title}</h3>
       <p className="text-sm mb-2 text-center">{description}</p>
       <div className="flex justify-around w-full">
@@ -27,10 +27,10 @@ const KeyProgramItem = ({ title, description, stats, icon, aosAnimation, aosDela
 
 const KeyProgramsSection = () => {
   return (
-    <section className="py-16 bg-[#001F3F]" data-aos="fade-up">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-white" data-aos="fade-up">
+      <div className="container mx-auto px-4 ">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">Our Key Programs</h2>
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row gap-6 ">
           <KeyProgramItem 
             title="Community Health Initiatives"
             description="Providing preventative care, maternal health services, and chronic disease management through our network of mobile and permanent health centers."

@@ -24,7 +24,7 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#001F3F] text-white"> 
+    <div className="min-h-screen bg-white text-black"> 
     
       {/* Hero Section */}
       <HeroCarousel/>
