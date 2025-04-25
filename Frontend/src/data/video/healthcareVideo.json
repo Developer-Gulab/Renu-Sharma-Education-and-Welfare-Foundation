@@ -6,29 +6,9 @@
     "video": "https://cdn.pixabay.com/video/2024/02/28/202368-918049003_large.mp4",
     "date": "2025-01-20"
   },
+  
   {
     "id": 2,
-    "location": "Mumbai",
-    "event": "Health Check-up Camp",
-    "video": "https://cdn.pixabay.com/video/2016/09/21/5448-183788663_tiny.mp4",
-    "date": "2025-02-05"
-  },
-  {
-    "id": 3,
-    "location": "Nagpur",
-    "event": "COVID-19 Vaccination Drive",
-    "video": "https://cdn.pixabay.com/video/2020/09/13/49808-458438856_tiny.mp4",
-    "date": "2025-02-18"
-  },
-  {
-    "id": 4,
-    "location": "Thane",
-    "event": "Mental Health Awareness Week",
-    "video": "https://cdn.pixabay.com/video/2016/09/21/5455-184226804_tiny.mp4",
-    "date": "2025-03-01"
-  },
-  {
-    "id": 5,
     "location": "Solapur",
     "event": "Blood Donation and Wellness Camp",
     "video": "https://cdn.pixabay.com/video/2022/12/23/144018-784164340_tiny.mp4",

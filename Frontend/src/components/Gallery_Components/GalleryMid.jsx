@@ -54,9 +54,9 @@ function GalleryMid() {
   };
 
   return (
-    <div className=" container mx-auto w-full overflow-hidden">
+    <div className=" container mx-auto w-full overflow-hidden ">
       {/* Carousel Section */}
-      <div className="px-9 mt-4 bg-white">
+      <div className="px-9 mt-4 ">
         <div className="slider-container">
           <Slider {...settings}>
             {list.map((el, index) => (
@@ -74,7 +74,7 @@ function GalleryMid() {
         </div>
       </div>
 
-      <hr className="w-1/2 mx-auto mt-14 bg-black-700 h-1" />
+      <hr className="w-1/2 mx-auto mt-14  h-1" />
 
       {/* Toggle Buttons */}
       <div className="flex gap-4 justify-center mt-12">

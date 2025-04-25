@@ -42,7 +42,7 @@ function PhotoGallerySection({ selectedCategory, scrollToRef }) {
         }
     };
     return (
-        <div className="w-full container px-14   mt-16  pb-36 bg-blue-50 " ref={scrollToRef}>
+        <div className="w-full container px-14   mt-16  pb-36   rounded-lg mb-5" ref={scrollToRef}>
             <motion.h1 initial={{ opacity: 0, x: -100, }} whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeOut", }}
                 className="text-4xl md:text-5xl font-extrabold text-center  bg-gradient-to-r from-blue-300 to-purple-900 text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] leading-relaxed mt-4 pt-10 pb-2"

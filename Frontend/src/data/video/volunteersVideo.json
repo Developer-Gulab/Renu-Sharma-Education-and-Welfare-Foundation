@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "location": "Nagpur",
-    "event": "Career Counseling Seminar",
-    "video": "https://cdn.pixabay.com/video/2024/05/29/214409_large.mp4",
-    "date": "2025-01-12"
+    "location": "Mumbai",
+    "event": "Beach Clean-up Mission",
+    "video": "https://cdn.pixabay.com/video/2021/09/05/87593-602317653_tiny.mp4",
+    "date": "2025-03-12"
   },
   {
     "id": 2,
@@ -33,19 +33,5 @@
     "event": "Beach Clean-up Mission",
     "video": "https://cdn.pixabay.com/video/2021/09/05/87593-602317653_tiny.mp4",
     "date": "2025-03-12"
-  },
-  {
-    "id": 6,
-    "location": "Kolhapur",
-    "event": "Rural Education Awareness",
-    "video": "https://cdn.pixabay.com/video/2020/06/01/40816-426939512_tiny.mp4",
-    "date": "2025-03-22"
-  },
-  {
-    "id": 7,
-    "location": "Aurangabad",
-    "event": "Plastic-Free Market Campaign",
-    "video": "https://cdn.pixabay.com/video/2021/04/07/70345-534725150_tiny.mp4",
-    "date": "2025-04-02"
   }
 ]

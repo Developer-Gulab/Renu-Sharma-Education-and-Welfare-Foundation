@@ -1,64 +1,84 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import events from "../../assets/events.json";
 
 const RecentEvents = () => {
-  const [index, setIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const isScrolling = useRef(false);
+  const containerRef = useRef(null);
+
+  const handleWheel = (e) => {
+    // If at first event and user scrolls up → allow page scroll
+    if (currentIndex === 0 && e.deltaY < 0) return;
+
+    // If at last event and user scrolls down → allow page scroll
+    if (currentIndex === events.length - 1 && e.deltaY > 0) return;
+
+    // Prevent default scroll
+    e.preventDefault();
+
+    if (isScrolling.current) return;
+    isScrolling.current = true;
+
+    if (e.deltaY > 0 && currentIndex < events.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    } else if (e.deltaY < 0 && currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 500);
+  };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % events.length);
-    }, 5000); // change every 5s
+    const container = containerRef.current;
 
-    return () => clearInterval(interval);
-  }, []);
+    if (container) {
+      container.addEventListener("wheel", handleWheel, { passive: false });
+    }
 
-  const current = events[index];
+    return () => {
+      if (container) {
+        container.removeEventListener("wheel", handleWheel);
+      }
+    };
+  }, [currentIndex]);
+
+  const currentEvent = events[currentIndex];
 
   return (
-    <>
-      <div className="relative w-full h-screen overflow-hidden">
-        {/* Background Video */}
+    <div
+      // ref={containerRef}
+      className="flex h-screen bg-[#002B40] text-white overflow-hidden"
+    >
+      {/* Left - Scrollable Content */}
+      <div className="w-1/2 flex items-center justify-center ">
+        <div className="info-box p-2 rounded-lg w-full max-w-md" ref={containerRef}>
+          <h2 className="text-4xl font-bold text-cyan-300">
+            {currentEvent.event}
+          </h2>
+          <p className="mt-4 text-base text-gray-200">
+            {currentEvent.description}
+          </p>
+          <p className="text-sm mt-4 text-gray-400">
+             {currentEvent.location} | {currentEvent.date}
+          </p>
+        </div>
+      </div>
+
+      {/* Right - Video */}
+      <div className="w-1/2 p-4 flex justify-center items-center bg-[#001A26]">
         <video
-          src={current.videoUrl}
+          key={currentEvent.videoUrl}
+          src={currentEvent.videoUrl}
           autoPlay
           muted
           loop
-          className="w-full h-full object-cover"
+          className="rounded-xl w-[90%] shadow-2xl"
         />
-
-
-        <h1 className="text-white font-bold absolute right-3 top-2 text-lg">
-          RECENT EVENTS
-
-        </h1>
-        {/* Overlay Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center space-y-2 lg:top-40 md:top-80">
-          <p className="text-white absolute md:bottom-48 bg-slate-600  px-4 py-1 sm:px-1  rounded font-dancing ">
-            {current.description}
-          </p>
-          <div className="absolute bottom-36 left-1/2 transform -translate-x-1/2 bg-slate-500  text-white px-4 py-1 rounded flex flex-wrap gap-x-4 text-sm font-normal text-center font-dancing ">
-            <span className="font-semibold">{current.event}</span>
-            <span>📍 {current.location}</span>
-            <span>📅 {current.date}</span>
-          </div>
-
-        </div>
-
-        {/* Bottom SVG Wave */}
-        <div className="absolute bottom-0 left-0 w-full ">
-       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fillOpacity="1" d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,192C840,203,960,245,1080,245.3C1200,245,1320,203,1380,181.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-       
-
-           </div>
-
       </div>
-
-    </>
-
+    </div>
   );
 };
 
 export default RecentEvents;
-
-

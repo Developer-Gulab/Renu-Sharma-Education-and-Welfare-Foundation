@@ -44,7 +44,7 @@ function VideoGallerySection({ selectedCategory, scrollToRef }) {
   };
 
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 mt-16 pb-36 bg-yellow-50" ref={scrollToRef}>
+    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 mt-16 pb-36 rounded-lg mb-5"  ref={scrollToRef}>
       <motion.h1
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -62,7 +62,7 @@ function VideoGallerySection({ selectedCategory, scrollToRef }) {
           hidden: { opacity: 0 },
           visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
         }}
-        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-12"
+        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-7 mt-12"
       >
         {loading ? (
           <div className="col-span-full flex justify-center items-center h-40">

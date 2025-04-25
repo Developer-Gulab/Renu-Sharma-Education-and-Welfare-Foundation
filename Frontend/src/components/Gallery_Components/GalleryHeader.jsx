@@ -1,88 +1,91 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import photoes from "../../assets/headerPhotos.json";
 
-import React from "react";
-import vedio from "../../assets/vediomp4.mp4";
-import { motion } from "framer-motion";
+function GalleryHeader({ scrollToRef }) {
+  const [current, setCurrent] = useState(0);
 
+  const preSlide = () => {
+    setCurrent((current - 1 + photoes.length) % photoes.length);
+  };
 
+  const nextSlide = () => {
+    setCurrent((current + 1) % photoes.length);
+  };
 
+  const scrollToRecentEvents = () => {
+    if (scrollToRef?.current) {
+      scrollToRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-export default function GalleryHeader() {
-  
   return (
-    <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 mt-8 ">
+    <motion.header
+      className="relative h-screen w-full overflow-hidden "
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      
+    >
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black bg-opacity-35 z-0" />
+    
+      {/* Carousel Background Image */}
+      <img
+        src={photoes[current].img}
+        alt="Gallery Slide"
+        className="w-full h-screen object-cover "
+      />
 
-        {/*vedio container*/}
-        <div className="">
-          <motion.div initial={{ opacity: 0, scale: 1 }} whileInView={{ opacity: 1, scale: 1.1 }} transition={{ duration: 2, ease: "easeInOut" }}
-            className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center group rounded-md">
-            {/* Video with Smooth Zoom-in Effect */}
-            <motion.video initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} transition={{ duration: 2, ease: "easeInOut" }}
-              className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted >
-
-              <source src={vedio} type="video/mp4" />
-              Your browser does not support the video tag.
-            </motion.video>
-
-            {/* Animated Dark Overlay */}
-            <motion.div initial={{ opacity: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
-              className="absolute top-0 left-0 w-full h-full bg-black" ></motion.div>
-
-            {/* Animated Text with Slide-in Effect */}
-            <motion.h1
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="absolute text-white text-2xl md:text-4xl  font-bold bottom-4 left-4 bg-black/20 px-4 py-2  rounded-lg border-l-8 border-blue-700 pl-4 flex flex-col md:flex-row"
-            >
-              <p>Capturing Moments&nbsp;</p><p>Creating Change</p>
-              
-            </motion.h1>
-          </motion.div>
-        </div>
-
-
-        <div className="text-center my-44">
-          {/* Animated Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="font-bold text-pink-900 text-4xl md:text-5xl mb-6 tracking-wide pt-5  "
-          >
-            Our Journey of Change & Impact
-          </motion.h1>
-
-          {/* Expanding Line */}
-          <motion.div
-            initial={{ width: "0%", opacity: 0 }}
-            animate={{ width: "80%", opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="h-1 bg-blue-600 mx-auto "
-          ></motion.div>
-
-          {/* Animated Paragraph */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-            className="text-lg md:text-xl text-black max-w-3xl mx-auto leading-relaxed mt-4"
-          >
-            Every moment captured reflects our commitment to <span className="font-semibold text-blue-600">uplifting communities, empowering individuals,</span>
-            and driving meaningful change. From humanitarian efforts to grassroots initiatives, our gallery showcases
-            the <span className="font-semibold text-green-600">real impact of collective action and compassion.</span>
-          </motion.p>
-        </div>
+      {/* Left/Right Navigation Buttons */}
+      <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2 z-20">
+        <button onClick={preSlide} className="btn btn-square text-white text-5xl border-none  bg-opacity-0 font-normal hover:bg-black/50 ">❮</button>
+        <button onClick={nextSlide} className="btn btn-square text-white text-3xl bg-black bg-opacity-30">❯</button>
       </div>
 
-      
-     
+      {/* Header Text Content */}
+      <div className="absolute  top-1/3 left-24  text-white font-sans">
+        <motion.h1
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-6xl pb-5 font-extrabold bg-gradient-to-r from-red-600 via-orange-500 to-white bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient"
+        >
+          Our Journey in Gallery
+        </motion.h1>
 
-      
-     
-    </>
+        <motion.p
+          className="text-lg mt-4  font-semibold"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
+          Witness the Renu Sharma Foundation’s impact through powerful moments<br />captured in photos, highlighting transformation and hope in every frame.
+        </motion.p>
+
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-16 text-black bg-gradient-to-r from-[#CF0F47] to-[#FF0B55] hover:from-[#FF0B55] hover:to-[#CF0F47] px-6 py-3 rounded-full font-semibold text-lg shadow-lg transition duration-300"
+          onClick={scrollToRecentEvents}
+        >
+          Explore More
+        </motion.button>
+      </div>
+    </motion.header>
   );
 }
+
+export default GalleryHeader;
+
+
+
+
+
+
+
+
+
 
 
 
