@@ -151,9 +151,18 @@ export default function InternshipHeader() {
 />
    <IntershipInfo/>
 
-   <div className="text-center py-24 px-4 space-y-10" >
-  {/* Icon */}
+   <div className="text-center py-12 space-y-8">
+  <div className="flex flex-row items-center justify-center relative">
+  {/* Left Line Animation */}
   <motion.div
+    initial={{ width: 0 }}
+    whileInView={{ width: "35%" }}
+    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+    viewport={{ once: true }}
+    className="absolute left-0 top-1/2 transform -translate-y-1/2 h-[2px] bg-gradient-to-r from-emerald-300 to-cyan-400"
+  />
+   {/* Icon */}
+   <motion.div
     initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
     whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
     transition={{ duration: 1.2, ease: "backOut" }}
@@ -165,13 +174,22 @@ export default function InternshipHeader() {
     </div>
   </motion.div>
 
-  {/* Heading */}
-  <motion.h2
+  {/* Right Line Animation */}
+  <motion.div
+    initial={{ width: 0 }}
+    whileInView={{ width: "35%" }}
+    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+    viewport={{ once: true }}
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 h-[2px] bg-gradient-to-l from-emerald-300 to-cyan-400"
+  />
+</div>
+    {/* Heading */}
+    <motion.h2
     initial={{ opacity: 0, scale: 0.85 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
     viewport={{ once: true }}
-    className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-300 to-cyan-400 text-transparent bg-clip-text"
+    className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-300 to-cyan-400 text-transparent bg-clip-text relative z-10"
   >
     Discover Your Dream Domain
   </motion.h2>

@@ -162,3 +162,16 @@ export default function InternshipReview() {
     </motion.div>
     );
 }
+/*
+ <div className="absolute bottom-4 right-4 flex space-x-4">
+              
+              <button className="relative px-5 py-2 text-sm font-semibold text-white bg-white/10 backdrop-blur-md rounded-lg shadow-md border border-white/30 transition-all duration-300 group-hover:border-transparent 
+                group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-green-500" onClick={()=>document.getElementById("my_modal_3").showModal()}>
+              <div className="flex flex-col md:flex-row items-center">
+                <span className="font-bold text-2xl"> Enroll Now  </span> 
+              <span className="ml-3"> <ArrowRightCircle size={30} className="text-white" /> </span></div>
+              </button>
+               </div>
+              <InternshipForm card={card} />
+
+              */

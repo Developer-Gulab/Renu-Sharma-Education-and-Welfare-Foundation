@@ -68,7 +68,7 @@ export default function InternshipForm({ card }) {
                         <div className="flex flex-col md:flex-row justify-center">
                             {/* Name Field */}
                             <div className="mt-2 px-4 py-1 w-full md:w-1/2">
-                                <h3 className="mb-1 text-white">Name</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">Name</h3>
                                 <input type="text" placeholder="Enter your name"
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -78,7 +78,7 @@ export default function InternshipForm({ card }) {
 
                             {/* Contact Number Field */}
                             <div className="mt-2 px-4 py-1 w-full md:w-1/2">
-                                <h3 className="mb-1 text-white">Contact No.</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">Contact No.</h3>
                                 <input type="number" placeholder="Enter your contact no."
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -90,7 +90,7 @@ export default function InternshipForm({ card }) {
                         <div className="flex flex-col md:flex-row justify-center">
                             {/* Gender*/}
                             <div className="mt-2 px-4 py-1 w-full md:w-1/2">
-                                <h3 className="mb-1 text-white">Gender</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">Gender</h3>
                                 <input type="text" placeholder="Enter your gender"
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -100,7 +100,7 @@ export default function InternshipForm({ card }) {
 
                             {/*Date of birth Field */}
                             <div className="mt-2 px-4 py-1 w-full md:w-1/2">
-                                <h3 className="mb-1 text-white">D.O.B</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">D.O.B</h3>
                                 <input
                                     type="date"
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
@@ -115,7 +115,7 @@ export default function InternshipForm({ card }) {
                         <div className="flex flex-col md:flex-row justify-center">
                             {/* Email Field */}
                             <div className="mt-2 px-4 py-1 w-full w-1/2">
-                                <h3 className="mb-1 text-white">Email</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">Email</h3>
                                 <input type="email" placeholder="Enter email"
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -125,7 +125,7 @@ export default function InternshipForm({ card }) {
 
                             {/* College Field */}
                             <div className="mt-2 px-4 py-1 w-full w-1/2">
-                                <h3 className="mb-1 text-white">College</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">College</h3>
                                 <input type="text" placeholder="Enter college name"
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -137,7 +137,7 @@ export default function InternshipForm({ card }) {
                         <div className="flex flex-col md:flex-row justify-center">
                             {/* Course*/}
                             <div className="mt-2 px-4 py-1 w-full md:w-1/2">
-                                <h3 className="mb-1 text-white">Course</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">Course</h3>
                                 <input type="text" placeholder="Enter your course"
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -147,7 +147,7 @@ export default function InternshipForm({ card }) {
 
                             {/* Id NO.*/}
                             <div className="mt-2 px-4 py-1 w-full md:w-1/2">
-                                <h3 className="mb-1 text-white">Id No.</h3>
+                                <h3 className="mb-1 text-lg font-semibold text-white text-left">Id No.</h3>
                                 <input type="number" placeholder="Enter your Id no."
                                     className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -158,7 +158,7 @@ export default function InternshipForm({ card }) {
 
                         {/* Skills Field */}
                         <div className="mt-2 px-4 py-1">
-                            <h3 className="mb-1 text-white">Skills And Achievements</h3>
+                            <h3 className="mb-1 text-lg font-semibold text-white text-left">Skills And Achievements</h3>
                             <input type="text" placeholder="Enter your skills"
                                 className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -168,7 +168,7 @@ export default function InternshipForm({ card }) {
 
                         {/* Domain Dropdown */}
                         <div className="mt-2 px-4 py-1">
-                            <h3 className="mb-1 text-white">Domain</h3>
+                            <h3 className="mb-1 text-lg font-semibold text-white text-left">Domain</h3>
                             <select className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
                                 {...register("domain", { required: true })}>
@@ -185,38 +185,45 @@ export default function InternshipForm({ card }) {
                             <p className="text-red-600 mt-2">{errors.domain && "This field is required"}</p>
                         </div>
 
-                        {/* Tenure Period Field */}
-                        <div className="mt-2 px-4 py-1">
-                            <h3 className="text-lg font-semibold text-white">Tenure Period (1 to 6 Months)</h3>
+                  
+                       {/* Tenure Period Field */}
+<div className="mt-2 px-4 py-1">
+    <h3 className="text-lg font-semibold text-white text-left">Tenure Period (1 to 6 Months)</h3>
 
-                            <div className="flex items-center gap-3 bg-gray-800 p-3 rounded-lg shadow-lg">
-                                <input
-                                    type="number"
-                                    min="1"
-                                    max="6"
-                                    {...register("tenure", { required: true, min: 1, max: 6 })}
-                                    className={`p-3 text-lg font-semibold rounded-md w-24 text-gray-900 transition-all duration-300 outline-none border-2 ${status === "invalid" ? "border-red-500"
-                                            : status === "valid" ? "border-green-500"
-                                                : "border-gray-300"
-                                        }`}
-                                />
+    <div className="flex items-center gap-3 bg-gray-800 p-3 rounded-lg shadow-lg">
+        <input
+            type="number"
+            min="1"
+            max="6"
+            {...register("tenure", { required: true, min: 1, max: 6 })}
+            className={`p-3 text-lg font-semibold rounded-md w-24 text-gray-900 transition-all duration-300 outline-none border-2 ${status === "invalid" ? "border-red-500"
+                    : status === "valid" ? "border-green-500"
+                        : "border-gray-300"
+                }`}
+        />
 
-                                {/* Show loading spinner or validation icons */}
-                                <div className="flex items-center justify-center w-10 h-10">
-                                    {loading ? (
-                                        <ImSpinner2 className="text-gray-400 text-3xl animate-spin" />
-                                    ) : status === "valid" ? (
-                                        <FaCheckCircle className="text-green-500 text-3xl transition-opacity duration-300 opacity-100" />
-                                    ) : status === "invalid" ? (
-                                        <FaTimesCircle className="text-red-500 text-3xl transition-opacity duration-300 opacity-100" />
-                                    ) : null}
-                                </div>
-                            </div>
-                        </div>
+        {/* Show loading spinner or validation icons */}
+        <div className="flex items-center justify-center w-10 h-10">
+            {loading ? (
+                <ImSpinner2 className="text-gray-400 text-3xl animate-spin" />
+            ) : status === "valid" ? (
+                <FaCheckCircle className="text-green-500 text-3xl transition-opacity duration-300 opacity-100" />
+            ) : status === "invalid" ? (
+                <FaTimesCircle className="text-red-500 text-3xl transition-opacity duration-300 opacity-100" />
+            ) : null}
+        </div>
+    </div>
+
+    {/* Error and valid status messages */}
+    {status === "invalid" && (
+        <p className="text-red-600 mt-2">Please input a valid tenure period (1 to 6 months).</p>
+    )}
+</div>
+
 
                         {/* Motivation Field */}
                         <div className="mt-2 px-4 py-1">
-                            <h3 className="mb-1 text-white">Why do you want this internship?</h3>
+                            <h3 className="mb-1 text-lg font-semibold text-white text-left">Why do you want this internship?</h3>
                             <textarea placeholder="Explain in a few sentences" rows="3"
                                 className="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:outline-none 
                focus:ring-2 focus:ring-blue-500 transition-all duration-200"
