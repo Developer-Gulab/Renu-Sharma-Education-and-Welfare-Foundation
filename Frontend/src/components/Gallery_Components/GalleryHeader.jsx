@@ -39,8 +39,8 @@ function GalleryHeader({ scrollToRef }) {
 
       {/* Left/Right Navigation Buttons */}
       <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2 z-20">
-        <button onClick={preSlide} className="btn btn-square text-white text-5xl border-none  bg-opacity-0 font-normal hover:bg-black/50 ">❮</button>
-        <button onClick={nextSlide} className="btn btn-square text-white text-3xl bg-black bg-opacity-30">❯</button>
+        <button onClick={preSlide} className="btn btn-square text-white text-3xl border-none  bg-opacity-0 font-normal hover:bg-opacity-30 ">❮</button>
+        <button onClick={nextSlide} className="btn btn-square text-white text-3xl border-none  bg-opacity-0 font-normal hover:bg-opacity-30">❯</button>
       </div>
 
       {/* Header Text Content */}
