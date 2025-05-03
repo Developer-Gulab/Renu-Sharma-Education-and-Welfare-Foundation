@@ -39,7 +39,6 @@ const ForgotPassword = () => {
     setLoading(false);
   };
 
-  // Particle animation for background
   const particles = Array.from({ length: 20 }).map((_, index) => ({
     id: index,
     size: Math.random() * 8 + 2,

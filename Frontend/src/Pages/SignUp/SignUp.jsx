@@ -32,8 +32,7 @@ const SignUp = () => {
   useEffect(() => {
     // Trigger animation after component mounts
     setTimeout(() => setAnimateForm(true), 100);
-    
-    // Add parallax effect on mouse move for the right side
+  
     const handleMouseMove = (e) => {
       const parallaxElements = document.querySelectorAll('.parallax');
       parallaxElements.forEach(el => {
@@ -128,7 +127,7 @@ const SignUp = () => {
     <div className="min-h-screen flex flex-col md:flex-row bg-gradient-to-br from-indigo-50 to-purple-50">
       {/* Left side - Form */}
       <div className="md:w-1/2 flex items-center justify-center py-10 px-8 md:px-16 relative">
-        {/* Decorative elements */}
+
         <div className="absolute top-0 left-0 w-64 h-64 bg-indigo-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-pink-50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
@@ -313,7 +312,6 @@ const SignUp = () => {
       
       {/* Right side - Visual elements */}
       <div className="md:w-1/2 relative overflow-hidden hidden md:block">
-        {/* Background image carousel with fade transition */}
         {backgroundImages.map((img, index) => (
           <div 
             key={index}

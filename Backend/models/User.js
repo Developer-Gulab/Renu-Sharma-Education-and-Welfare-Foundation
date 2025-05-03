@@ -1,9 +1,7 @@
 import mongoose from 'mongoose'; // Import Mongoose to interact with the MongoDB database
 import bcrypt from 'bcryptjs';  // Import bcryptjs to securely hash passwords before saving them to the database
-
 // schema defined in the database
 const UserSchema = new mongoose.Schema({
-  
   name: {
     type: String,
     required: true
@@ -21,7 +19,6 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true // Added phone number field
   },
-
   date: {
     type: Date,
     default: Date.now
@@ -33,7 +30,6 @@ UserSchema.pre('save', async function(next) {
   if (!this.isModified('password')) {
     return next();
   }
-  
   try {
     const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);
@@ -42,7 +38,6 @@ UserSchema.pre('save', async function(next) {
     next(error);
   }
 });
-
 // Method to check password
 UserSchema.methods.matchPassword = async function(enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);

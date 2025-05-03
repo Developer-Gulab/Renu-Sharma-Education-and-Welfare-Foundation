@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import SimpleMarquee from "@/fancy/components/blocks/simple-marquee";
 
-
+// random images that is used in the marquee
+// you can replace it with your own images
 const exampleImages = [
   "https://thumbs.dreamstime.com/z/team-young-diversity-volunteer-worker-group-enjoy-charitable-social-work-outdoor-tree-forest-planting-ngo-fighting-273224918.jpg",
   "https://images.hindustantimes.com/img/2023/01/03/550x309/NGO-workers-distribute-milk-at-a-village-during-th_1672757437713.jpg",
@@ -57,13 +58,11 @@ const Login = () => {
       : (2 - Math.pow(2, -20 * x + 10)) / 2;
   };
 
-  // Handle image click for the modal
   const handleImageClick = (src) => {
-    console.log("Image clicked:", src); // Add this for debugging
+    console.log("Image clicked:", src);
     setSelectedImage(src);
   };
 
-  // Close the modal
   const closeModal = () => {
     setSelectedImage(null);
   };
@@ -203,7 +202,6 @@ const Login = () => {
           </SimpleMarquee>
         </div>
 
-        {/* Modal for image preview - FIXED VERSION */}
         {selectedImage && (
           <div 
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
@@ -270,7 +268,6 @@ const Login = () => {
             
             {/* Form content with backdrop blur */}
             <div className="relative backdrop-blur-md bg-white/5 p-8 rounded-2xl border border-white/10 shadow-2xl">
-              {/* Decorative elements */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-green-400/10 rounded-full blur-2xl"></div>
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-400/10 rounded-full blur-2xl"></div>
               

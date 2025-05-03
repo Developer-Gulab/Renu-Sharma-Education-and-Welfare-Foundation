@@ -5,7 +5,6 @@ import dotenv from 'dotenv'; // Import dotenv to load environment variables from
 import process from 'process'; // Import process to access environment variables
 
 dotenv.config();
-
 const app = express();
 
 // Middleware

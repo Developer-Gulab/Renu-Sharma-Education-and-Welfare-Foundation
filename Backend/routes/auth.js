@@ -10,15 +10,11 @@ const router = express.Router(); // Create an Express Router to define routes se
 router.post('/forgot-password', async (req, res) => {
   try {
     const { email } = req.body; // Only destructuring email for forgot password
-
     // Check if email exists
     let user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ message: 'Email does not exist' });
     }
-
-    // Send OTP logic here (not implemented in this example)
-
     res.status(200).json({ success: true, message: 'OTP has been sent to your email!' });
   } catch (error) {
     console.error(error);
@@ -43,8 +39,8 @@ router.get('/check-email', async (req, res) => {
   }
 });
 
-// Register a new user
 
+// Register a new user
 router.post('/register', async (req, res) => {
   try {
     const { name, email, password, phone } = req.body; // Added phone to destructured body
@@ -91,7 +87,6 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
-
     // Check if user exists
     const user = await User.findOne({ email });
     if (!user) {
