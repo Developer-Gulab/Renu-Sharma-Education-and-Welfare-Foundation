@@ -9,7 +9,7 @@ const Founders = () => {
     <div className="aspect-w-3 aspect-h-4 relative" data-aos="fade-right"> {/* Adjusted aspect ratio */}
         <div className="w-[450px] h-[450px] rounded-2xl overflow-hidden group p-4"> {/* Decreased image size */}
             <img 
-                src="https://media.licdn.com/dms/image/v2/D5603AQFmGGv20J-skg/profile-displayphoto-shrink_400_400/B56ZR_Q_lxHsAg-/0/1737301949647?e=2147483647&v=beta&t=eNli3VFB3k-XCl5aWjFDsqh33-hqZUhRH0p9IxZmdTo"  
+                src="https://media.licdn.com/dms/image/v2/D5603AQE_hrA1D-yyfw/profile-displayphoto-shrink_400_400/B56ZZX4Ii_HsAg-/0/1745231056413?e=1750896000&v=beta&t=vfnH1cdv6tsN_AnjFDRi-b2QmVvXEDyHAXyGjibLR2Y"  
                 alt="Founder"
                 className="w-full h-full  object-cover"
             />
@@ -73,7 +73,7 @@ const Founders = () => {
     <div className="aspect-w-4 aspect-h-5 relative " data-aos="fade-left">
         <div className="w-[450px] h-[450px] rounded-2xl ml-20  overflow-hidden group p-2 ">
             <img 
-                src="https://media.licdn.com/dms/image/v2/D5603AQFmGGv20J-skg/profile-displayphoto-shrink_400_400/B56ZR_Q_lxHsAg-/0/1737301949647?e=2147483647&v=beta&t=eNli3VFB3k-XCl5aWjFDsqh33-hqZUhRH0p9IxZmdTo" 
+                src="https://media.licdn.com/dms/image/v2/D5603AQE_hrA1D-yyfw/profile-displayphoto-shrink_400_400/B56ZZX4Ii_HsAg-/0/1745231056413?e=1750896000&v=beta&t=vfnH1cdv6tsN_AnjFDRi-b2QmVvXEDyHAXyGjibLR2Y" 
                 alt="Co-Founder 1"
                 className="w-full h-full object-cover"
             />
@@ -87,7 +87,7 @@ const Founders = () => {
     <div className="aspect-w-3 aspect-h-4 relative" data-aos="fade-right"> {/* Adjusted aspect ratio */}
         <div className="w-[450px] h-[450px] rounded-2xl overflow-hidden group p-4"> {/* Decreased image size */}
             <img 
-                src="https://media.licdn.com/dms/image/v2/D5603AQFmGGv20J-skg/profile-displayphoto-shrink_400_400/B56ZR_Q_lxHsAg-/0/1737301949647?e=2147483647&v=beta&t=eNli3VFB3k-XCl5aWjFDsqh33-hqZUhRH0p9IxZmdTo"  
+                src="https://media.licdn.com/dms/image/v2/D5603AQE_hrA1D-yyfw/profile-displayphoto-shrink_400_400/B56ZZX4Ii_HsAg-/0/1745231056413?e=1750896000&v=beta&t=vfnH1cdv6tsN_AnjFDRi-b2QmVvXEDyHAXyGjibLR2Y"  
                 alt="Founder"
                 className="w-full h-full  object-cover"
             />

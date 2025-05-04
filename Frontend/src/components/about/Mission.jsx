@@ -8,7 +8,7 @@ const Mission = () => {
           {/* Image Column */}
           <div className="w-full md:w-1/2 mb-6 md:mb-0" data-aos="zoom-in" data-aos-duration="1000">
             <img 
-              src="https://media.licdn.com/dms/image/v2/D5603AQFmGGv20J-skg/profile-displayphoto-shrink_400_400/B56ZR_Q_lxHsAg-/0/1737301949647?e=2147483647&v=beta&t=eNli3VFB3k-XCl5aWjFDsqh33-hqZUhRH0p9IxZmdTo" 
+              src="https://media.licdn.com/dms/image/v2/D5603AQE_hrA1D-yyfw/profile-displayphoto-shrink_400_400/B56ZZX4Ii_HsAg-/0/1745231056413?e=1750896000&v=beta&t=vfnH1cdv6tsN_AnjFDRi-b2QmVvXEDyHAXyGjibLR2Y" 
               alt="Description of Image" 
               className="w-3/4 h-auto rounded-lg" 
             /> 

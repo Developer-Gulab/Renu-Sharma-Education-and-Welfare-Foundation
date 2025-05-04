@@ -59,9 +59,7 @@ export default function AboutUs() {
       {/* Image Slider */}
       <ImageSlider />
 
-      <footer className="w-full bg-gray-800 text-white text-center p-4">
-        <p>Footer Content Here</p>
-      </footer>
+     
     </div>
   );
 }
