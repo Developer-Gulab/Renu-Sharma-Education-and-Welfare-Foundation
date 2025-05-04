@@ -5,21 +5,21 @@ import 'aos/dist/aos.css';
 const TeamMember = ({ name, title, description, image, aosAnimation, aosDelay }) => {
   return (
     <div 
-      className="bg-[#6A9AB0] p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" 
+      className=" p-6 rounded-lg  transition-transform duration-300 shadow-xl hover-effect shadow-slate-800" 
       data-aos={aosAnimation} 
       data-aos-delay={aosDelay}
     >
-      <img src={image} alt={name} className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" />
-      <h3 className="text-xl font-semibold text-[#234155] text-center">{name}</h3>
-      <p className="text-[#315770]  text-center">{title}</p>
-      <p className="text-white mt-2 text-center">{description}</p>
+      <img src={image} alt={name} className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg hover-effect shadow-slate-800" />
+      <h3 className="text-xl font-semibold text-[#358fcb] text-center">{name}</h3>
+      <p className="text-[#4c8ab4]  text-center">{title}</p>
+      <p className="text-black mt-2 text-center">{description}</p>
     </div>
   );
 };
 
 const LeadershipTeamSection = () => {
   return (
-    <section className="py-16 bg-[#001F3F] px-4 md:px-20 lg:px-32" data-aos="fade-up">
+    <section className="py-16 bg-white px-4 md:px-20 lg:px-32" data-aos="fade-up">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#3A6D8C]">Our Leadership Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >

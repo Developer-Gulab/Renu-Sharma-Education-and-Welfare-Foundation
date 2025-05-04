@@ -16,6 +16,10 @@ import KeyProgramsSection from "../../components/about/KeyProgramItem";
 import LeadershipTeamSection from "../../components/about/LeadershipTeamSection";
 import PartnersSection from "../../components/about/PartnersSection";
 import HeroCarousel from "../../components/about/HeroCarousel";
+import ServiceCard from "../../components/about/ServiceCard";
+import Mission from "../../components/about/Mission";
+import AboutRSF from "../../components/about/AboutRSF";
+import Founders from "../../components/about/Founders";
 
 export default function AboutUs() {
   useEffect(() => {
@@ -28,6 +32,8 @@ export default function AboutUs() {
 
   return (
     <div className="min-h-screen bg-[#001F3F] text-white">
+    <div className="min-h-screen bg-white text-black"> 
+    
       {/* Hero Section */}
       <HeroCarousel />
 
@@ -66,6 +72,9 @@ export default function AboutUs() {
           </p>
         </div>
       </section>
+    
+{/* About Renu Sharma Foundation Section */}
+<AboutRSF/>
 
       {/* What We Do Section */}
       <section className="py-16 bg-[#E8F4F8]" data-aos="zoom-in">
@@ -185,6 +194,14 @@ export default function AboutUs() {
 
       {/* Our Impact Section */}
       <ImpactSection />
+{/* What We Do Section */}
+<ServiceCard/>
+
+{/* our Mission */}
+<Mission/>
+ 
+{/* Our Impact Section */}
+<ImpactSection />
 
       {/* About Founder Section */}
       <section className="py-16 bg-[#001F3F]" data-aos="fade-up">
@@ -328,23 +345,22 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+{/* About Founder Section */}
+      <Founders/>
 
       {/* Key Program Section */}
       <KeyProgramsSection />
 
       {/* Team Section */}
       <LeadershipTeamSection />
-      <PartnersSection />
 
-      {/* Testimonial Section */}
-      {/* <Testimonials /> */}
+      {/* Our partner companys */}
+      <PartnersSection />
 
       {/* Image Slider */}
       <ImageSlider />
 
-      <footer className="w-full bg-gray-800 text-white text-center p-4">
-        <p>Footer Content Here</p>
-      </footer>
+     
     </div>
   );
 }
