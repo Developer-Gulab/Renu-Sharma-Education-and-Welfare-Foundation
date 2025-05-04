@@ -13,6 +13,7 @@ import Leader from "../../components/Home/Leader";
 import Feedback from "@/components/Home/Feedback";
 import Footer from "@/components/Home/Footer";
 import CardGrid from "@/components/Home/CardGrid";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,6 +26,7 @@ export default function Home() {
 
   return (
     <div ref={mainRef} className="min-h-screen flex flex-col">
+      <Navbar/>
       <div className="relative min-h-screen">
         {/* Background elements with lower z-index */}
         <div className="fixed inset-0 min-h-screen bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#001F3F]/10 via-[#001F3F]/5 to-transparent opacity-50 z-0"></div>

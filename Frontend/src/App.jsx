@@ -15,7 +15,7 @@ import ForgotPassword from "./Pages/Login/ForgotPassword"; // Import the ForgotP
 function App() {
   return (
     <div className="bg-[#E8F4F8] min-h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />

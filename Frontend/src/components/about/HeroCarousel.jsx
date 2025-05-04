@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Navbar from "../Navbar/Navbar";
 
 const images = [
   {
@@ -48,7 +49,8 @@ const HeroCarousel = () => {
       className="absolute inset-0 bg-fixed bg-cover bg-center transition-all duration-500"
       style={{ backgroundImage: `url(${images[currentIndex].src})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black flex items-center justify-center">
+      <Navbar />
+      <div className="absolute inset-0 bg-gradient-to-r  flex items-center justify-center">
         <div className="text-white text-center p-8 rounded-lg shadow-lg">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-shadow-800" data-aos="fade-down" data-aos-duration="1000" style={{ textShadow: '2px 2px 6px black' }}>About Us</h1>
           <div className="max-w-2xl mx-auto">
